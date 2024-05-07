@@ -87,5 +87,20 @@
         </div>
     </div>
 
+    <footer>
+			<div class="social-icons">
+				<a href="#"><i class="fab fa-pinterest"></i></a>
+				<a href="#"><i class="fab fa-facebook"></i></a>
+				<a href="#"><i class="fab fa-twitter"></i></a>
+				<a href="#"><i class="fab fa-instagram"></i></a>
+			</div>
+			<center>
+			<p class="copyright">© 2035 Creado por D'antojitosGourmet decora.com</p>
+			<p class="chat-link"><a href="#">Chat en línea</a></p>
+		</footer></center>
+		<script
+			src="https://kit.fontawesome.com/81581fb069.js"
+			crossorigin="anonymous"
+		></script>
 </body>
 </html>
