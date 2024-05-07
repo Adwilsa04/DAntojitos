@@ -54,11 +54,11 @@
                 </div>
                 <div class="inputBox">
                     <span>cards accepted :</span>
-                    <img src="images/card_img.png" alt="">
+                    <img src="imgtarjeta/card.png" alt="">
                 </div>
                 <div class="inputBox">
                     <span>Nombre en la tarjeta:</span>
-                    <input type="text" placeholder="mr. john deo">
+                    <input type="text" placeholder="Carlos Rodriguez">
                 </div>
                 <div class="inputBox">
                     <span>Número de la Tarjeta de crédito:</span>
