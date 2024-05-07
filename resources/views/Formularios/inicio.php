@@ -70,7 +70,7 @@
           <div class="footer-link padding-top--24">
             <span>¿No estás registrado? Regístrate <a href="registro.php">Regístrate</a></span>
             <div class="listing padding-top--24 padding-bottom--24 flex-flex center-center">
-              <span><a href="#">© D' Antojitos Gourmet</a></span>
+              <span><a href="#">© D' Antojitos Gourmet Decora</a></span>
               <span><a href="#">Volver a Inicio</a></span>
             </div>
           </div>
