@@ -4,9 +4,10 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>D' antojitos Gourmet Decora</title>
-        <link rel="stylesheet" href="">
+        <link rel="icon" type="image/png" href="imagenes/Logo.png">
     </head>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
 
 *{
     margin: 0;
@@ -46,30 +47,38 @@
     text-align: center;
 }
 .content h1{
+    font-family: 'Cinzel';
     margin-top: 80px;
     font-size: 90px;
-    font-weight: 800;
+    font-weight: 100;
+    color: white;
 }
 button{
+    font-family: 'Cinzel';
     width: 200px;
     padding: 15px;
     margin: 20px 5px;
     text-align: center;
-    border-radius: 25px;
-    color: black;
+    border-radius: 0;
+    color:#ffffff;
     border: 2px;
     font-size: 20px;
     cursor: pointer;
     font-weight: 600;
-    border-radius: 0;
-    
+    position: left;
+	background-color: transparent ;
+	display: inline-block;
+	padding: 1rem 3rem;
+	border: 1px solid #ffffff;
 }
+
+
 button:hover{
-    background: rgb(0, 192, 226);
+    background: #000000;
     transition: 0.5s;
 }
 button:hover{
-    color: white;
+    color: rgb(255, 255, 255);
 }
 .banner video{
     position: absolute;
@@ -88,7 +97,7 @@ button:hover{
     <body>
         <div class="banner">
             <video autoplay loop muted plays-inline>
-                <source src="Video.mp4" type="video/mp4">
+                <source src="imagenes/Video.mp4" type="video/mp4">
             </video>
         
             <div class="content">
