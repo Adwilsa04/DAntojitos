@@ -30,7 +30,7 @@
                 </div>
                 <div class="inputBox">
                     <span>Descripción del pago:</span>
-                    <input type="text" placeholder="...">
+                    <input type="text" placeholder="Abono de ...">
                 </div>
                 <div class="inputBox">
                     <span>Monto:</span>
