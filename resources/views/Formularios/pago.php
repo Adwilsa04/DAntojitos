@@ -58,7 +58,7 @@
                 </div>
                 <div class="inputBox">
                     <span>Nombre en la tarjeta:</span>
-                    <input type="text" placeholder="Carlos Rodriguez">
+                    <input type="text" placeholder="Carlos Rodriguezb">
                 </div>
                 <div class="inputBox">
                     <span>Número de la Tarjeta de crédito:</span>
