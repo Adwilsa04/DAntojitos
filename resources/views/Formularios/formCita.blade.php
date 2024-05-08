@@ -1,3 +1,5 @@
+@extends()
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -230,6 +232,8 @@ body {
         <h2>Reserva tu cita !!!</h2>
         <form action="" method="post">
             <!--Account Information Start-->
+            @csrf
+            @method("POST")
             <h4>Cuenta</h4>
             <div class="input_group">
                 <div class="input_box">
