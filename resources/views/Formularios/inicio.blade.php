@@ -52,7 +52,7 @@
               <form action="crudregistro/iniciosec.php" id="stripe-login" method="POST">
                 <div class="field padding-bottom--24">
                   <label for="email">Email</label>
-                  <input type="email" name="email">
+                  <input type="email" name="email" placeholder="Tu correo con el que estás registrado">
                 </div>
                 <div class="field padding-bottom--24">
                   <div class="grid--50-50">
@@ -60,7 +60,7 @@
                     <div class="reset-pass">
                     </div>
                   </div>
-                  <input type="password" name="contrasena">
+                  <input type="password" name="contrasena" placeholder="Tu contraseña">
                 </div>
                 <div class="field padding-bottom--24">
                   <input type="submit" name="submit" value="Continue">

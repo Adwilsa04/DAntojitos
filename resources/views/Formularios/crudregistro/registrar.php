@@ -12,7 +12,7 @@ $sqlinsert = "INSERT INTO registro values(0, '$nombre', '$apellido', '$telefono'
 $insert = mysqli_query($mysqli, $sqlinsert);
 
 if($insert){
-    echo "<script>alert('Se ha registrado correctamente.'); window.location='/pagianPrinci.html'</script>";
+    echo "<script>alert('Se ha registrado correctamente.'); window.location='/Antojitos2/DAntojitos/resources/views/pagianPrinci.html'</script>";
 } else {
     echo "<script>alert('Error en el registro.');windor,history.go(-1);</script>";
 }

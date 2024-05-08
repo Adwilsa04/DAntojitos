@@ -52,19 +52,20 @@
               <form action="crudregistro/registrar.php" id="stripe-login" method="POST">
                 <div class="field padding-bottom--24">
                   <label for="nombre">Nombre</label>
-                  <input type="text" name="nombre" required>
+                  <input type="text" name="nombre" placeholder="Tu nombre" required>
                 </div>
                 <div class="field padding-bottom--24">
                   <label for="apellido">Apellido</label>
-                  <input type="text" name="apellido" required>
+                  <input type="text" name="apellido" placeholder="Primer apellido" required>
                 </div>
                 <div class="field padding-bottom--24">
                   <label for="telefono">Teléfono</label>
-                  <input type="text" name="telefono" required>
+                  <input type="text" name="telefono" placeholder="000-000-0000" required pattern="\d{3}-\d{3}-\d{4}">
+
                 </div>
                 <div class="field padding-bottom--24">
                   <label for="email">Email</label>
-                  <input type="email" name="email" required>
+                  <input type="email" name="email" placeholder="ejemplo@ejemplo.com" required>
                 </div>
                 <div class="field padding-bottom--24">
                   <div class="grid--50-50">
@@ -72,7 +73,7 @@
                     <div class="reset-pass">
                     </div>
                   </div>
-                  <input type="password" name="contrasena" required>
+                  <input type="password" name="contrasena" placeholder="Límite de 20 digitos..." required>
                 </div>
                 <div class="field padding-bottom--24">
                   <input type="submit" name="submit" value="Continue">
