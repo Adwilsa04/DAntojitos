@@ -48,22 +48,23 @@
           <div class="formbg">
             <div class="formbg-inner padding-horizontal--48">
               <span class="padding-bottom--15">Ingresa los datos</span>
-              <form id="stripe-login">
+              
+              <form action="crudregistro/registrar.php" id="stripe-login" method="POST">
                 <div class="field padding-bottom--24">
                   <label for="nombre">Nombre</label>
-                  <input type="text" name="nombre">
+                  <input type="text" name="nombre" required>
                 </div>
                 <div class="field padding-bottom--24">
                   <label for="apellido">Apellido</label>
-                  <input type="text" name="apellido">
+                  <input type="text" name="apellido" required>
                 </div>
                 <div class="field padding-bottom--24">
                   <label for="telefono">Teléfono</label>
-                  <input type="text" name="telefono">
+                  <input type="text" name="telefono" required>
                 </div>
                 <div class="field padding-bottom--24">
                   <label for="email">Email</label>
-                  <input type="email" name="email">
+                  <input type="email" name="email" required>
                 </div>
                 <div class="field padding-bottom--24">
                   <div class="grid--50-50">
@@ -71,7 +72,7 @@
                     <div class="reset-pass">
                     </div>
                   </div>
-                  <input type="password" name="contrasena">
+                  <input type="password" name="contrasena" required>
                 </div>
                 <div class="field padding-bottom--24">
                   <input type="submit" name="submit" value="Continue">
