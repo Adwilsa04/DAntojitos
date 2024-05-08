@@ -20,7 +20,7 @@
     font-family: 'Open Sans';
 }
 header{
-    background: url(img/header.jpg);
+    background: url(img/imgINI.jpg);
     background-size: cover;
     background-position:center;
     height: 300px;
@@ -226,27 +226,29 @@ header h1{
     </style>
     </head>
     <header>
-        <h1>Tienda de Relojes</h1>
+        <h1>Portafolio de pedidos</h1>
     </header>
     <section class="contenedor">
         <!-- Contenedor de elementos -->
         <div class="contenedor-items">
             <div class="item">
-                <span class="titulo-item">Box Engasse</span>
-                <img src="img/boxengasse.png" alt="" class="img-item">
-                <span class="precio-item">$15.000</span>
+                <span class="titulo-item">Buffet | precio por plato</span><br>
+                <img src="img/menu1.jpg" alt="" class="img-item">
+                <span class="precio-item">RD$550.000</span>
                 <button class="boton-item">Agregar al Carrito</button>
             </div>
             <div class="item">
-                <span class="titulo-item">English Horse</span>
-                <img src="img/englishrose.png" alt="" class="img-item">
-                <span class="precio-item">$25.000</span>
+                <span class="titulo-item">Buffet | precio por plato
+                    
+                </span><br>
+                <img src="img/menu2.jpg" alt="" class="img-item">
+                <span class="precio-item">RD$500.000</span>
                 <button class="boton-item">Agregar al Carrito</button>
             </div>
             <div class="item">
-                <span class="titulo-item">Knock Nap</span>
-                <img src="img/knocknap.png" alt="" class="img-item">
-                <span class="precio-item">$35.000</span>
+                <span class="titulo-item">Buffet | precio por plato</span><br>
+                <img src="img/menu3.jpg" alt="" class="img-item">
+                <span class="precio-item">RD$650.000</span>
                 <button class="boton-item">Agregar al Carrito</button>
             </div>
             <div class="item">
