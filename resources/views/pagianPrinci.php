@@ -85,16 +85,16 @@
             <h1>Explore More</h1>
             <a href="#">Start Learning</a>
         </div>
-    </div>
+    </div><br><br>
 
-    <footer>
+    <center> <footer>
 			<div class="social-icons">
 				<a href="#"><i class="fab fa-pinterest"></i></a>
 				<a href="#"><i class="fab fa-facebook"></i></a>
 				<a href="#"><i class="fab fa-twitter"></i></a>
 				<a href="#"><i class="fab fa-instagram"></i></a>
 			</div>
-			<center>
+			
 			<p class="copyright">© 2035 Creado por D'antojitosGourmet decora.com</p>
 			<p class="chat-link"><a href="#">Chat en línea</a></p>
 		</footer></center>
