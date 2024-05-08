@@ -1,7 +1,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Inicio de Sección</title>
+  <title>Regístrate</title>
   <link rel="stylesheet" type="text/css" href="regristro.css">
 </head>
 
@@ -42,16 +42,29 @@
       </div>
       <div class="box-root padding-top--24 flex-flex flex-direction--column" style="flex-grow: 1; z-index: 9;">
         <div class="box-root padding-top--48 padding-bottom--24 flex-flex flex-justifyContent--center">
-          <h1>Bienvenido/a de vuelta</h1>
+          <h1>Regístrate</h1>
         </div>
         <div class="formbg-outer">
           <div class="formbg">
             <div class="formbg-inner padding-horizontal--48">
               <span class="padding-bottom--15">Ingresa los datos</span>
-              <form id="stripe-login">
+              
+              <form action="crudregistro/registrar.php" id="stripe-login" method="POST">
+                <div class="field padding-bottom--24">
+                  <label for="nombre">Nombre</label>
+                  <input type="text" name="nombre" required>
+                </div>
+                <div class="field padding-bottom--24">
+                  <label for="apellido">Apellido</label>
+                  <input type="text" name="apellido" required>
+                </div>
+                <div class="field padding-bottom--24">
+                  <label for="telefono">Teléfono</label>
+                  <input type="text" name="telefono" required>
+                </div>
                 <div class="field padding-bottom--24">
                   <label for="email">Email</label>
-                  <input type="email" name="email">
+                  <input type="email" name="email" required>
                 </div>
                 <div class="field padding-bottom--24">
                   <div class="grid--50-50">
@@ -59,7 +72,7 @@
                     <div class="reset-pass">
                     </div>
                   </div>
-                  <input type="password" name="contrasena">
+                  <input type="password" name="contrasena" required>
                 </div>
                 <div class="field padding-bottom--24">
                   <input type="submit" name="submit" value="Continue">
@@ -68,10 +81,10 @@
             </div>
           </div>
           <div class="footer-link padding-top--24">
-            <span>¿No estás registrado? Regístrate <a href="registro.php">Regístrate</a></span>
+            <span>¿Estás registrado? Inicia sesión <a href="inicio.blade.php">Iniciar Sesión</a></span>
             <div class="listing padding-top--24 padding-bottom--24 flex-flex center-center">
-              <span><a href="#">© D' Antojitos Gourmet Decora</a></span>
-              <span><a href="#">Volver a Inicio</a></span>
+            <span><a href="#">© D' Antojitos Gourmet Decora</a></span>
+            <span><a href="#">Volver a Inicio</a></span>
             </div>
           </div>
         </div>
@@ -79,4 +92,5 @@
     </div>
   </div>
 </body>
+
 </html>

@@ -9,14 +9,14 @@ $contrasena = $_POST['contrasena'];
 
 $sqlinsert = "INSERT INTO registro values(0, '$nombre', '$apellido', '$telefono', '$email', '$contrasena')";
 
-mysqli_query($mysqli, $sqlinsert);
+$insert = mysqli_query($mysqli, $sqlinsert);
 
-if($sqlinsert){
-    echo 'El registro fue exitoso';
-}
-else{
-    echo 'No se ha podido registrar, intente de nuevo';
+if($insert){
+    echo "<script>alert('Se ha registrado correctamente.'); window.location='/pagianPrinci.html'</script>";
+} else {
+    echo "<script>alert('Error en el registro.');windor,history.go(-1);</script>";
 }
 
-header("location:./Formularios/registro.php?insert=sucess")
+exit();
+
 ?>
