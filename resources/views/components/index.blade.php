@@ -17,7 +17,8 @@
       <header class="header">
          <nav class="nav container">
             <div class="nav__data">
-               <a href="#" class="nav__logo">
+               <a href="" class="nav__logo">
+                  <link rel="icon" type="image/png" href="images/Logo.ico"
                   <i class="ri-planet-line"></i> D'antojitos Gourmet Decora
                </a>
                
@@ -54,10 +55,11 @@
                         </li>
 
                         <!--=============== DROPDOWN SUBMENU ===============-->
-                        <li class="dropdown__subitem">
-                           <div class="dropdown__link">
-                              <i class="ri-bar-chart-line"></i> Servicios <i class="ri-add-line dropdown__add"></i>
-                           </div>
+                        <li>
+                           <a href="#" class="dropdown__link">
+                              <i class="ri-arrow-up-down-line"></i> Decoracion
+                           </a>
+                        </li>
                               
                         </li>
                      </ul>

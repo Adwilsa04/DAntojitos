@@ -111,10 +111,12 @@ button:hover{
 
     </style>
     <body>
+        
         <div class="banner">
             <video autoplay loop muted plays-inline>
                 <source src="imagenes/Video.mp4" type="video/mp4">
             </video>
+<x-index></x-index>
         
             <div class="content">
                 <h1>D' antojitos Gourmet Decora</h1>
