@@ -14,6 +14,10 @@ return new class extends Migration
         Schema::create('regitro_clientes', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->timestamps();
+            $table->timestamps();
+            $table->timestamps();
+            $table->timestamps();
         });
     }
 

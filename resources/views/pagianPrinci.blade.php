@@ -1,11 +1,23 @@
 <!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>D'antojitos Gourmet Decora</title>
+</head>
+<head>
+
 <html>
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>D' antojitos Gourmet Decora</title>
-        <link rel="icon" type="image/png" href="imagenes/Logo.ico">
+        <link rel="icon" type="image/x-icon" href="{{asset('img/Logo.ico')}}">
     </head>
+
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
 
@@ -93,19 +105,44 @@ button:hover{
     }
 }
 
+.social-icons{
+    color: #000000;
+}
+
     </style>
     <body>
+        
         <div class="banner">
             <video autoplay loop muted plays-inline>
-                <source src="imagenes/Video.mp4" type="video/mp4">
+                <source src="{{asset('video/Video.mp4')}}" type="video/mp4">
             </video>
+<x-index></x-index>
         
             <div class="content">
                 <h1>D' antojitos Gourmet Decora</h1>
                 <div>
-                    <button type="button">Ver más</button>
+                    <button type="button"> <a href="{{route('pagservi')}}" style="text-decoration:none; color:white;"> Ver más</a></button> 
+                    <li class="nav-item"><a class="nav-link scrollto" href="{{route('pagservi')}}">
+                        </a></li>
                 </div>
             </div>
-        </div>
+        </div><br><br>
+
+<center>
+        <footer>
+			<div class="social-icons">
+				<a href="#"><i class="fab fa-pinterest"></i></a>
+				<a href="#"><i class="fab fa-facebook"></i></a>
+				<a href="#"><i class="fab fa-twitter"></i></a>
+				<a href="#"><i class="fab fa-instagram"></i></a>
+			</div>
+			
+			<p class="copyright">© 2035 Creado por D'antojitosGourmet decora.com</p>
+			<p class="chat-link"><a href="#">Chat en línea</a></p>
+		</footer></center>
+		<script
+			src="https://kit.fontawesome.com/81581fb069.js"
+			crossorigin="anonymous"
+		></script>
     </body>
 </html>
