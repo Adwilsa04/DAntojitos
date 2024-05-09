@@ -7,15 +7,15 @@
 
   /*========== Colors ==========*/
   /*Color mode HSL(hue, saturation, lightness)*/
-  --black-color: hsl(220, 24%, 12%);
-  --black-color-light: hsl(220, 24%, 15%);
-  --black-color-lighten: hsl(220, 20%, 18%);
-  --white-color: #fff;
-  --body-color: hsl(220, 100%, 97%);
+  --black-color: hsl(0, 0%, 0%);
+  --black-color-light: hsl(228, 8%, 12%);
+  --black-color-lighten: hsl(0, 0%, 100%);
+  --white-color: #ffffff;
+  --body-color: hsl(0, 0%, 100%);
 
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
-  --body-font: 'cinzel';
+  --body-font: 'Cinzel';
   --normal-font-size: .938rem;
 
   /*========== Font weight ==========*/
@@ -55,6 +55,7 @@ ul {
 
 a {
   text-decoration: none;
+  
 }
 
 /*=============== REUSABLE CSS CLASSES ===============*/
@@ -70,7 +71,7 @@ a {
   left: 0;
   width: 100%;
   background-color: var(--black-color);
-  box-shadow: 0 2px 16px hsla(220, 32%, 8%, .3);
+  box-shadow: 0 2px 16px hsla(0, 0%, 2%, 0.3);
   z-index: var(--z-fixed);
 }
 

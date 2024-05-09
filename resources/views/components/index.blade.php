@@ -20,7 +20,7 @@
             <div class="nav__data">
                <a href="" class="nav__logo">
                   <link rel="icon" type="image/png" href="images/Logo.ico"
-                  <i class="ri-planet-line"></i> D'antojitos Gourmet Decora
+                  <i class="ri-planet-line">D'antojitos Gourmet Decora</i>
                </a>
                
                <div class="nav__toggle" id="nav-toggle">
