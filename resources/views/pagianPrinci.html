@@ -1,107 +1,111 @@
-
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
-</head>
-<head>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>D' antojitos Gourmet Decora</title>
+        <link rel="icon" type="image/png" href="imagenes/Logo.ico">
+    </head>
     <style>
-        *{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins';
-}
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
 
-.container{
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+.banner{
     width: 100%;
     height: 100vh;
-    background-color: rgba(0,0,0,0.4);
+    background-image: linear-gradient(rgba(0,0,0,0.40),rgba(0,0,0,0.40));
+    background-position: center;
+    background-size: center;
+}
+.navbar{
+    width: 90%;
+    padding: 30px;
+    margin: auto;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 }
-
+.logo{
+    width: 160px;
+    margin-top: -10px;
+    cursor: pointer;
+}
+.navbar a:hover{
+    color: black;
+}
 .content{
+    width: 100%;
+    position: absolute;
+    color: white;
+    top: 45%;
+    transform: translateY(-50%);
     text-align: center;
 }
-
 .content h1{
-    font-size: 95px;
-    color: #fff;
-    margin-bottom: 50px;
+    font-family: 'Cinzel';
+    margin-top: 80px;
+    font-size: 90px;
+    font-weight: 100;
+    color: white;
+}
+button{
+    font-family: 'Cinzel';
+    width: 200px;
+    padding: 15px;
+    margin: 20px 5px;
+    text-align: center;
+    border-radius: 0;
+    color:#ffffff;
+    border: 2px;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    position: left;
+	background-color: transparent ;
+	display: inline-block;
+	padding: 1rem 3rem;
+	border: 1px solid #ffffff;
 }
 
-.content a{
-    font-size: 23px;
-    color: #fff;
-    text-decoration: none;
-    border: 2px solid #fff;
-    padding: 15px 25px;
-    border-radius: 50px;
-    transition: 0.3s;
-}
 
-.content a:hover{
-    background-color: #fff;
-    color: #000;
+button:hover{
+    background: #000000;
+    transition: 0.5s;
 }
-
-.background-clip{
+button:hover{
+    color: rgb(255, 255, 255);
+}
+.banner video{
     position: absolute;
     right: 0;
     bottom: 0;
     z-index: -1;
 }
-
-@media (min-aspect-ratio:16/9) {
-    .background-clip{
+@media(min-aspect-ratio: 16/9){
+    .banner video{
         width: 100%;
         height: auto;
     }
 }
 
-@media (max-aspect-ratio:16/9) {
-    .background-clip{
-        width: auto;
-        height: 100%;
-    }
-}
-
     </style>
-</head>
-<body>
-    
-    <div class="container">
-
-        <video autoplay loop muted plays-inline class="background-clip">
-            <source src="images/video.mp4" type="video/mp4">
-        </video>
-
-        <div class="content">
-            <h1>Explore More</h1>
-            <a href="#">Start Learning</a>
+    <body>
+        <div class="banner">
+            <video autoplay loop muted plays-inline>
+                <source src="imagenes/Video.mp4" type="video/mp4">
+            </video>
+        
+            <div class="content">
+                <h1>D' antojitos Gourmet Decora</h1>
+                <div>
+                    <button type="button">Ver más</button>
+                </div>
+            </div>
         </div>
-    </div><br><br>
-
-    <center> <footer>
-			<div class="social-icons">
-				<a href="#"><i class="fab fa-pinterest"></i></a>
-				<a href="#"><i class="fab fa-facebook"></i></a>
-				<a href="#"><i class="fab fa-twitter"></i></a>
-				<a href="#"><i class="fab fa-instagram"></i></a>
-			</div>
-			
-			<p class="copyright">© 2035 Creado por D'antojitosGourmet decora.com</p>
-			<p class="chat-link"><a href="#">Chat en línea</a></p>
-		</footer></center>
-		<script
-			src="https://kit.fontawesome.com/81581fb069.js"
-			crossorigin="anonymous"
-		></script>
-</body>
+    </body>
 </html>
