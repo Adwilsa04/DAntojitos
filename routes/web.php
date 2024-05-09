@@ -41,9 +41,6 @@ Route::get('/pagservicios', function () {
     return view('PagSERVI');
 }) ->name('pagservi');
 
-Route::get('/inicio', function () {
-    return view('pagianPrinci');
-}) ->name('inicio');
 
 
 
