@@ -26,6 +26,7 @@
                     <select name="">
                         <option value="transferencia">Transferencia</option>
                         <option value="efectivo">Efectivo</option>
+                        <option value="tarjeta">Tarjeta</option>
                     </select>
                 </div>
                 <div class="inputBox">
@@ -41,15 +42,42 @@
                 <h3 class="title">Cuenta de Banco</h3>
                 <div class="inputBox">
                     <span>Nombre del banco:</span>
-                    <input type="text" placeholder="Santa Cruz">
+                    <span>Santa Cruz</span>
                 </div>
                 <div class="inputBox">
                     <span>Cuenta de Banco:</span>
-                    <input type="number" placeholder="1111-2222-3333-4444">
+                    <span>111-222-333-44</span>
                 </div>
                 <div class="inputBox">
                     <span>Nombre de la cuenta de Banco:</span>
-                    <input type="text" placeholder="Nombre destinado ">
+                    <span>D Antojitos</span>
+                </div>
+                <div class="inputBox">
+                    <span>cards accepted :</span>
+                    <img src="imgtarjeta/card.png" alt="">
+                </div>
+                <div class="inputBox">
+                    <span>Nombre en la tarjeta:</span>
+                    <input type="text" placeholder="Carlos Rodriguezb">
+                </div>
+                <div class="inputBox">
+                    <span>Número de la Tarjeta de crédito:</span>
+                    <input type="number" placeholder="1111-2222-3333-4444">
+                </div>
+                <div class="inputBox">
+                    <span>Mes de expiración:</span>
+                    <input type="text" placeholder="january">
+                </div>
+
+                <div class="flex">
+                    <div class="inputBox">
+                        <span>Año de expiración:</span>
+                        <input type="number" placeholder="2022">
+                    </div>
+                    <div class="inputBox">
+                        <span>CVV:</span>
+                        <input type="text" placeholder="1234">
+                    </div>
                 </div>
             </div>
         </div>

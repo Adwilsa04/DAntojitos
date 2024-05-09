@@ -48,10 +48,11 @@
           <div class="formbg">
             <div class="formbg-inner padding-horizontal--48">
               <span class="padding-bottom--15">Ingresa los datos</span>
-              <form id="stripe-login">
+
+              <form action="crudregistro/iniciosec.php" id="stripe-login" method="POST">
                 <div class="field padding-bottom--24">
                   <label for="email">Email</label>
-                  <input type="email" name="email">
+                  <input type="email" name="email" placeholder="Tu correo con el que estás registrado">
                 </div>
                 <div class="field padding-bottom--24">
                   <div class="grid--50-50">
@@ -59,7 +60,7 @@
                     <div class="reset-pass">
                     </div>
                   </div>
-                  <input type="password" name="contrasena">
+                  <input type="password" name="contrasena" placeholder="Tu contraseña">
                 </div>
                 <div class="field padding-bottom--24">
                   <input type="submit" name="submit" value="Continue">
@@ -68,7 +69,7 @@
             </div>
           </div>
           <div class="footer-link padding-top--24">
-            <span>¿No estás registrado? Regístrate <a href="registro.php">Regístrate</a></span>
+            <span>¿No estás registrado? Regístrate <a href="registro.blade.php">Regístrate</a></span>
             <div class="listing padding-top--24 padding-bottom--24 flex-flex center-center">
               <span><a href="#">© D' Antojitos Gourmet Decora</a></span>
               <span><a href="#">Volver a Inicio</a></span>
