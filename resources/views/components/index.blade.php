@@ -32,7 +32,12 @@
             <!--=============== NAV MENU ===============-->
             <div class="nav__menu" id="nav-menu">
                <ul class="nav__list">
-                  <li><a href="#" class="nav__link">Home</a></li>
+                 <!-- <li><a href="#" class="nav__link">Home</a></li>
+                 
+
+                  <li><a href="{{route('pagianPrinci')}}" style="text-decoration:none; color:white;">Home</a></li>
+                 <li class="nav-item"><a class="nav-link scrollto" href="{{route('pagianprinci')}}">
+                        </a></li>-->
 
                   <li><a href="#" class="nav__link">Sobre Nosotros</a></li>
 
