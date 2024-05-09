@@ -91,7 +91,7 @@ img{
     font-weight: 400;
     position: left;
 	background-color: transparent ;
-	display: inline-block;
+	
 	padding: 1rem 3rem;
 	border: 1px solid #ffffff;
 }
@@ -111,9 +111,12 @@ img{
 
 
 <body>
+<x-index></x-index>
+
 
 <div class="ui-card">
-	<img src="imagenes/img3.jpg">
+	<img src="{{asset('img/img3.jpg')}}" type="images/jpg">
+
 	<div class="description">
 		<h3>Buffet</h3><br>
 		
@@ -122,7 +125,7 @@ img{
 </div>
 
 <div class="ui-card">
-	<img src="imagenes/img2.jpg">
+<img src="{{asset('img/img2.jpg')}}" type="images/jpg">
 	<div class="description">
 		<h3>Picadera</h3><br>
 		
@@ -131,7 +134,7 @@ img{
 </div>
 
 <div class="ui-card">
-	<img src="imagenes/img1.jpg">
+<img src="{{asset('img/img1.jpg')}}" type="images/jpg">
 	<div class="description">
 		<h3>Decoracion</h3><br>
 		

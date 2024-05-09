@@ -15,7 +15,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>D' antojitos Gourmet Decora</title>
-        <link rel="icon" type="image/png" href="imagenes/Logo.ico">
+        <link rel="icon" type="image/x-icon" href="{{asset('img/Logo.ico')}}">
     </head>
 
     <style>
@@ -114,14 +114,16 @@ button:hover{
         
         <div class="banner">
             <video autoplay loop muted plays-inline>
-                <source src="imagenes/Video.mp4" type="video/mp4">
+                <source src="{{asset('video/Video.mp4')}}" type="video/mp4">
             </video>
 <x-index></x-index>
         
             <div class="content">
                 <h1>D' antojitos Gourmet Decora</h1>
                 <div>
-                    <button type="button">Ver más</button>
+                    <button type="button"> <a href="{{route('pagservi')}}" style="text-decoration:none; color:white;"> Ver más</a></button> 
+                    <li class="nav-item"><a class="nav-link scrollto" href="{{route('pagservi')}}">
+                        </a></li>
                 </div>
             </div>
         </div><br><br>

@@ -7,8 +7,9 @@
       <!--=============== REMIXICONS ===============-->
       <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
 
+   <link rel="shortcut icon" href="{{asset('img/img1.jpg')}}" type="image/jpg">
       <!--=============== CSS ===============-->
-      <link rel="stylesheet" href="assets/css/styles.css">
+      <link rel="stylesheet" href="{{asset('css/styles.css')}}">
 
       <title></title>
    </head>
