@@ -9,12 +9,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario Cita</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="imagenes/Logo.ico">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
 </head>
 
 <head>
     <style>
-         {
+
+ *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -232,8 +234,6 @@ body {
         <h2>Reserva tu cita !!!</h2>
         <form action="" method="post">
             <!--Account Information Start-->
-            @csrf
-            @method("POST")
             <h4>Cuenta</h4>
             <div class="input_group">
                 <div class="input_box">
