@@ -65,7 +65,7 @@ function agregarAlCarritoClicked(event) {
 
     agregarItemAlCarrito(titulo, precio, imagenSrc);
 
-   item.classList.add = ('item');
+    hacerVisibleCarrito();
 }
 
 //Función que hace visible el carrito
