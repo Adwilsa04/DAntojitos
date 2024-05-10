@@ -41,7 +41,13 @@ Route::get('/pagservicios', function () {
     return view('PagSERVI');
 }) ->name('pagservi');
 
+Route::get('Formularios/inicio', function() {
+    return view('Formularios/inicio');
+}) ->name('inicio');
 
+Route::get('Formularios/registro', function() {
+    return view('Formularios/registro');
+}) ->name('registro');
 
 
 require __DIR__.'/auth.php';

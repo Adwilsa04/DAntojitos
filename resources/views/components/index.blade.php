@@ -82,13 +82,13 @@
                         </li>
 
                         <li>
-                           <a href="#" class="dropdown__link">
-                              <i class="ri-lock-line"></i> Inicio sesion
+                           <a href="{{route('inicio')}}" class="dropdown__link">
+                              <i  class="ri-lock-line"></i> Inicio sesion
                            </a>
                         </li>
 
                         <li>
-                           <a href="#" class="dropdown__link">
+                           <a href="{{route('registro')}}" class="dropdown__link">
                               <i class="ri-message-3-line"></i> Registro Cliente
                            </a>
                         </li>
