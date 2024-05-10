@@ -234,16 +234,16 @@ header h1{
             <div class="item">
                 <span class="titulo-item">Buffet | precio por plato</span><br>
                 <img src="img/menu1.jpg" alt="" class="img-item">
-                <span class="precio-item">$550.000</span>
+                <span class="precio-item">RD$550.000</span>
                 <button class="boton-item">Agregar al Carrito</button>
             </div>
-            
+
             <div class="item">
                 <span class="titulo-item">Buffet | precio por plato
                     
                 </span><br>
                 <img src="img/menu2.jpg" alt="" class="img-item">
-                <span class="precio-item">$500.000</span>
+                <span class="precio-item">RD$500.000</span>
                 <button class="boton-item">Agregar al Carrito</button>
             </div>
 
