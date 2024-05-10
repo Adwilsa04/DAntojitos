@@ -32,7 +32,7 @@
             <!--=============== NAV MENU ===============-->
             <div class="nav__menu" id="nav-menu">
                <ul class="nav__list">
-                  <li><a href="{{route('principal')}}" style="text-decoration:none; color:white;"> Home</a></li>
+                  <li><a href="{{route('principal')}}" style="text-decoration:none; color:white;">Home</a></li>
                  
 
                  
@@ -95,6 +95,7 @@
                               <i class="ri-message-3-line"></i> Registro Cliente
                            </a>
                         </li>
+                        
                      </ul>
                   </li>
 
