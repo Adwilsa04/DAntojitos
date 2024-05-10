@@ -232,31 +232,31 @@ body {
 <body>
     <div class="wrapper">
         <h2>Reserva tu cita !!!</h2>
-        <form action="" method="post">
+        <form action="InsertCita/insertar.php" method="post">
             <!--Account Information Start-->
             <h4>Cuenta</h4>
             <div class="input_group">
                 <div class="input_box">
-                    <input type="text" placeholder="Nombre cliente" required class="name">
+                    <input type="text" name="nombre" placeholder="Nombre cliente" required class="name">
                     <i class="fa fa-user icon"></i>
                 </div>
                 
             </div>
             <div class="input_group">
                 <div class="input_box">
-                    <input type="email" placeholder="Email Address" required class="name">
+                    <input type="email" name="email" placeholder="Email Address" required class="name">
                     <i class="fa fa-envelope icon"></i>
                 </div>
             </div>
             <div class="input_group">
                 <div class="input_box">
-                    <input type="text" placeholder="Lugar de encuentro" required class="name">
+                    <input type="text" name="direccion" placeholder="Lugar de encuentro" required class="name">
                     <i class="fa fa-map-marker icon" aria-hidden="true"></i>
                 </div>
             </div>
             <div class="input_group">
                 <div class="input_box">
-                    <input type="text" placeholder="Ciudad" required class="name">
+                    <input type="text" name="ciudad" placeholder="Ciudad" required class="name">
                     <i class="fa fa-institution icon"></i>
                 </div>
             </div>
@@ -264,12 +264,12 @@ body {
             <div class="input_group">
                 <div class="input_box">
                     <div class="input_box">
-                        <input type="number" placeholder="Fecha cita" required class="name">
+                        <input type="number" name="fecha" placeholder="0000/00/00" required class="name">
                         <i class="fa fa-calendar icon" aria-hidden="true"></i>
                     </div>
                 </div>
                 <div class="input_box">
-                    <input type="" placeholder="Hora cita" required class="name">
+                    <input type="time" name="hora" placeholder="Hora cita" required class="name">
                     <i class="fa fa-calendar-o icon" ></i>
                 </div>
             </div>
@@ -298,7 +298,7 @@ body {
            
             
             <div class="input_pago">
-                <input type="" placeholder="Cantidad a pagar RD$ 500.00" required class="name">
+                <input type="" placeholder="Cantidad a pagar RD$ 500.00" class="name">
                 <i class="fa fa-money icon" ></i>
             </div>
             <!--final de detalle de pago-->

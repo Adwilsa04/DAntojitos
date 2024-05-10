@@ -105,8 +105,17 @@ button:hover{
     }
 }
 
-.social-icons{
-    color: #000000;
+
+.footer {
+    background-color: black;
+    color: white;
+    width: 100%;
+    left: 100px;
+    
+}
+
+.footer .social-icons a {
+    color: white;
 }
 
     </style>
@@ -123,13 +132,13 @@ button:hover{
                 <h1>D' antojitos Gourmet Decora</h1>
                 <div>
                     <button type="button"> <a href="{{route('pagservi')}}" style="text-decoration:none; color:white;"> Ver más</a></button> 
-                    <li class="nav-item"><a class="nav-link scrollto" href="{{route('pagservi')}}">
-                        </a></li>
+                        </a>
                 </div>
             </div>
         </div><br><br>
 
 <center>
+
         <footer>
 			<div class="social-icons">
 				<a href="#"><i class="fab fa-pinterest"></i></a>
@@ -143,7 +152,8 @@ button:hover{
 		</footer></center>
 		<script
 			src="https://kit.fontawesome.com/81581fb069.js"
-			crossorigin="anonymous"
-		></script>
+			crossorigin="anonymous">
+        </script>
+
     </body>
 </html>
