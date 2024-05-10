@@ -234,7 +234,7 @@ header h1{
             <div class="item">
                 <span class="titulo-item">Buffet | precio por plato</span><br>
                 <img src="img/menu1.jpg" alt="" class="img-item">
-                <span class="precio-item">RD$550.000</span>
+                <span class="precio-item">$550.000</span>
                 <button class="boton-item">Agregar al Carrito</button>
             </div>
             <div class="item">
@@ -242,7 +242,7 @@ header h1{
                     
                 </span><br>
                 <img src="img/menu2.jpg" alt="" class="img-item">
-                <span class="precio-item">RD$500.000</span>
+                <span class="precio-item">$500.000</span>
                 <button class="boton-item">Agregar al Carrito</button>
             </div>
             <div class="item">
@@ -253,37 +253,37 @@ header h1{
             </div>
             <div class="item">
                 <span class="titulo-item">La Night</span>
-                <img src="img/lanight.png" alt="" class="img-item">
+                <img src="img/menu4.jpg" alt="" class="img-item">
                 <span class="precio-item">$18.000</span>
                 <button class="boton-item">Agregar al Carrito</button>
             </div>
             <div class="item">
                 <span class="titulo-item">Silver All</span>
-                <img src="img/silverall.png" alt="" class="img-item">
+                <img src="img/menu5.jpg" alt="" class="img-item">
                 <span class="precio-item">$32.000</span>
                 <button class="boton-item">Agregar al Carrito</button>
             </div>
             <div class="item">
                 <span class="titulo-item">Skin Glam</span>
-                <img src="img/skinglam.png" alt="" class="img-item">
+                <img src="img/menu6.jpg" alt="" class="img-item">
                 <span class="precio-item">$18.000</span>
                 <button class="boton-item">Agregar al Carrito</button>
             </div>
             <div class="item">
                 <span class="titulo-item">Midimix</span>
-                <img src="img/midimix.png" alt="" class="img-item">
+                <img src="img/menu7.jpg" alt="" class="img-item">
                 <span class="precio-item">$54.000</span>
                 <button class="boton-item">Agregar al Carrito</button>
             </div>
             <div class="item">
                 <span class="titulo-item">Sir Blue</span>
-                <img src="img/sirblue.png" alt="" class="img-item">
+                <img src="img/menu8.jpg" alt="" class="img-item">
                 <span class="precio-item">$32.000</span>
                 <button class="boton-item">Agregar al Carrito</button>
             </div>
             <div class="item">
                 <span class="titulo-item">Middlesteel</span>
-                <img src="img/middlesteel.png" alt="" class="img-item">
+                <img src="img/menu9.jpg" alt="" class="img-item">
                 <span class="precio-item">$42.800</span>
                 <button class="boton-item">Agregar al Carrito</button>
             </div>
