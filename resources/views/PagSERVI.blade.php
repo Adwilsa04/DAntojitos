@@ -5,7 +5,9 @@
 <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=1">
 <title>Portafolio</title>
 </head>
-
+<br>
+<br>
+<br>
 
 <style>
 
@@ -144,4 +146,5 @@ img{
 <br>
 
 </body>
+
 </html>

@@ -95,8 +95,6 @@
 
                         <li>
                            <a href="{{route('registro')}}" class="dropdown__link">
-
-                           <a href="" class="dropdown__link">
                               <i class="ri-message-3-line"></i> Registro Cliente
                            </a>
                       </li>
