@@ -143,7 +143,7 @@ button:hover{
 		</footer></center>
 		<script
 			src="https://kit.fontawesome.com/81581fb069.js"
-			crossorigin="anonymous"
-		></script>
+			crossorigin="anonymous">
+        </script>
     </body>
 </html>
