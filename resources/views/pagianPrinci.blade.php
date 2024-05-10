@@ -106,18 +106,7 @@ button:hover{
 }
 
 
-.footer {
-    background-color: black;
-    color: white;
-    width: 100%;
-    left: 150px; 
-    height: auto; /
-    
-}
 
-.footer .social-icons a {
-    color: white;
-}
 
 
     </style>
@@ -134,25 +123,16 @@ button:hover{
                 <h1>D' antojitos Gourmet Decora</h1>
                 <div>
                     <button type="button"> <a href="{{route('pagservi')}}" style="text-decoration:none; color:white;"> Ver más</a></button> 
+
                 <a class="nav-link scroll to" href="{{route('pagservi')}}">      
                 </a>
+=======
+                    <a class="nav-link scrollto" href="{{route('pagservi')}}">
+                        </a>
                 </div>
             </div>
         </div><br><br>
 
-<center>
-<footer class="footer" style="background-color: black; color: white;">
-    <div class="social-icons">
-        <a href="#"><i class="fab fa-pinterest"></i></a>
-        <a href="#"><i class="fab fa-facebook"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-    </div>
 
-    <p class="copyright">© 2035 Creado por D'antojitosGourmet decora.com</p>
-    <p class="chat-link"><a href="#">Chat en línea</a></p>
-</footer></center>
-
-<script src="https://kit.fontawesome.com/81581fb069.js" crossorigin="anonymous"></script>
     </body>
 </html>
