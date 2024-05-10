@@ -19,7 +19,7 @@
          <nav class="nav container">
             <div class="nav__data">
                <a href="" class="nav__logo">
-                  <link rel="icon" type="image/png" href="images/Logo.ico"
+                  <link rel="icon" type="image/png" href="images/Logo.ico">
                   <i class="ri-planet-line">D'antojitos Gourmet Decora</i>
                </a>
                
@@ -32,7 +32,10 @@
             <!--=============== NAV MENU ===============-->
             <div class="nav__menu" id="nav-menu">
                <ul class="nav__list">
-                  <li><a href="#" class="nav__link">Home</a></li>
+                  <li><a href="{{route('principal')}}" style="text-decoration:none; color:white;">Home</a></li>
+                 
+
+                 
 
                   <li><a href="#" class="nav__link">Sobre Nosotros</a></li>
 
@@ -86,12 +89,17 @@
                               <i  class="ri-lock-line"></i> Inicio sesion
                            </a>
                         </li>
-
+<x-index>
                         <li>
+<<<<<<< HEAD
                            <a href="{{route('registro')}}" class="dropdown__link">
+=======
+                           <a href="" class="dropdown__link">
+>>>>>>> 4d8f87b8d4f8d50d44df6c5087fb5639a3b2f3a8
                               <i class="ri-message-3-line"></i> Registro Cliente
                            </a>
                         </li>
+                        
                      </ul>
                   </li>
 

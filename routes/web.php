@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('inicio');;
 
 Route::get('/prueba', function () {
     return view('prueba');
@@ -37,7 +37,7 @@ Route::get('/inicio', function () {
 }) ->name('inicio');
 
 
-Route::get('/pagservicios', function () {
+Route::get('/pagianservi', function () {
     return view('PagSERVI');
 }) ->name('pagservi');
 
@@ -48,6 +48,7 @@ Route::get('Formularios/inicio', function() {
 Route::get('Formularios/registro', function() {
     return view('Formularios/registro');
 }) ->name('registro');
+
 
 
 require __DIR__.'/auth.php';
