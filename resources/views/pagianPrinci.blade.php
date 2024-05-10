@@ -126,7 +126,7 @@ button:hover{
 
                 <a class="nav-link scroll to" href="{{route('pagservi')}}">      
                 </a>
-=======
+
                     <a class="nav-link scrollto" href="{{route('pagservi')}}">
                         </a>
                 </div>

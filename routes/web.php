@@ -52,6 +52,10 @@ Route::get('Formularios/registro', function() {
     return view('Formularios/registro');
 }) ->name('registro');
 
+Route::get('pedidos/pedido', function() {
+    return view('pedidos/pedido');
+}) ->name('pedidos');
+
 
 
 require __DIR__.'/auth.php';

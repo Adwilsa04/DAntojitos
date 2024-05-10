@@ -19,7 +19,7 @@
          <nav class="nav container">
             <div class="nav__data">
                <a href="" class="nav__logo">
-                  <link rel="icon" type="image/png" href="images/Logo.ico">
+                  <link rel="icon" type="imagenes/png" href="imagenes/Logo.ico">
                   <i class="ri-planet-line">D'antojitos Gourmet Decora</i>
                </a>
                
@@ -69,7 +69,9 @@
                      </ul>
                   </li>
                   
-                  <li><a href="#" class="nav__link">Pedidos</a></li>
+                  <li>
+                  <a href="{{route('pedidos')}}" class="nav__link">Pedidos</a>
+                 </li>
 
                   <!--=============== DROPDOWN 2 ===============-->
                   <li class="dropdown__item">
