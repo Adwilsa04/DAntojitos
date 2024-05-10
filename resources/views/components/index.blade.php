@@ -85,15 +85,22 @@
                         </li>
 
                         <li>
-                           <a href="#" class="dropdown__link">
-                              <i class="ri-lock-line"></i> Inicio sesion</a>
+
+
+                           <a href="{{route('inicio')}}" class="dropdown__link">
+                              <i  class="ri-lock-line"></i> Inicio sesion
+                           </a>
+
                         </li>
 
                         <li>
-                        <a href="{{route('registro')}}" style="text-decoration:none; color:white;" class="dropdown__link">
-                              <i class="ri-message-3-line"></i> Registro Cliente </a>
-                             
-                        </li>
+                        <a href="{{route('registro')}}" class="dropdown__link">
+
+                           <a href="" class="dropdown__link">
+
+                              <i class="ri-message-3-line"></i> Registro Cliente
+                           </a>
+                      </li>
                         
                      </ul>
                   </li>

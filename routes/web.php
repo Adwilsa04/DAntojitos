@@ -42,13 +42,16 @@ Route::get('/pagianservi', function () {
     return view('PagSERVI');
 }) ->name('pagservi');
 
-/*
-Route::get('/Registro', function () {
-    return view('registro');
+
+
+Route::get('Formularios/inicio', function() {
+    return view('Formularios/inicio');
+}) ->name('inicio');
+
+Route::get('Formularios/registro', function() {
+    return view('Formularios/registro');
+
 }) ->name('registro');
-
-
-
 
 
 
