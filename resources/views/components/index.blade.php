@@ -32,7 +32,7 @@
             <!--=============== NAV MENU ===============-->
             <div class="nav__menu" id="nav-menu">
                <ul class="nav__list">
-                  <li><a href="{{route('principal')}}" style="text-decoration:none; color:white;">Home</a></li>
+                  <li><a href="{{route('inicio')}}" style="text-decoration:none; color:white;" class="nav__link">Home</a></li>
                  
 
                  
@@ -85,18 +85,21 @@
                         </li>
 
                         <li>
-                           <a href="{{route('inicio')}}" class="dropdown__link">
+
+
+                           <a href="{{route('sesion')}}" class="dropdown__link">
                               <i  class="ri-lock-line"></i> Inicio sesion
                            </a>
+
                         </li>
-<x-index>
+
                         <li>
                            <a href="{{route('registro')}}" class="dropdown__link">
 
                            <a href="" class="dropdown__link">
                               <i class="ri-message-3-line"></i> Registro Cliente
                            </a>
-                        </li>
+                      </li>
                         
                      </ul>
                   </li>

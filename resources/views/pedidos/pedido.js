@@ -19,10 +19,26 @@ function ready(){
 
     //Agrego funcionalidad al boton sumar cantidad
     var botonesSumarCantidad = document.getElementsByClassName('sumar-cantidad');
-    for(var i=0;i<botonesSumarCantidad.length; i++){
+    for(var i = 0;i <botonesSumarCantidad.length; i++){
         var button = botonesSumarCantidad[i];
         button.addEventListener('click',sumarCantidad);
     }
+
+    function sumarCantidad(event){
+    var button = event.target;
+    var item = button.parentElement;
+    var cantidadInput = item.querySelector('.carrito-item-cantidad');
+    var cantidad = parseInt(cantidadInput.value); // Obtener la cantidad actual como un número entero
+   
+    var incremento = 1; // Puedes ajustar este valor según sea necesario
+
+    // Multiplicar la cantidad por el incremento especificado
+    cantidad *= incremento;
+
+    // Actualizar el valor del input con la nueva cantidad calculada
+    cantidadInput.value = cantidad;
+}
+    
 
      //Agrego funcionalidad al buton restar cantidad
     var botonesRestarCantidad = document.getElementsByClassName('restar-cantidad');

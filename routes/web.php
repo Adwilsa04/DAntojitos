@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 Route::get('/', function () {
     return view('welcome');
 })->name('inicio');;
@@ -41,9 +42,11 @@ Route::get('/pagianservi', function () {
     return view('PagSERVI');
 }) ->name('pagservi');
 
+
+
 Route::get('Formularios/inicio', function() {
     return view('Formularios/inicio');
-}) ->name('inicio');
+}) ->name('sesion');
 
 Route::get('Formularios/registro', function() {
     return view('Formularios/registro');
