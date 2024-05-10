@@ -87,7 +87,7 @@
                         <li>
 
 
-                           <a href="{{route('inicio')}}" class="dropdown__link">
+                           <a href="{{route('sesion')}}" class="dropdown__link">
                               <i  class="ri-lock-line"></i> Inicio sesion
                            </a>
 

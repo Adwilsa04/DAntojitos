@@ -46,11 +46,10 @@ Route::get('/pagianservi', function () {
 
 Route::get('Formularios/inicio', function() {
     return view('Formularios/inicio');
-}) ->name('inicio');
+}) ->name('sesion');
 
 Route::get('Formularios/registro', function() {
     return view('Formularios/registro');
-
 }) ->name('registro');
 
 
