@@ -15,7 +15,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>D' antojitos Gourmet Decora</title>
-        <link rel="icon" type="image/x-icon" href="{{asset('img/Logo.ico')}}">
+        <link rel="icon" type="image/x-icon" href="{{asset('imagenes/Logo.ico')}}">
     </head>
 
     <style>
