@@ -7,7 +7,7 @@
       <!--=============== REMIXICONS ===============-->
       <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
 
-   <link rel="shortcut icon" href="{{asset('imagenes/img1.jpg')}}" type="image/jpg">
+   <link rel="shortcut icon" href="{{asset('img/img1.jpg')}}" type="image/jpg">
       <!--=============== CSS ===============-->
       <link rel="stylesheet" href="{{asset('css/styles.css')}}">
 
@@ -19,7 +19,7 @@
          <nav class="nav container">
             <div class="nav__data">
                <a href="" class="nav__logo">
-                  <link rel="icon" type="image/png" href="images/Logo.ico">
+                  <link rel="icon" type="imagenes/png" href="imagenes/Logo.ico">
                   <i class="ri-planet-line">D'antojitos Gourmet Decora</i>
                </a>
                
@@ -69,7 +69,9 @@
                      </ul>
                   </li>
                   
-                  <li><a href="#" class="nav__link">Pedidos</a></li>
+                  <li>
+                     <a href="{{route('pedidos')}}" class="nav__link">Pedidos</a>
+               </li>
 
                   <!--=============== DROPDOWN 2 ===============-->
                   <li class="dropdown__item">
@@ -85,8 +87,6 @@
                         </li>
 
                         <li>
-
-
                            <a href="{{route('sesion')}}" class="dropdown__link">
                               <i  class="ri-lock-line"></i> Inicio sesion
                            </a>
