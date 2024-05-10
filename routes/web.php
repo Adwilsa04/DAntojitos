@@ -53,7 +53,7 @@ Route::get('Formularios/registro', function() {
 }) ->name('registro');
 
 Route::get('pedidos/pedido', function() {
-    return view('pedidos/pedido');
+    return view('pedidos/pedidos');
 }) ->name('pedidos');
 
 
