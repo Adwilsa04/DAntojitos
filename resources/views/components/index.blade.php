@@ -91,11 +91,9 @@
                         </li>
 <x-index>
                         <li>
-<<<<<<< HEAD
                            <a href="{{route('registro')}}" class="dropdown__link">
-=======
+
                            <a href="" class="dropdown__link">
->>>>>>> 4d8f87b8d4f8d50d44df6c5087fb5639a3b2f3a8
                               <i class="ri-message-3-line"></i> Registro Cliente
                            </a>
                         </li>
