@@ -237,6 +237,7 @@ header h1{
                 <span class="precio-item">$550.000</span>
                 <button class="boton-item">Agregar al Carrito</button>
             </div>
+            
             <div class="item">
                 <span class="titulo-item">Buffet | precio por plato
                     
@@ -245,49 +246,57 @@ header h1{
                 <span class="precio-item">$500.000</span>
                 <button class="boton-item">Agregar al Carrito</button>
             </div>
+
             <div class="item">
                 <span class="titulo-item">Buffet | precio por plato</span><br>
                 <img src="img/menu3.jpg" alt="" class="img-item">
                 <span class="precio-item">RD$650.000</span>
                 <button class="boton-item">Agregar al Carrito</button>
             </div>
+
             <div class="item">
-                <span class="titulo-item">La Night</span>
+                <span class="titulo-item">Buffet | precio por plato</span>
                 <img src="img/menu4.jpg" alt="" class="img-item">
-                <span class="precio-item">$18.000</span>
+                <span class="precio-item">RD$550.000</span>
                 <button class="boton-item">Agregar al Carrito</button>
             </div>
+
             <div class="item">
-                <span class="titulo-item">Silver All</span>
-                <img src="img/menu5.jpg" alt="" class="img-item">
-                <span class="precio-item">$32.000</span>
+                <span class="titulo-item">Buffet | precio por plato</span>
+                <img src="img/menu8.jpg" alt="" class="img-item">
+                <span class="precio-item">RD$600.000</span>
                 <button class="boton-item">Agregar al Carrito</button>
             </div>
+
             <div class="item">
-                <span class="titulo-item">Skin Glam</span>
+                <span class="titulo-item">Buffet | precio por plato</span>
                 <img src="img/menu6.jpg" alt="" class="img-item">
-                <span class="precio-item">$18.000</span>
+                <span class="precio-item">RD$650.000</span>
                 <button class="boton-item">Agregar al Carrito</button>
             </div>
+
             <div class="item">
                 <span class="titulo-item">Midimix</span>
                 <img src="img/menu7.jpg" alt="" class="img-item">
-                <span class="precio-item">$54.000</span>
+                <span class="precio-item">RD$54.000</span>
                 <button class="boton-item">Agregar al Carrito</button>
             </div>
+
             <div class="item">
                 <span class="titulo-item">Sir Blue</span>
                 <img src="img/menu8.jpg" alt="" class="img-item">
-                <span class="precio-item">$32.000</span>
+                <span class="precio-item">RD$32.000</span>
                 <button class="boton-item">Agregar al Carrito</button>
             </div>
+
             <div class="item">
                 <span class="titulo-item">Middlesteel</span>
-                <img src="img/menu9.jpg" alt="" class="img-item">
-                <span class="precio-item">$42.800</span>
+                <img src="img/menu5.jpg" alt="" class="img-item">
+                <span class="precio-item">RD$42.800</span>
                 <button class="boton-item">Agregar al Carrito</button>
             </div>
         </div>
+
         <!-- Carrito de Compras -->
         <div class="carrito" id="carrito">
             <div class="header-carrito">
