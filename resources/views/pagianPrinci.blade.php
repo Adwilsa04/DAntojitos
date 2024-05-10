@@ -131,8 +131,6 @@ button:hover{
                         </a>
                 </div>
             </div>
-        </div><br><br>
-
-
+        </div>
     </body>
 </html>
