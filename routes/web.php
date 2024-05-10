@@ -52,7 +52,8 @@ Route::get('Formularios/registro', function() {
     return view('Formularios/registro');
 }) ->name('registro');
 
-Route::get('pedidos/pedido', function() {
+
+Route::get('pedidos', function() {
     return view('pedidos/pedidos');
 }) ->name('pedidos');
 

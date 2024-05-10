@@ -242,7 +242,7 @@ header h1{
                 <span class="titulo-item">Buffet | precio por plato
                     
                 </span><br>
-                <img src="img/menu2.jpg" alt="" class="img-item">
+                <img href="{{asset('img/menu2.jpg')}}" alt="" class="img-item">
                 <span class="precio-item">RD$500.000</span>
                 <button class="boton-item">Agregar al Carrito</button>
             </div>

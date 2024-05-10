@@ -7,7 +7,7 @@
       <!--=============== REMIXICONS ===============-->
       <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
 
-   <link rel="shortcut icon" href="{{asset('imagenes/img1.jpg')}}" type="image/jpg">
+   <link rel="shortcut icon" href="{{asset('img/img1.jpg')}}" type="image/jpg">
       <!--=============== CSS ===============-->
       <link rel="stylesheet" href="{{asset('css/styles.css')}}">
 
@@ -70,7 +70,7 @@
                   </li>
                   
                   <li>
-                  <a href="{{route('pedidos')}}" class="nav__link">Pedidos</a>
+                     <a href="#" class="nav__link">Pedidos</a>
                  </li>
 
                   <!--=============== DROPDOWN 2 ===============-->
@@ -87,8 +87,6 @@
                         </li>
 
                         <li>
-
-
                            <a href="{{route('sesion')}}" class="dropdown__link">
                               <i  class="ri-lock-line"></i> Inicio sesion
                            </a>
@@ -97,8 +95,6 @@
 
                         <li>
                            <a href="{{route('registro')}}" class="dropdown__link">
-
-                           <a href="" class="dropdown__link">
                               <i class="ri-message-3-line"></i> Registro Cliente
                            </a>
                       </li>
