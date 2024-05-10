@@ -24,20 +24,7 @@ function ready(){
         button.addEventListener('click',sumarCantidad);
     }
 
-    function sumarCantidad(event){
-    var button = event.target;
-    var item = button.parentElement;
-    var cantidadInput = item.querySelector('.carrito-item-cantidad');
-    var cantidad = parseInt(cantidadInput.value); // Obtener la cantidad actual como un número entero
-   
-    var incremento = 1; // Puedes ajustar este valor según sea necesario
-
-    // Multiplicar la cantidad por el incremento especificado
-    cantidad *= incremento;
-
-    // Actualizar el valor del input con la nueva cantidad calculada
-    cantidadInput.value = cantidad;
-}
+    
     
 
      //Agrego funcionalidad al buton restar cantidad
@@ -151,7 +138,10 @@ function sumarCantidad(event){
     cantidadActual++;
     selector.getElementsByClassName('carrito-item-cantidad')[0].value = cantidadActual;
     actualizarTotalCarrito();
+
 }
+
+
 //Resto en uno la cantidad del elemento seleccionado
 function restarCantidad(event){
     var buttonClicked = event.target;
