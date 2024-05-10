@@ -15,8 +15,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('pagianPrinci');
+})->name('principal');;
 
 Route::get('/prueba', function () {
     return view('prueba');
@@ -37,9 +37,14 @@ Route::get('/inicio', function () {
 }) ->name('inicio');
 
 
-Route::get('/pagservicios', function () {
+Route::get('/Portafolio', function () {
     return view('PagSERVI');
 }) ->name('pagservi');
+
+
+Route::get('/Registro', function () {
+    return view('registro');
+}) ->name('registro');
 
 
 
