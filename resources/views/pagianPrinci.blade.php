@@ -105,8 +105,17 @@ button:hover{
     }
 }
 
-.social-icons{
-    color: #000000;
+
+.footer {
+    background-color: black;
+    color: white;
+    width: 100%;
+    left: 100px;
+    
+}
+
+.footer .social-icons a {
+    color: white;
 }
 
     </style>
@@ -130,6 +139,7 @@ button:hover{
         </div><br><br>
 
 <center>
+
         <footer>
 			<div class="social-icons">
 				<a href="#"><i class="fab fa-pinterest"></i></a>
@@ -145,5 +155,6 @@ button:hover{
 			src="https://kit.fontawesome.com/81581fb069.js"
 			crossorigin="anonymous">
         </script>
+
     </body>
 </html>
