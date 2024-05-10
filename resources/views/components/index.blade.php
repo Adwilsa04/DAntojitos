@@ -86,14 +86,12 @@
 
                         <li>
                            <a href="#" class="dropdown__link">
-                              <i class="ri-lock-line"></i> Inicio sesion
-                           </a>
+                              <i class="ri-lock-line"></i> Inicio sesion</a>
                         </li>
-<x-index>
+
                         <li>
                            <a href="" class="dropdown__link">
-                              <i class="ri-message-3-line"></i> Registro Cliente
-                           </a>
+                              <i class="ri-message-3-line"></i> Registro Cliente </a>
                         </li>
                         
                      </ul>
