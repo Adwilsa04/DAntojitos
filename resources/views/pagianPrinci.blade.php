@@ -132,6 +132,7 @@ button:hover{
                 <h1>D' antojitos Gourmet Decora</h1>
                 <div>
                     <button type="button"> <a href="{{route('pagservi')}}" style="text-decoration:none; color:white;"> Ver más</a></button> 
+                    <a class="nav-link scrollto" href="{{route('pagservi')}}">
                         </a>
                 </div>
             </div>
