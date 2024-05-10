@@ -42,7 +42,7 @@ Route::get('/pagianservi', function () {
     return view('PagSERVI');
 }) ->name('pagservi');
 
-
+/*
 Route::get('/Registro', function () {
     return view('registro');
 }) ->name('registro');
