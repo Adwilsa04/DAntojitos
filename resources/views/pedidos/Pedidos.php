@@ -8,7 +8,7 @@
    <!-- <link rel="stylesheet" href="estilo.css">-->
     <!--<link rel="stylesheet" href="styles.css" />-->
     <script src="pedido.js" async></script>
-    <title>Portafolio de pedidos | </title>
+    <title>Portafolio de pedidos</title>
 </head>
 <body>
     <head>
@@ -20,7 +20,7 @@
     font-family: 'Open Sans';
 }
 header{
-    background: url(img/header.jpg);
+    background: url(imagenes/img6.jpg);
     background-size: cover;
     background-position:center;
     height: 300px;
@@ -53,12 +53,13 @@ header h1{
     transition: .3s;
 }
 .contenedor .contenedor-items .item{
-    max-width: 200px;
+    max-width: 600px;
     margin: auto;
     border: 1px solid #666;
     border-radius: 10px;
-    padding: 20px;
+    padding: 30px;
     transition: .3s;
+    text-align: center;
 }
 .contenedor .contenedor-items .item .img-item{
     width: 100%;
@@ -226,66 +227,70 @@ header h1{
     </style>
     </head>
     <header>
-        <h1>Tienda de Relojes</h1>
+        <h1>Portafolio de pedidos</h1>
     </header>
     <section class="contenedor">
         <!-- Contenedor de elementos -->
+        
         <div class="contenedor-items">
             <div class="item">
-                <span class="titulo-item">Box Engasse</span>
-                <img src="img/boxengasse.png" alt="" class="img-item">
-                <span class="precio-item">$15.000</span>
+                <span class="titulo-item">Buffet | precio por plato</span>
+                <img src="imagenes/menu1.jpg" alt="" type="images/jpg" class="img-item">
+                <span class="precio-item">RD$550.00</span>
                 <button class="boton-item">Agregar al Carrito</button>
             </div>
+
             <div class="item">
-                <span class="titulo-item">English Horse</span>
-                <img src="img/englishrose.png" alt="" class="img-item">
-                <span class="precio-item">$25.000</span>
+                <span class="titulo-item">Buffet | precio por plato</span>
+                <img src="imagenes/menu2.jpg" type="img/jpg"  class="img-item" >
+                <span class="precio-item">RD$500.00</span>
                 <button class="boton-item">Agregar al Carrito</button>
             </div>
+
             <div class="item">
-                <span class="titulo-item">Knock Nap</span>
-                <img src="img/knocknap.png" alt="" class="img-item">
-                <span class="precio-item">$35.000</span>
+                <span class="titulo-item">Buffet | precio por plato</span>
+                <img src="imagenes/menu3.jpg" alt="" type="images/jpg" class="img-item">
+                <span class="precio-item">RD$650.00</span>
                 <button class="boton-item">Agregar al Carrito</button>
             </div>
+
             <div class="item">
-                <span class="titulo-item">La Night</span>
-                <img src="img/lanight.png" alt="" class="img-item">
-                <span class="precio-item">$18.000</span>
+                <span class="titulo-item">Buffet | precio por plato</span>
+                <img src="imagenes/menu4.jpg" alt="" class="img-item">
+                <span class="precio-item">RD$550.00</span>
                 <button class="boton-item">Agregar al Carrito</button>
             </div>
+
             <div class="item">
-                <span class="titulo-item">Silver All</span>
-                <img src="img/silverall.png" alt="" class="img-item">
-                <span class="precio-item">$32.000</span>
+                <span class="titulo-item">Buffet | precio por plato</span>
+                <img src="imagenes/menu8.jpg" alt="" class="img-item">
+                <span class="precio-item">RD$600.00</span>
                 <button class="boton-item">Agregar al Carrito</button>
             </div>
+
             <div class="item">
-                <span class="titulo-item">Skin Glam</span>
-                <img src="img/skinglam.png" alt="" class="img-item">
-                <span class="precio-item">$18.000</span>
+                <span class="titulo-item">Buffet | precio por plato</span>
+                <img src="imagenes/menu6.jpg" alt="" class="img-item">
+                <span class="precio-item">RD$650.00</span>
                 <button class="boton-item">Agregar al Carrito</button>
             </div>
+
             <div class="item">
                 <span class="titulo-item">Midimix</span>
-                <img src="img/midimix.png" alt="" class="img-item">
-                <span class="precio-item">$54.000</span>
+                <img src="imagenes/menu7.jpg" alt="" class="img-item">
+                <span class="precio-item">RD$54.00</span>
                 <button class="boton-item">Agregar al Carrito</button>
             </div>
+
             <div class="item">
                 <span class="titulo-item">Sir Blue</span>
-                <img src="img/sirblue.png" alt="" class="img-item">
-                <span class="precio-item">$32.000</span>
+                <img src="imagenes/menu8.jpg" alt="" class="img-item">
+                <span class="precio-item">RD$32.00</span>
                 <button class="boton-item">Agregar al Carrito</button>
             </div>
-            <div class="item">
-                <span class="titulo-item">Middlesteel</span>
-                <img src="img/middlesteel.png" alt="" class="img-item">
-                <span class="precio-item">$42.800</span>
-                <button class="boton-item">Agregar al Carrito</button>
-            </div>
-        </div>
+
+           
+
         <!-- Carrito de Compras -->
         <div class="carrito" id="carrito">
             <div class="header-carrito">

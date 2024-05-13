@@ -1,11 +1,23 @@
 <!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>D'antojitos Gourmet Decora</title>
+</head>
+<head>
+
 <html>
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>D' antojitos Gourmet Decora</title>
-        <link rel="icon" type="image/png" href="imagenes/Logo.png">
+        <link rel="icon" type="image/x-icon" href="{{asset('imagenes/Logo.ico')}}">
     </head>
+
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
 
@@ -94,19 +106,33 @@ button:hover{
     }
 }
 
+
+
+
+
     </style>
+    <x-index></x-index>
     <body>
+        
         <div class="banner">
             <video autoplay loop muted plays-inline>
-                <source src="imagenes/Video.mp4" type="video/mp4">
+                <source src="{{asset('video/Video.mp4')}}" type="video/mp4">
             </video>
+
         
             <div class="content">
                 <h1>D' antojitos Gourmet Decora</h1>
                 <div>
-                    <button type="button">Ver más</button>
+                    <button type="button"> <a href="{{route('pagservi')}}" style="text-decoration:none; color:white;"> Ver más</a></button> 
+
+                <a class="nav-link scroll to" href="{{route('pagservi')}}">      
+                </a>
+
+                    <a class="nav-link scrollto" href="{{route('pagservi')}}">
+                        </a>
                 </div>
             </div>
         </div>
     </body>
+    <x-footer></x-footer>
 </html>

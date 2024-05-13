@@ -3,27 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Form</title>
-    <link rel="stylesheet" href="pagos.css">
+    <title>Formulario de Pago</title>
+    <link rel="stylesheet" href="pago.css">
+    <link rel="icon" type="image/png" href="imagenes/Logo.icon">
 </head>
 <body>
-
 <div class="container">
-    <form action="">
+    <form action="crudpago/pagar.php" method="POST">
         <div class="row">
             <div class="col">
-                <h3 class="title">Datos Personales</h3>
+            <center><h3 class="title">Formulario de Pago</h3></center>
+            <br>
+            <br>
+                <h1 class="title">Datos Personales</h1>
                 <div class="inputBox">
                     <span>Nombre Completo:</span>
-                    <input type="text" placeholder="Laura Rosario">
+                    <input type="text" name="nombre_completo" placeholder="Laura Rosario" required>
                 </div>
                 <div class="inputBox">
                     <span>Email:</span>
-                    <input type="email" placeholder="ejemplo@ejemplo.com">
+                    <input type="email" name="email" placeholder="ejemplo@ejemplo.com" required>
                 </div>
                 <div class="inputBox">
                     <span>Tipo del pago:</span>
-                    <select name="">
+                    <select name="tipo_pago">
                         <option value="transferencia">Transferencia</option>
                         <option value="efectivo">Efectivo</option>
                         <option value="tarjeta">Tarjeta</option>
@@ -31,11 +34,11 @@
                 </div>
                 <div class="inputBox">
                     <span>Descripción del pago:</span>
-                    <input type="text" placeholder="Abono de ...">
+                    <input type="text" name="descripcion" placeholder="Abono de ..." required>
                 </div>
                 <div class="inputBox">
                     <span>Monto:</span>
-                    <input type="text" placeholder="...">
+                    <input type="text" name="monto" placeholder="..." required>
                 </div>
             </div>
             <div class="col">
@@ -58,25 +61,25 @@
                 </div>
                 <div class="inputBox">
                     <span>Nombre en la tarjeta:</span>
-                    <input type="text" placeholder="Carlos Rodriguez">
+                    <input type="text" name="nombre_tarjeta" placeholder="Carlos Rodriguezb">
                 </div>
                 <div class="inputBox">
                     <span>Número de la Tarjeta de crédito:</span>
-                    <input type="number" placeholder="1111-2222-3333-4444">
+                    <input type="number" name="num_tarjeta" placeholder="1111-2222-3333-4444">
                 </div>
                 <div class="inputBox">
                     <span>Mes de expiración:</span>
-                    <input type="text" placeholder="january">
+                    <input type="text" name="mes_expiracion" placeholder="january">
                 </div>
 
                 <div class="flex">
                     <div class="inputBox">
                         <span>Año de expiración:</span>
-                        <input type="number" placeholder="2022">
+                        <input type="text" name="ano_expiracion" placeholder="2022">
                     </div>
                     <div class="inputBox">
                         <span>CVV:</span>
-                        <input type="text" placeholder="1234">
+                        <input type="text" name="cvv" placeholder="1234">
                     </div>
                 </div>
             </div>

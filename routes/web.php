@@ -14,9 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('pagianPrinci');
+})->name('inicio');;
 
 Route::get('/prueba', function () {
     return view('prueba');
@@ -31,5 +32,31 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+
+Route::get('/inicio', function () {
+    return view('pagianPrinci');
+}) ->name('inicio');
+
+
+Route::get('/pagianservi', function () {
+    return view('PagSERVI');
+}) ->name('pagservi');
+
+
+
+Route::get('Formularios/inicio', function() {
+    return view('Formularios/inicio');
+}) ->name('sesion');
+
+Route::get('Formularios/registro', function() {
+    return view('/Formularios/registro');
+}) ->name('registro');
+
+
+Route::get('pedidos', function() {
+    return view('pedidos/pedidos');
+}) ->name('pedidos');
+
+
 
 require __DIR__.'/auth.php';
