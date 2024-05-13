@@ -49,7 +49,7 @@ Route::get('Formularios/inicio', function() {
 }) ->name('sesion');
 
 Route::get('Formularios/registro', function() {
-    return view('Formularios/registro');
+    return view('/Formularios/registro');
 }) ->name('registro');
 
 
