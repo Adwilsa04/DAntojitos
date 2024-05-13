@@ -57,6 +57,10 @@ Route::get('pedidos', function() {
     return view('pedidos/pedidos');
 }) ->name('pedidos');
 
+Route::get('inicio', function() {
+    return view('pagianPrinci');
+}) ->name('volver');
+
 
 
 require __DIR__.'/auth.php';
