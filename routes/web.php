@@ -61,6 +61,10 @@ Route::get('inicio', function() {
     return view('pagianPrinci');
 }) ->name('volver');
 
+Route::get('registro', function() {
+    return view('Formularios/registro');
+}) ->name('registrate');
+
 
 
 require __DIR__.'/auth.php';
