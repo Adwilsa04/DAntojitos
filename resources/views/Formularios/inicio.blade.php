@@ -69,10 +69,10 @@
             </div>
           </div>
           <div class="footer-link padding-top--24">
-            <span>¿No estás registrado? Regístrate <a href="{{route('registro')}}">Regístrate</a></span>
+            <span>¿No estás registrado? Regístrate <a href="{{route('registrate')}}">Regístrate</a></span>
             <div class="listing padding-top--24 padding-bottom--24 flex-flex center-center">
               <span><a href="#">© D' Antojitos Gourmet Decora</a></span>
-              <span><a href="{{route('pagianPrinci')}}">Volver a Inicio</a></span>
+              <span><a href="{{route('volver')}}">Volver a Inicio</a></span>
             </div>
           </div>
         </div>
