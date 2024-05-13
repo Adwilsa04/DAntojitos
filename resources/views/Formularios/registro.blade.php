@@ -82,10 +82,10 @@
             </div>
           </div>
           <div class="footer-link padding-top--24">
-            <span>¿Estás registrado? Inicia sesión <a href="{{route('iniciogit')}}">Iniciar Sesión</a></span>
+            <span>¿Estás registrado? Inicia sesión <a href="{{route('sesion')}}">Iniciar Sesión</a></span>
             <div class="listing padding-top--24 padding-bottom--24 flex-flex center-center">
             <span><a href="#">© D' Antojitos Gourmet Decora</a></span>
-            <span><a href="#">Volver a Inicio</a></span>
+            <span><a href="{{route('volver')}}">Volver a Inicio</a></span>
             </div>
           </div>
         </div>
