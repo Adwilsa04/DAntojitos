@@ -50,6 +50,7 @@
               <span class="padding-bottom--15">Ingresa los datos</span>
 
               <form action="crudregistro/iniciosec.php" id="stripe-login" method="POST">
+              @csrf
                 <div class="field padding-bottom--24">
                   <label for="email">Email</label>
                   <input type="email" name="email" placeholder="Tu correo con el que estás registrado">

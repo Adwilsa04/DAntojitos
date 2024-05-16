@@ -10,7 +10,7 @@
 <br>
 
 <style>
-
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
     :after,*:before{
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -98,13 +98,6 @@ img{
 	border: 1px solid #ffffff;
 }
 
-/*
-.ui-card .description a{
-	text-decoration: none;
-	border: none;
-	outline: none;
-}
-*/
 
 .ui-card .description a:hover{
 	background:#0d0f0f;

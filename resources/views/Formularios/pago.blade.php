@@ -10,6 +10,7 @@
 <body>
 <div class="container">
     <form action="crudpago/pagar.php" method="POST">
+    @csrf
         <div class="row">
             <div class="col">
             <center><h3 class="title">Formulario de Pago</h3></center>

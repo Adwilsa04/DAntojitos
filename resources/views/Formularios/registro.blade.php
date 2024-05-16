@@ -50,6 +50,7 @@
               <span class="padding-bottom--15">Ingresa los datos</span>
               
               <form action="crudregistro/registrar.php" id="stripe-login" method="POST">
+                @csrf
                 <div class="field padding-bottom--24">
                   <label for="nombre">Nombre</label>
                   <input type="text" name="nombre" placeholder="Tu nombre" required>

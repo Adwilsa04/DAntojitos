@@ -2,136 +2,111 @@
 <html>
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Gestor de Administrador</title>
 </head>
 
 <style>
-
-    :after,*:before{
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-ms-box-sizing: border-box;
-	box-sizing: border-box;
-}
-body{
-	font-family: 'Cinzel';
-	font-size: 16px;
-	margin:0;
-	background: #fcfdfe;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	min-height: 100vh;
-}
-img{
-	max-width: 100%;
-}
-
-.ui-card{
-	width: 100px;
-    width: calc((100% - 40px) / 3);
-    height: 400px;
-    margin-bottom: 20px;
-    max-width: 600px;
-	position: relative;
-	overflow: hidden;
-	transition: all 0.3s ease-out;
-	background:radial-gradient(#111 50%, #000 100%);
-}
-
-@media (max-width: 600px){
-    .ui-card{
-        width: calc(100% -20px);
-        margin: 0 auto 20px auto;
-    }
-}
-.ui-card img{
-    width: 100%;
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body, html {
     height: 100%;
-    object-fit: cover;
-    object-position: center;
-	transform: scale(1.3);
-	transition: all 0.3s ease-out;
-}
-
-
-.ui-card .description{
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	padding: 15px;
-	width: 100%;
-	text-align: center;
-	color: #fff;
-	font-size: 18px;
-}
-.ui-card .description h3,
-.ui-card .description p,
-.ui-card .description a {
     margin: 0;
 }
-.ui-card .description a{
-	font-family: 'Cinzel';
-    width: 50px;
-    padding: 15px;
-    margin: 10px 5px;
-    text-align: center;
-    border-radius: 0;
-    color:#ffffff;
-    border: 2px;
-    font-size: 15px;
-    cursor: pointer;
-    font-weight: 400;
-    position: left;
-	background-color: transparent ;
-	
-	padding: 1rem 3rem;
-	border: 1px solid #ffffff;
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100%;
 }
 
-.ui-card .description a:hover{
-	background:#0d0f0f;
+.image-box {
+    position: relative;
+    width: 300px;
+    text-align: center;
+    margin: 20px; 
 }
+
+img {
+    width: 100%;
+}
+
+.label {
+    position: absolute;
+    bottom: 150px; 
+    left: 0;
+    right: 0;
+    font-size: 40px;
+    font-family: 'Cinzel';
+    color: #fff;
+}
+
+button {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: #f12f1f;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: 'Cinzel';
+}
+
+button:hover{
+    color: #fff;
+    background-color: black;
+    transition: 0.5s;
+}
+
+h1{
+    font-family: 'Cinzel';
+    text-align: center;
+}
+
+h3{
+    font-family: 'Poppins';
+    text-align: center;
+}
+
+footer{
+	font-family: arial;
+}
+
+
 
 </style>
 
-
 <body>
 <x-index></x-index>
-
-<div class="ui-card">
-	<img src="{{asset('imagenes/img3.jpg')}}" type="images/jpg">
-
-	<div class="description">
-		<h3>Citas</h3><br>
-		
-		<a href="#">VER</a>
-	</div>
-</div>
-
-<div class="ui-card">
-<img src="{{asset('imagenes/img2.jpg')}}" type="images/jpg">
-	<div class="description">
-		<h3>Registros</h3><br>
-		
-		<a href="#">VER</a>
-	</div>
-</div>
-
-<div class="ui-card">
-<img src="{{asset('imagenes/img1.jpg')}}" type="images/jpg">
-	<div class="description">
-		<h3>Pedidos</h3><br>
-		
-		<a href="#">VER</a>
-	</div>
+<br><br><br><br><br><br><br>
+<h1>Gestión de registros</h1>
+<br>
+<h3>Selecciona el área que desea gestionar</h3>
+<div class="container">
+    <div class="image-box">
+        <img src="{{asset('imagenes/img3.jpg')}}" alt="Image 1">
+        <div class="label">Pedidos</div>
+        <button class="button">Gestionar</button>
+    </div>
+    <div class="image-box">
+        <img src="{{asset('imagenes/img2.jpg')}}" alt="Image 2">
+        <div class="label">Citas</div>
+        <button class="button">Gestionar</button>
+    </div>
+    <div class="image-box">
+        <img src="{{asset('imagenes/img1.jpg')}}" alt="Image 3">
+        <div class="label">Usuarios</div>
+        <button class="button">Gestionar</button>
+    </div>
 </div>
 <br>
 
-
-
-
 </body>
+<x-footer></x-footer>
 </html>
