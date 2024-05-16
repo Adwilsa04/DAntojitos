@@ -132,6 +132,6 @@ img{
 
 
 
+
 </body>
-<x-footer></x-footer>
 </html>
