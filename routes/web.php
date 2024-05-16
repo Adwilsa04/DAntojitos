@@ -57,6 +57,12 @@ Route::get('pedidos', function() {
     return view('pedidos/pedidos');
 }) ->name('pedidos');
 
+
+Route::get('pantadmin', function(){
+    return view('pantadmin');
+}) ->name('pantadmin');
+
+
 Route::get('inicio', function() {
     return view('pagianPrinci');
 }) ->name('volver');
@@ -70,5 +76,6 @@ Route::get('sesion', function() {
 }) ->name('sesion');
 
 
+>>>>>>> a7ff860980c23ce1a285645c43729d8ec5ff8e60
 
 require __DIR__.'/auth.php';

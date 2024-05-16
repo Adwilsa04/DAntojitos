@@ -11,12 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('regitro_clientes', function (Blueprint $table) {
+        Schema::create('pagos', function (Blueprint $table) {
             $table->id();
-            $table->string('nombre_cliente');
-            $table->string('apellido_cliente');
-            $table->char('telefono_cliente');
-            $table->text('correo');
+            $table->string('nombre_completo');
+            $table->text('email');
+            $table->string('tipo_pago');
+            $table->text('descripcion_pago');
+            $table->string('monto');
             $table->timestamps();
         });
     }
@@ -26,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('regitro_clientes');
+        Schema::dropIfExists('pagos');
     }
 };
