@@ -7,10 +7,14 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="product.json">
 </head>
+<x-index></x-index>
+
 <body>
 
     <header>
         <h1>Tienda de Relojes</h1>
+
+
     </header>
 
     <div class="container">

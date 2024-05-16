@@ -232,12 +232,10 @@ body {
 <body>
     <div class="wrapper">
         <h2>Reserva tu cita !!!</h2>
-<<<<<<< HEAD
+
         <form action="InsertCita/insertar.php" method="post">            
-=======
+
         <form action="InsertCita/insertar.php" method="post">
-            @csrf
->>>>>>> dd72040f49ead348d024a8870bdecb9df8278d02
             <!--Account Information Start-->
             <h4>Cuenta</h4>
             <div class="input_group">
