@@ -54,7 +54,7 @@ Route::get('Formularios/registro', function() {
 
 
 Route::get('pedidos', function() {
-    return view('pedidos/pedidos');
+    return view('Pedidos/index');
 }) ->name('pedidos');
 
 
