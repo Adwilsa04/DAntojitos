@@ -57,6 +57,8 @@ Route::get('pedidos', function() {
     return view('pedidos/pedidos');
 }) ->name('pedidos');
 
-
+Route::get('pantadmin', function(){
+    return view('pantadmin');
+}) ->name('pantadmin');
 
 require __DIR__.'/auth.php';
