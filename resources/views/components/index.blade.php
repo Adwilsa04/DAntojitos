@@ -69,9 +69,9 @@
                      </ul>
                   </li>
                   
-                  <li>
+                  <!--<li>
                      <a href="{{route('pedidos')}}" class="nav__link">Pedidos</a>
-               </li>
+               </li>-->
 
                   <!--=============== DROPDOWN 2 ===============-->
                   <li class="dropdown__item">
