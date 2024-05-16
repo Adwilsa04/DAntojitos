@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('pagianPrinci');
-})->name('inicio');;
+}) ->name('inicio');
 
 Route::get('/prueba', function () {
     return view('prueba');
