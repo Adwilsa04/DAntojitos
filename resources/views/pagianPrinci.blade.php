@@ -106,12 +106,9 @@ button:hover{
     }
 }
 
-
-
-
-
     </style>
-    <x-index></x-index>
+  
+  <x-index></x-index>
     <body>
         
         <div class="banner">
