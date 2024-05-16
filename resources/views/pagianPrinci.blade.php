@@ -65,6 +65,7 @@
     font-weight: 100;
     color: white;
 }
+
 button{
     font-family: 'Cinzel';
     width: 200px;
