@@ -76,6 +76,4 @@ Route::get('sesion', function() {
 }) ->name('sesion');
 
 
->>>>>>> a7ff860980c23ce1a285645c43729d8ec5ff8e60
-
 require __DIR__.'/auth.php';
