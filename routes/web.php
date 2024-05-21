@@ -53,10 +53,10 @@ Route::get('Formularios/registro', function() {
 }) ->name('registro');
 
 
-/*Route::get('pedidos', function() {
+Route::get('pedidos', function() {
     return view('Pedidos/index');
 }) ->name('pedidos');
-*/
+
 
 
 Route::get('pantadmin', function(){
