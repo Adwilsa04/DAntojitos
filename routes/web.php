@@ -75,5 +75,8 @@ Route::get('sesion', function() {
     return view('Formularios/inicio');
 }) ->name('sesion');
 
+Route::get('usuarios', function(){
+    return view('manejoadmin/usuarios');
+}) ->name('usuarios');
 
 require __DIR__.'/auth.php';

@@ -77,17 +77,35 @@ h3{
     text-align: center;
 }
 
-a{
-    font-family: 'Cinzel';
-    text-align: center;
-    color: #fff;
-}
 
 footer{
 	font-family: arial;
 }
 
-
+table {
+        margin: 0 auto;
+        border-collapse: collapse;
+        width: 80%;
+        max-width: 1000px;
+        background-color: #fff;
+        box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+    }
+    th, td {
+        padding: 12px 15px;
+        border: 1px solid #ddd;
+    }
+    th {
+        background-color: #333;
+        color: #fff;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+    tr:hover {
+        background-color: #f5f5f5;
+    }
 
 </style>
 
@@ -96,26 +114,30 @@ footer{
 <br><br><br><br><br>
 <h1>Gestión de registros</h1>
 <br>
-<h3>Selecciona el área que desea gestionar</h3>
-<div class="container">
-    <div class="image-box">
-        <img src="{{asset('imagenes/img3.jpg')}}" alt="Image 1">
-        <div class="label">Pedidos</div>
-        <button class="button"><a href="">Gestionar</a></button>
-    </div>
-    <div class="image-box">
-        <img src="{{asset('imagenes/img2.jpg')}}" alt="Image 2">
-        <div class="label">Citas</div>
-        <button class="button"><a href="">Gestionar</a></button>
-    </div>
-    <div class="image-box">
-        <img src="{{asset('imagenes/img1.jpg')}}" alt="Image 3">
-        <div class="label">Usuarios</div>
-        <button class="button"><a href="{{route('usuarios')}}">Gestionar</a></button>
-    </div>
-</div>
-<br>
+<table border="1">
+    <tr>
+        <th>Id Del Registro</th>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Teléfono</th>
+        <th>Email</th>
+    </tr>
+<?php
+include_once 'conex.php';
 
+$query = "SELECT id_registro, nombre, apellido, telefono, email FROM registro";
+$data = mysqli_query($mysqli, $query);
+$total = mysqli_num_rows($data); 
+
+
+if($total!=0){
+    while($row=mysqli_fetch_assoc($data)){
+        echo "<tr> <td>" . $row['id_registro'] . "</td> <td>" . $row['nombre'] . "</td> <td>" . $row['apellido'] . "</td> <td>" . $row['telefono'] . "</td> <td>" . $row['email'] . "</td> </tr>";
+    }
+}
+
+?>
+</table>
 </body>
 <x-footer></x-footer>
 </html>
