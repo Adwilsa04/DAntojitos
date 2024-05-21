@@ -58,6 +58,7 @@ Route::get('pedidos', function() {
 }) ->name('pedidos');
 
 
+
 Route::get('pantadmin', function(){
     return view('pantadmin');
 }) ->name('pantadmin');
