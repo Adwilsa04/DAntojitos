@@ -8,6 +8,12 @@
     
 </head>
 <x-index></x-index>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 <body>
 
@@ -23,6 +29,7 @@
                 <div class="totalQuantity">0</div>
             </div>
         </header>
+
 
         <div class="listProduct">
 
