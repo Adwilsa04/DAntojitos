@@ -93,12 +93,14 @@ table {
     th, td {
         padding: 12px 15px;
         border: 1px solid #ddd;
+        font-family: Arial;
     }
     th {
         background-color: #333;
         color: #fff;
         text-transform: uppercase;
         letter-spacing: 1px;
+        font-family: 'Cinzel';
     }
     tr:nth-child(even) {
         background-color: #f2f2f2;
