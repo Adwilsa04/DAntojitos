@@ -5,10 +5,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="product.json">
-    <script rel="" href="app.jss"></script>
+    
 </head>
-<style>
-    body{
+<x-index></x-index>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<body>
+
+    <header>
+        <h1>Buffet</h1>
+    </header>
+
+    <div class="container">
+        <header>        
+            <h1>Lista de buffet</h1>
+            <div class="iconCart">
+                <img src="icon.png">
+                <div class="totalQuantity">0</div>
+            </div>
+        </header>
+
+
+        <div class="listProduct">
+
+            <div class="item">
+            <img src="{{ asset('images/2.png') }}" alt="Descripción de la imagen">
+                <h2>CoPilot / Black / Automatic</h2>
+                <div class="price">$550</div>
+                <button href="checkout.html">Add To Cart</button>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="cart">
+        <h2>
+            Cart
+        </h2>
+
+        <div class="listCart">
+
+
+            <div class="item">
+            <img src="{{ asset('images/1.jpg') }}" alt="Descripción de la imagen">
+                <div class="content">
+                    <div class="name">CoPilot / Black / Automatic</div>
+                    <div class="price">$550 / 1 product</div>
+                </div>
+                <div class="quantity">
+                    <button>-</button>
+                    <span class="value">3</span>
+                    <button href="checkout.html">Add To Cart</button>
+
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="buttons">
+            <div class="close">
+                CLOSE
+            </div>
+            <div class="checkout">
+                <a href="checkout.html">CHECKOUT</a>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="app.js"></script>
+    <style>
+        body{
     font-family: monospace;
     overflow-x: hidden;
     font-synthesis: 15px;
@@ -75,7 +148,7 @@ header .totalQuantity{
     position: absolute;
     top: 50%;
     left: 50%;
-    background-color: #e6572c;
+    background-color: #b31010;
     color: #fff;
     width: 50%;
     border: none;
@@ -96,7 +169,7 @@ header .totalQuantity{
     width: 400px;
     max-width: 80vw;
     height: 100vh;
-    background-color: #0E0F11;
+    background-color: #181818eb;
     top: 0px;
     right: -100%;
     display: grid;
@@ -106,11 +179,11 @@ header .totalQuantity{
 }
 
 .cart .buttons .checkout{
-    background-color: #E8BC0E;
-    color: #000;
+    background-color: #b31010;
+    color: #000000;
 }
 .cart h2{
-    color: #E8BC0E;
+    color: #fff;
     padding: 20px;
     height: 30px;
     margin: 0;
@@ -177,7 +250,7 @@ header .totalQuantity{
     padding: 20px;
 }
 .checkoutLayout .right{
-    background-color: #5358B3;
+    background-color: #000;
     border-radius: 20px;
     padding: 40px;
     color: #fff;
@@ -186,7 +259,7 @@ header .totalQuantity{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
-    border-bottom: 1px solid #7a7fe2;
+    border-bottom: 1px solid #ababab;
     padding-bottom: 20px;
 }
 .checkoutLayout .form h1,
@@ -203,8 +276,8 @@ header .totalQuantity{
     border-radius: 20px;
     margin-top: 10px;
     border:none;
-    background-color: #6a6fc9;
-    color: #fff;
+    background-color: #ffffff;
+    color: #000;
 }
 .checkoutLayout .right .return .row{
     display: flex;
@@ -221,7 +294,7 @@ header .totalQuantity{
     height: 40px;
     border: none;
     border-radius: 20px;
-    background-color: #49D8B9;
+    background-color: #b31010;
     margin-top: 20px;
     font-weight: bold;
     color: #fff;
@@ -251,72 +324,6 @@ header .totalQuantity{
     font-weight: bold;
 }
 
-</style>
-<body>
-
-    <header>
-        <h1>Tienda de Relojes</h1>
-
-
-    </header>
-
-    <div class="container">
-        <header>
-            <h1>LIST PRODUCT</h1>
-            <div class="iconCart">
-                <img src="icon.png">
-                <div class="totalQuantity">0</div>
-            </div>
-        </header>
-
-        <div class="listProduct">
-
-            <div class="item">
-                <img src="images/1.webp">
-                <h2>CoPilot / Black / Automatic</h2>
-                <div class="price">$550</div>
-                <button href="checkout.blade.php">Add To Cart</button>
-            </div>
-
-        </div>
-    </div>
-
-    <div class="cart">
-        <h2>
-            CART
-        </h2>
-
-        <div class="listCart">
-
-
-            <div class="item">
-                <img src="images/2.webp">
-                <div class="content">
-                    <div class="name">CoPilot / Black / Automatic</div>
-                    <div class="price">$550 / 1 product</div>
-                </div>
-                <div class="quantity">
-                    <button>-</button>
-                    <span class="value">3</span>
-                    <button>+</button>
-                </div>
-            </div>
-
-
-        </div>
-
-        <div class="buttons">
-            <div class="close">
-                CLOSE
-            </div>
-            <div class="checkout">
-                <a href="checkout.blade.php">CHECKOUT</a>
-            </div>
-        </div>
-    </div>
-
-
-    <script src="app.js"></script>
-    
+    </style>
 </body>
 </html>
