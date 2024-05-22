@@ -52,11 +52,11 @@ Route::get('Formularios/registro', function() {
     return view('/Formularios/registro');
 }) ->name('registro');
 
-
+/*
 Route::get('pedidos', function() {
     return view('Pedidos/index');
 }) ->name('pedidos');
-
+*/
 
 
 Route::get('pantadmin', function(){

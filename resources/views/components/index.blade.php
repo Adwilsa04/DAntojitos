@@ -70,7 +70,7 @@
                   </li>
                   
                 
-                     <a href="{{route('pedidos')}}" class="nav__link">Pedidos</a>
+                    <!-- <a href="{{route('pedidos')}}" class="nav__link">Pedidos</a>-->
                
 
                   <!--=============== DROPDOWN 2 ===============-->

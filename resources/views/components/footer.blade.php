@@ -116,7 +116,7 @@ footer{
         
     </div>
     <div class="footerBottom">
-        <p>Copyright &copy;2023;  <span class="designer">D' Antojitos Gourmet</span></p>
+        <p>Copyright &copy;2023  <span class="designer">D' Antojitos Gourmet Decora</span></p>
     </div>
 </footer>
 </body>
