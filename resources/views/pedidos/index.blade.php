@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="product.json">
+    <link rel="stylesheet" href="">
     
 </head>
 <x-index></x-index>
@@ -19,11 +19,11 @@
         <header>        
             <h1>Lista de buffet</h1>
             <div class="iconCart">
-            <img src="{{ asset('icon.png') }}" alt="cARRITo">
-
-                
+            <div class="totalQuantity">0</div>
+            <img src="icon.png" alt="carrito">
             </div>
         </header>
+<br>
 
 
             <div class="listProduct">
@@ -50,13 +50,13 @@
             <div class="item">
             <img src="{{ asset('images/1.jpg') }}" alt="Descripción de la imagen">
                 <div class="content">
-                    <div class="name">CoPilot / Black / Automatic</div>
-                    <div class="price">$550 / 1 product</div>
+                    <div class="name">Menú 2</div>
+                    <div class="price">$50,000</div>
                 </div>
                 <div class="quantity">
                     <button>-</button>
                     <span class="value">3</span>
-                    <button href="checkout.html">Add To Cart</button>
+                    <button href="checkout.html">Añadir</button>
 
                 </div>
             </div>
@@ -76,11 +76,17 @@
 
 
     <script src="app.js"></script>
+
     <style>
+        
         body{
     font-family: monospace;
     overflow-x: hidden;
     font-synthesis: 15px;
+}
+h1{
+    font-family: 'Cinzel';
+
 }
 a{
     text-decoration: none;
@@ -183,6 +189,8 @@ header .totalQuantity{
     padding: 20px;
     height: 30px;
     margin: 0;
+    font-family: 'Cinzel';
+
 }
 
 
