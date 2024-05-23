@@ -2,9 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Regitro_cliente;
-use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Registro_cliente;
 
 class RegitroClienteController extends Controller
 {
@@ -29,13 +28,26 @@ class RegitroClienteController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // Validación de los datos del formulario
+        $validatedData = $request->validate([
+            'nombre_cliente' => 'required|string|max:40',
+            'apellido_cliente' => 'required|string|max:40',
+            'telefono_cliente' => 'required|string|regex:/\d{3}-\d{3}-\d{4}/',
+            'correo' => 'required|email|max:100',
+            'contrasena' => 'required|string|min:8|max:20',
+        ]);
+
+        // Guardar los datos en la base de datos
+        Registro_cliente::create($validatedData);
+
+        // Redirigir o devolver una respuesta
+        return redirect()->back()->with('success', 'Registro exitoso.');
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(Regitro_cliente $regitro_cliente)
+    public function show(Registro_cliente $registro_cliente)
     {
         //
     }
@@ -43,7 +55,7 @@ class RegitroClienteController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Regitro_cliente $regitro_cliente)
+    public function edit(Registro_cliente $registro_cliente)
     {
         //
     }
@@ -51,7 +63,7 @@ class RegitroClienteController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Regitro_cliente $regitro_cliente)
+    public function update(Request $request, Registro_cliente $registro_cliente)
     {
         //
     }
@@ -59,8 +71,9 @@ class RegitroClienteController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Regitro_cliente $regitro_cliente)
+    public function destroy(Registro_cliente $registro_cliente)
     {
         //
     }
 }
+?>
