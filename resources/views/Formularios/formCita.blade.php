@@ -1,4 +1,4 @@
-@extends()
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -225,6 +225,19 @@ body {
     cursor: pointer;
     background-color: black;
 }
+
+.selec_ubi{
+   padding: 14px 10px 14px 50px;
+    width: 100%;
+    background-color: #fcfcfc;
+    border: 1px solid #0003;
+    outline: none;
+    letter-spacing: 1px;
+    transition: 0.3s;
+    border-radius: 3px;
+    color: #333;
+
+}
         
     </style>
 </head>
@@ -236,7 +249,7 @@ body {
         <form action="InsertCita/insertar.php" method="post">            
 
         <form action="InsertCita/insertar.php" method="post">
-        @csrf
+    
             <!--Account Information Start-->
             <h4>Cuenta</h4>
             <div class="input_group">
@@ -254,21 +267,19 @@ body {
             </div>
             <div class="input_group">
                 <div class="input_box">
-                    <input type="text" name="direccion" placeholder="Lugar de encuentro" required class="name">
-                    <i class="fa fa-map-marker icon" aria-hidden="true"></i>
-                </div>
-            </div>
-            <div class="input_group">
-                <div class="input_box">
-                    <input type="text" name="ciudad" placeholder="Ciudad" required class="name">
-                    <i class="fa fa-institution icon"></i>
+                    <select name="" id="selecciona" class="selec_ubi">
+                    <option value="choose-class">Ubicacion</option>
+                        <option value="class-1">1- Scory, Avenida 27 de Febrero Esquina Onesimo Jimenez Estación Total Los Jardines, Santiago de los Caballeros República Dominicana</option>
+                        <option value="class-2">2- Cafe Santo Domingo, Av Olímpica, Santiago De Los Caballeros 51122, República Dominicana ·</option>
+                        <option value="class-3">3- Square One, 1 Av. Estrella Sadhalá, Santiago, Santiago · 2,3 km</option>
+                    </select><i class="fa fa-map-marker icon" aria-hidden="true"></i>
                 </div>
             </div>
 
             <div class="input_group">
                 <div class="input_box">
                     <div class="input_box">
-                        <input type="number" name="fecha" placeholder="0000/00/00" required class="name">
+                        <input type="date" name="fecha" placeholder="0000/00/00" required class="name">
                         <i class="fa fa-calendar icon" aria-hidden="true"></i>
                     </div>
                 </div>

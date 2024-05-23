@@ -88,6 +88,10 @@ Route::get('usuarios', function(){
     return view('manejoadmin/usuarios');
 }) ->name('usuarios');
 
+Route::get('Reserva Cita', function(){
+    return view('formCita');
+}) ->name('cita');
+
 use App\Http\Controllers\PagoController;
 
 Route::post('/pagar', [PagoController::class, 'store'])->name('pagar.store');
