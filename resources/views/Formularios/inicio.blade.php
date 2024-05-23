@@ -53,7 +53,7 @@
     @csrf
     <div class="field padding-bottom--24">
         <label for="email">Email</label>
-        <input type="email" name="email" placeholder="Tu correo con el que estás registrado" required>
+        <input type="email" name="correo" placeholder="Tu correo con el que estás registrado" required>
     </div>
     <div class="field padding-bottom--24">
         <div class="grid--50-50">
@@ -65,6 +65,18 @@
     <div class="field padding-bottom--24">
         <input type="submit" name="submit" value="Continue">
     </div>
+    @if (session('success'))
+    <div class="alert alert-success">
+        {{ session('success') }}
+    </div>
+@endif
+
+@if (session('error'))
+    <div class="alert alert-danger">
+        {{ session('error') }}
+    </div>
+@endif
+
 </form>
             </div>
           </div>
