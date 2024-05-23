@@ -6,7 +6,7 @@
     <title>Proyecto final</title>
   </head>
   <body>
-    @yield('content')
+    
     <h1>Hello, world!</h1>
   </body>
 </html>
