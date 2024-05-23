@@ -8,6 +8,38 @@ use Illuminate\Http\Request;
 
 class PagoController extends Controller
 {
+    public function store(Request $request)
+    {
+        $validatedData = $request->validate([
+            'nombre_completo' => 'required|string|max:255',
+            'email' => 'required|email|max:255',
+            'tipo_pago' => 'required|string',
+            'descripcion' => 'required|string',
+            'monto' => 'required|string',
+            'nombre_tarjeta' => 'nullable|string|max:255',
+            'num_tarjeta' => 'nullable|numeric',
+            'mes_expiracion' => 'nullable|string',
+            'ano_expiracion' => 'nullable|numeric',
+            'cvv' => 'nullable|numeric',
+        ]);
+
+        Pago::create([
+            'nombre_completo' => $validatedData['nombre_completo'],
+            'email' => $validatedData['email'],
+            'tipo_pago' => $validatedData['tipo_pago'],
+            'descripcion_pago' => $validatedData['descripcion'],
+            'monto' => $validatedData['monto'],
+            'nombre_tarjeta' => $validatedData['nombre_tarjeta'] ?? '',
+            'num_tarjeta' => $validatedData['num_tarjeta'] ?? '',
+            'mes_expiracion' => $validatedData['mes_expiracion'] ?? '',
+            'ano_expiracion' => $validatedData['ano_expiracion'] ?? '',
+            'cvv' => $validatedData['cvv'] ?? '',
+            'activo' => true,
+        ]);
+
+        return redirect()->back()->with('success', 'Pago realizado con éxito');
+    }
+
     /**
      * Display a listing of the resource.
      */
@@ -63,4 +95,5 @@ class PagoController extends Controller
     {
         //
     }
+
 }

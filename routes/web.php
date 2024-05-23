@@ -80,6 +80,10 @@ Route::get('usuarios', function(){
     return view('manejoadmin/usuarios');
 }) ->name('usuarios');
 
+use App\Http\Controllers\PagoController;
+
+Route::post('/pagar', [PagoController::class, 'store'])->name('pagar.store');
+
 use App\Http\Controllers\RegitroClienteController;
 
 Route::resource('registro', RegitroClienteController::class);
