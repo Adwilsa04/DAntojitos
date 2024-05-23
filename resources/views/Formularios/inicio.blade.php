@@ -49,28 +49,27 @@
             <div class="formbg-inner padding-horizontal--48">
               <span class="padding-bottom--15">Ingresa los datos</span>
 
-              <form action="crudregistro/iniciosec.php" id="stripe-login" method="POST">
-              @csrf
-                <div class="field padding-bottom--24">
-                  <label for="email">Email</label>
-                  <input type="email" name="email" placeholder="Tu correo con el que estás registrado">
-                </div>
-                <div class="field padding-bottom--24">
-                  <div class="grid--50-50">
-                    <label for="contrasena">Contraseña</label>
-                    <div class="reset-pass">
-                    </div>
-                  </div>
-                  <input type="password" name="contrasena" placeholder="Tu contraseña">
-                </div>
-                <div class="field padding-bottom--24">
-                  <input type="submit" name="submit" value="Continue">
-                </div>
-              </form>
+              <form action="{{ route('login') }}" id="stripe-login" method="POST">
+    @csrf
+    <div class="field padding-bottom--24">
+        <label for="email">Email</label>
+        <input type="email" name="email" placeholder="Tu correo con el que estás registrado" required>
+    </div>
+    <div class="field padding-bottom--24">
+        <div class="grid--50-50">
+            <label for="contrasena">Contraseña</label>
+            <div class="reset-pass"></div>
+        </div>
+        <input type="password" name="contrasena" placeholder="Tu contraseña" required>
+    </div>
+    <div class="field padding-bottom--24">
+        <input type="submit" name="submit" value="Continue">
+    </div>
+</form>
             </div>
           </div>
           <div class="footer-link padding-top--24">
-            <span>¿No estás registrado? Regístrate <a href="{{route('registrate')}}">Regístrate</a></span>
+            <span>¿No estás registrado? Regístrate <a href="{{route('registro')}}">Regístrate</a></span>
             <div class="listing padding-top--24 padding-bottom--24 flex-flex center-center">
               <span><a href="#">© D' Antojitos Gourmet Decora</a></span>
               <span><a href="{{route('volver')}}">Volver a Inicio</a></span>
