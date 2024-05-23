@@ -88,4 +88,22 @@ Route::get('usuarios', function(){
     return view('manejoadmin/usuarios');
 }) ->name('usuarios');
 
+use App\Http\Controllers\RegitroClienteController;
+
+Route::resource('registro', RegitroClienteController::class);
+
+use App\Http\Controllers\Auth\InicioController;
+
+Route::get('login', [InicioController::class, 'showLoginForm'])->name('login');
+Route::post('login', [InicioController::class, 'login']);
+Route::post('logout', [InicioController::class, 'logout'])->name('logout');
+
+Route::middleware(['auth'])->group(function () {
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
+});
+
+
+
 require __DIR__.'/auth.php';
