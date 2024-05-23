@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gestor de Usuarios</title>
+<title>Gestor de Pagos</title>
 </head>
 
 <style>
@@ -98,9 +98,11 @@ table {
         letter-spacing: 1px;
         font-family: 'Cinzel';
     }
+
     tr:nth-child(even) {
         background-color: #f2f2f2;
     }
+
     tr:hover {
         background-color: #f5f5f5;
     }
@@ -110,27 +112,30 @@ table {
 <body>
 <x-index></x-index>
 <br><br><br><br><br>
-<h1>Gestión de registros</h1>
+<h1>Gestión de los pagos</h1>
 <br>
 <table border="0">
     <tr>
-        <th>Id Del Registro</th>
-        <th>Nombre</th>
-        <th>Apellido</th>
-        <th>Teléfono</th>
-        <th>Email</th>
+        <th>Id Del Pago</th>
+        <th>Id Del Cliente</th>
+        <th>Id Del Pedido</th>
+        <th>Tipo del Pago</th>
+        <th>Descripción</th>
+        <th>Monto</th>
+        <th>Tipo de Moneda</th>
+        <th>Activo</th>
     </tr>
 <?php
 include_once 'conex.blade.php';
 
-$query = "SELECT id_registro, nombre, apellido, telefono, email FROM registro";
+$query = "SELECT id_pago, id_cliente, id_pedido, tipo_pago, descripcion_pago, monto, tipo_moneda, activo FROM pagos";
 $data = mysqli_query($mysqli, $query);
 $total = mysqli_num_rows($data); 
 
 
 if($total!=0){
     while($row=mysqli_fetch_assoc($data)){
-        echo "<tr> <td>" . $row['id_registro'] . "</td> <td>" . $row['nombre'] . "</td> <td>" . $row['apellido'] . "</td> <td>" . $row['telefono'] . "</td> <td>" . $row['email'] . "</td> <td> <button href='editarusu.php?rn=$row[id_registro]'>Editar</button></td> </tr>";
+        echo "<tr> <td>" . $row['id_pago'] . "</td> <td>" . $row['id_cliente'] . "</td> <td>" . $row['id_pedido'] . "</td> <td>" . $row['tipo_pago'] . "</td> <td>" . $row['descripcion_pago'] . "</td> <td>" . $row['monto'] . "</td> <td>" . $row['tipo_moneda'] . "</td> <td>" . $row['activo'] . "</td> <td> <button href='editarusu.php?rn=$row[id_pago]'>Editar</button></td> </tr>";
     }
 }
 

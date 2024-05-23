@@ -68,10 +68,8 @@
                         </li>
                      </ul>
                   </li>
-                  
-                
-                     <a href="{{route('pedidos')}}" class="nav__link">Pedidos</a>
-               
+
+            
 
                   <!--=============== DROPDOWN 2 ===============-->
                   <li class="dropdown__item">
