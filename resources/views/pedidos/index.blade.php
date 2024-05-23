@@ -9,12 +9,6 @@
 </head>
 <x-index></x-index>
 <br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
 <body>
 
     <header>
@@ -25,19 +19,21 @@
         <header>        
             <h1>Lista de buffet</h1>
             <div class="iconCart">
-                <img src="icon.png">
-                <div class="totalQuantity">0</div>
+            <img src="{{ asset('icon.png') }}" alt="cARRITo">
+
+                
             </div>
         </header>
 
 
-        <div class="listProduct">
+            <div class="listProduct">
 
             <div class="item">
             <img src="{{ asset('images/2.png') }}" alt="Descripción de la imagen">
-                <h2>CoPilot / Black / Automatic</h2>
-                <div class="price">$550</div>
-                <button href="checkout.html">Add To Cart</button>
+            <center>
+                <h2>Menu 1</h2>
+                <div class="price">$10,000.00</div></center>
+                <button href="checkout.html">Añadir</button>
             </div>
 
         </div>

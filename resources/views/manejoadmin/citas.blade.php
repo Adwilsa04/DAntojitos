@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gestor de Usuarios</title>
+<title>Gestor de Citas</title>
 </head>
 
 <style>
@@ -59,7 +59,7 @@ button {
 
 button:hover{
     color: #fff;
-    background-color: black;
+    background-color: #619E48;
     transition: 0.5s;
 }
 
@@ -110,27 +110,29 @@ table {
 <body>
 <x-index></x-index>
 <br><br><br><br><br>
-<h1>Gestión de registros</h1>
+<h1>Gestión de Citas</h1>
 <br>
 <table border="0">
     <tr>
-        <th>Id Del Registro</th>
+        <th>Id De Cita</th>
         <th>Nombre</th>
-        <th>Apellido</th>
-        <th>Teléfono</th>
         <th>Email</th>
+        <th>Dirección</th>
+        <th>Ciudad</th>
+        <th>Fecha</th>
+        <th>Hora</th>
     </tr>
 <?php
 include_once 'conex.blade.php';
 
-$query = "SELECT id_registro, nombre, apellido, telefono, email FROM registro";
+$query = "SELECT id_cita, nombre, email, direccion, ciudad, fecha, hora FROM cita";
 $data = mysqli_query($mysqli, $query);
 $total = mysqli_num_rows($data); 
 
 
 if($total!=0){
     while($row=mysqli_fetch_assoc($data)){
-        echo "<tr> <td>" . $row['id_registro'] . "</td> <td>" . $row['nombre'] . "</td> <td>" . $row['apellido'] . "</td> <td>" . $row['telefono'] . "</td> <td>" . $row['email'] . "</td> <td> <button href='editarusu.php?rn=$row[id_registro]'>Editar</button></td> </tr>";
+        echo "<tr> <td>" . $row['id_cita'] . "</td> <td>" . $row['nombre'] . "</td> <td>" . $row['email'] . "</td> <td>" . $row['direccion'] . "</td> <td>" . $row['ciudad'] . "</td> <td>" . $row['fecha'] . "</td> <td>" . $row['hora'] . "</td> <td> <button href='editarusu.php?rn=$row[id_cita]'>Aceptar</button></td> </tr>";
     }
 }
 
