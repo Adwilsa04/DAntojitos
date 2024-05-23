@@ -18,6 +18,12 @@ return new class extends Migration
             $table->string('tipo_pago');
             $table->text('descripcion_pago');
             $table->string('monto');
+            $table->string('nombre_tarjeta');
+            $table->string('num_tarjeta');
+            $table->string('mes_expiracion');
+            $table->string('ano_expiracion');
+            $table->string('cvv');
+            $table->string('activo');
             $table->timestamps();
         });
     }
