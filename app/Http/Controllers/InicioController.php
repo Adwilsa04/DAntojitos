@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation\ValidationException;
+use App\Models\Registro_cliente;
 
 class InicioController extends Controller
 {
@@ -15,34 +16,20 @@ class InicioController extends Controller
     }
 
     public function login(Request $request)
-    {
-        $credentials = $request->validate([
-            'correo' => ['required', 'email'],
-            'contrasena' => ['required', 'string'],
-        ]);
+{
+    $credentials = $request->validate([
+        'correo' => ['required', 'email'],
+        'contrasena' => ['required', 'string'],
+    ]);
 
-        if (Auth::attempt(['correo' => $credentials['email'], 'password' => $credentials['contrasena']])) {
-            $request->session()->regenerate();
+    if (Auth::attempt(['correo' => $credentials['correo'], 'password' => $credentials['contrasena']])) {
+        $request->session()->regenerate();
 
-            return redirect()->intended('dashboard');
-        }
-
-        throw ValidationException::withMessages([
-            'correo' => __('auth.failed'),
-        ]);
-
-        
+        // Inicio de sesión exitoso
+        return redirect()->intended('dashboard')->with('success', '¡Inicio de sesión exitoso!');
     }
 
-    public function logout(Request $request)
-    {
-        Auth::logout();
-
-        $request->session()->invalidate();
-
-        $request->session()->regenerateToken();
-
-        return redirect('/');
-    }
+    // Inicio de sesión fallido
+    return redirect()->route('login')->with('error', 'Credenciales incorrectas. Por favor, inténtalo de nuevo.');
 }
-
+}

@@ -115,10 +115,10 @@ return [
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
-            'model' => App\Models\Registro_cliente::class,
-            'table' => 'registro_clientes',
+            'model' => App\Models\Registro_cliente::class, 
         ],
     ],
+    
 
 ];
 
