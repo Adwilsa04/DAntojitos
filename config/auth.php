@@ -62,8 +62,9 @@ return [
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
-            'model' => App\Models\User::class,
+            'model' => App\Models\Registro_cliente::class, 
         ],
+    
 
         // 'users' => [
         //     'driver' => 'database',
@@ -112,13 +113,6 @@ return [
 
     'password_timeout' => 10800,
 
-    'providers' => [
-        'users' => [
-            'driver' => 'eloquent',
-            'model' => App\Models\Registro_cliente::class, 
-        ],
-    ],
-    
 
 ];
 
