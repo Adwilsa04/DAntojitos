@@ -7,8 +7,7 @@
       <!--=============== REMIXICONS ===============-->
       <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
 
-   <link rel="shortcut icon" href="{{asset('img/img1.jpg')}}" type="image/jpg">
-      <!--=============== CSS ===============-->
+       <!--=============== CSS ===============-->
       <link rel="stylesheet" href="{{asset('css/styles.css')}}">
 
       <title></title>
@@ -19,7 +18,7 @@
          <nav class="nav container">
             <div class="nav__data">
                <a href="" class="nav__logo">
-                  <link rel="icon" type="imagenes/png" href="imagenes/Logo.ico">
+                  <link rel="icon" href="imagenes/Logo.ico">
                   <i class="ri-planet-line">D'antojitos Gourmet Decora</i>
                </a>
                
@@ -68,6 +67,7 @@
                         </li>
                      </ul>
                   </li>
+
 
             
 

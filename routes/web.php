@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\File;
 
 /*
 |--------------------------------------------------------------------------
@@ -52,11 +53,18 @@ Route::get('Formularios/registro', function() {
     return view('/Formularios/registro');
 }) ->name('registro');
 
-/*
-Route::get('pedidos', function() {
-    return view('Pedidos/index');
-}) ->name('pedidos');
-*/
+
+Route::get('/products', function () {
+    $path = storage_path('pedidos/product.json'); // Ruta al archivo JSON en la carpeta pedidos
+    if (!File::exists($path)) {
+        abort(404); // Muestra un error 404 si el archivo no existe
+    }
+    $file = File::get($path); // Obtiene el contenido del archivo
+    $products = json_decode($file, true); // Decodifica el contenido JSON a un array
+    return view('products.index', ['products' => $products]); // Pasa los productos a la vista
+});
+
+
 
 
 Route::get('pantadmin', function(){
@@ -79,6 +87,10 @@ Route::get('sesion', function() {
 Route::get('usuarios', function(){
     return view('manejoadmin/usuarios');
 }) ->name('usuarios');
+
+use App\Http\Controllers\PagoController;
+
+Route::post('/pagar', [PagoController::class, 'store'])->name('pagar.store');
 
 use App\Http\Controllers\RegitroClienteController;
 

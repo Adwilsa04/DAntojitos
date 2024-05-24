@@ -58,6 +58,7 @@ footer{
     font-size: 1.3em;
     opacity: 0.7;
     transition: 0.5s;
+    font-family: 'Cinzel';
 
 }
 .footerNav ul li a:hover{
@@ -65,9 +66,11 @@ footer{
 }
 .footerBottom{
     background-color: #000;
-    padding: 20px;
     text-align: center;
+    font-family: 'Cinzel';
+
 }
+
 .footerBottom p{
     color: white;
 }
