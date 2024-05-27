@@ -100,6 +100,9 @@ use App\Http\Controllers\RegitroClienteController;
 
 Route::resource('registro', RegitroClienteController::class);
 
+Route::get('/registro', [App\Http\Controllers\RegitroClienteController::class, 'index'])->name('registros.index');
+
+
 use App\Http\Controllers\Auth\InicioController;
 
 Route::get('login', [InicioController::class, 'showLoginForm'])->name('login');

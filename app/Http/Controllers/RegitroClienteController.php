@@ -12,7 +12,8 @@ class RegitroClienteController extends Controller
      */
     public function index()
     {
-        return view('Formularios.registro');
+        $registros = Registro_cliente::all();
+        return view('usuarios', compact('registros'));
     }
 
     /**
