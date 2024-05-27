@@ -257,14 +257,15 @@ body {
                     <input type="text" name="nombre" placeholder="Nombre cliente" required class="name">
                     <i class="fa fa-user icon"></i>
                 </div>
-                
             </div>
+            
             <div class="input_group">
                 <div class="input_box">
                     <input type="email" name="email" placeholder="Email Address" required class="name">
                     <i class="fa fa-envelope icon"></i>
                 </div>
             </div>
+
             <div class="input_group">
                 <div class="input_box">
                     <select name="" id="selecciona" class="selec_ubi">
@@ -283,6 +284,8 @@ body {
                         <i class="fa fa-calendar icon" aria-hidden="true"></i>
                     </div>
                 </div>
+           
+
                 <div class="input_box">
                     <input type="time" name="hora" placeholder="Hora cita" required class="name">
                     <i class="fa fa-calendar-o icon" ></i>
@@ -329,6 +332,6 @@ body {
     
 
 </body>
-
 </html>
+<x-footer></x-footer>
         

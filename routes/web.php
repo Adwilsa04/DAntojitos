@@ -89,7 +89,7 @@ Route::get('usuarios', function(){
 }) ->name('usuarios');
 
 Route::get('Reserva Cita', function(){
-    return view('formCita');
+    return view('Formularios/formCita');
 }) ->name('cita');
 
 use App\Http\Controllers\PagoController;
