@@ -243,10 +243,11 @@ body {
 </head>
 
 <body>
+  
     <div class="wrapper">
         <h2>Reserva tu cita !!!</h2>
 
-        <form action="InsertCita/insertar.php" method="post">            
+                   
 
         <form action="InsertCita/insertar.php" method="post">
     
@@ -284,6 +285,7 @@ body {
                         <i class="fa fa-calendar icon" aria-hidden="true"></i>
                     </div>
                 </div>
+                
            
 
                 <div class="input_box">
@@ -327,11 +329,12 @@ body {
                     <button type="submit">RESERVAR</button>
                 </div>
             </div>
+            </div>
             </center>
         </form>
-    
+        <br><br>
+    <x-footer></x-footer>
+        
 
 </body>
 </html>
-<x-footer></x-footer>
-        
