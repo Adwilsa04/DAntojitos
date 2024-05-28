@@ -115,6 +115,13 @@ Route::middleware(['auth'])->group(function () {
     })->name('dashboard');
 });
 
+use App\Http\Controllers\CitaController;
+
+Route::resource('citas', CitaController::class);
+
+Route::get('/citas', [App\Http\Controllers\CitaController::class, 'index'])->name('citas.index');
+Route::post('/citas', [App\Http\Controllers\CitaController::class, 'store'])->name('citas.store');
+
 
 
 require __DIR__.'/auth.php';

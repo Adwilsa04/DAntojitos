@@ -249,90 +249,54 @@ body {
 
                    
 
-        <form action="InsertCita/insertar.php" method="post">
-    
-            <!--Account Information Start-->
-            <h4>Cuenta</h4>
-            <div class="input_group">
-                <div class="input_box">
-                    <input type="text" name="nombre" placeholder="Nombre cliente" required class="name">
-                    <i class="fa fa-user icon"></i>
-                </div>
+        <form action="{{ route('citas.store') }}" method="POST">
+        @csrf
+        <h4>Cuenta</h4>
+        <div class="input_group">
+            <div class="input_box">
+                <input type="text" name="nombre_cliente" placeholder="Nombre cliente" required class="name">
+                <i class="fa fa-user icon"></i>
             </div>
-            
-            <div class="input_group">
-                <div class="input_box">
-                    <input type="email" name="email" placeholder="Email Address" required class="name">
-                    <i class="fa fa-envelope icon"></i>
-                </div>
+        </div>
+        
+        <div class="input_group">
+            <div class="input_box">
+                <input type="email" name="email" placeholder="Email Address" required class="name">
+                <i class="fa fa-envelope icon"></i>
             </div>
+        </div>
 
+        <div class="input_group">
+            <div class="input_box">
+                <select name="direccion" id="selecciona" class="selec_ubi">
+                    <option value="">Seleccione ubicación</option>
+                    <option value="1- Scory, Avenida 27 de Febrero Esquina Onesimo Jimenez Estación Total Los Jardines, Santiago de los Caballeros República Dominicana">1- Scory, Avenida 27 de Febrero Esquina Onesimo Jimenez Estación Total Los Jardines, Santiago de los Caballeros República Dominicana</option>
+                    <option value="2- Cafe Santo Domingo, Av Olímpica, Santiago De Los Caballeros 51122, República Dominicana">2- Cafe Santo Domingo, Av Olímpica, Santiago De Los Caballeros 51122, República Dominicana</option>
+                    <option value="3- Square One, 1 Av. Estrella Sadhalá, Santiago, Santiago">3- Square One, 1 Av. Estrella Sadhalá, Santiago, Santiago</option>
+                </select>
+                <i class="fa fa-map-marker icon" aria-hidden="true"></i>
+            </div>
+        </div>
+
+        <div class="input_group">
+            <div class="input_box">
+                <input type="text" name="fecha" placeholder="0000/00/00" required class="name">
+                <i class="fa fa-calendar icon" aria-hidden="true"></i>
+            </div>
+            <div class="input_box">
+                <input type="time" name="hora" placeholder="Hora cita" required class="name">
+                <i class="fa fa-calendar-o icon"></i>
+            </div>
+        </div>
+        <center>
             <div class="input_group">
-                <div class="input_box">
-                    <select name="" id="selecciona" class="selec_ubi">
-                    <option value="choose-class">Ubicacion</option>
-                        <option value="class-1">1- Scory, Avenida 27 de Febrero Esquina Onesimo Jimenez Estación Total Los Jardines, Santiago de los Caballeros República Dominicana</option>
-                        <option value="class-2">2- Cafe Santo Domingo, Av Olímpica, Santiago De Los Caballeros 51122, República Dominicana ·</option>
-                        <option value="class-3">3- Square One, 1 Av. Estrella Sadhalá, Santiago, Santiago · 2,3 km</option>
-                    </select><i class="fa fa-map-marker icon" aria-hidden="true"></i>
-                </div>
-            </div>
-
-            <div class="input_group">
-                <div class="input_box">
-                    <div class="input_box">
-                        <input type="date" name="fecha" placeholder="0000/00/00" required class="name">
-                        <i class="fa fa-calendar icon" aria-hidden="true"></i>
-                    </div>
-                </div>
-                
-           
-
-                <div class="input_box">
-                    <input type="time" name="hora" placeholder="Hora cita" required class="name">
-                    <i class="fa fa-calendar-o icon" ></i>
-                </div>
-            </div>
-            <!--Account Information End-->
-
-
-            <!--detalle de pago-->
-            <div class="input_group">
-                <div class="input_box">
-                    <h4>Detalle de pago Cita</h4>
-                    <input type="" name="pay" class="radio" id="bc1" checked>
-                    
-                    <input type="" name="pay" class="radio" id="bc2">
-                    <label for="bc2"><span>
-                            <i class="fa fa-cc-paypal"></i>Banco Santa Cruz - D'antojitos</span></label>
-                </div>
-            </div>
-             <!--fianl detalle de pago-->
-
-            <div class="input_group">
-                <div class="input_box">
-                    <input type="" class="name" placeholder="Numero de Cuenta 1111-2222-3333-4444" checked>
-                    <span><i class="fa fa-credit-card icon"></i></span>
-                </div>
-            </div>
-           
-            
-            <div class="input_pago">
-                <input type="" placeholder="Cantidad a pagar RD$ 500.00" class="name">
-                <i class="fa fa-money icon" ></i>
-            </div>
-            <!--final de detalle de pago-->
-         <br>
-            <center>
-             <div class="input_group">
                 <div class="input_box">
                     <button type="submit">RESERVAR</button>
                 </div>
             </div>
-            </div>
-            </center>
-        </form>
-        <br><br>
+        </center>
+    </form>
+            <br><br>
     <x-footer></x-footer>
         
 
