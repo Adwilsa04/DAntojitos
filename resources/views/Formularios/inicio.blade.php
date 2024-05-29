@@ -76,7 +76,6 @@
         {{ session('error') }}
     </div>
 @endif
-
 </form>
             </div>
           </div>

@@ -10,10 +10,17 @@ class RegitroClienteController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
-    {
-        return view('Formularios.registro');
-    }
+
+     public function index()
+     {
+         try {
+             $registros = Registro_cliente::all();
+             return view('manejoadmin.usuarios', compact('registros'));
+         } catch (\Exception $e) {
+             return back()->withError($e->getMessage())->withInput();
+         }
+     }
+ 
 
     /**
      * Show the form for creating a new resource.

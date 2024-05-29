@@ -12,7 +12,7 @@
     box-sizing: border-box;
 }
 footer{
-    background-color: #111;
+    background-color: white;
 }
 .footerContainer{
     width: 100%;
@@ -52,7 +52,7 @@ footer{
     list-style-type: none;
 }
 .footerNav ul li a{
-    color:white;
+    color:black;
     margin: 20px;
     text-decoration: none;
     font-size: 1.3em;
@@ -114,6 +114,7 @@ footer{
                 <li><a href="">Sobre nosotros</a></li>
                 <li><a href="">Contacto</a></li>
                 <li><a href="{{route('registro')}}">Registro</a></li>
+                <li><a href="{{route('cita')}}">Reserva tu cita</a></li>
             </ul>
         </div>
         

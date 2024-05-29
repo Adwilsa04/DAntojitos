@@ -105,37 +105,53 @@ table {
         background-color: #f5f5f5;
     }
 
+    p{
+        font-family: 'Poppins';
+    }
+
 </style>
 
 <body>
-<x-index></x-index>
-<br><br><br><br><br>
-<h1>Gestión de registros</h1>
-<br>
-<table border="0">
-    <tr>
-        <th>Id Del Registro</th>
-        <th>Nombre</th>
-        <th>Apellido</th>
-        <th>Teléfono</th>
-        <th>Email</th>
-    </tr>
-<?php
-include_once 'conex.blade.php';
-
-$query = "SELECT id_registro, nombre, apellido, telefono, email FROM registro";
-$data = mysqli_query($mysqli, $query);
-$total = mysqli_num_rows($data); 
-
-
-if($total!=0){
-    while($row=mysqli_fetch_assoc($data)){
-        echo "<tr> <td>" . $row['id_registro'] . "</td> <td>" . $row['nombre'] . "</td> <td>" . $row['apellido'] . "</td> <td>" . $row['telefono'] . "</td> <td>" . $row['email'] . "</td> <td> <button href='editarusu.php?rn=$row[id_registro]'>Editar</button></td> </tr>";
-    }
-}
-
-?>
-</table>
+    <x-index></x-index>
+    <br><br><br><br><br>
+    <h1>Gestión de registros</h1>
+    <br>
+    <center>
+    @if(isset($registros))
+        <p>{{ $registros->count() }} registros existentes.</p>
+    @else
+        <p>Variable $registros no está definida.</p>
+    @endif
+    </center>
+    <br>
+    <br>
+    <table border="0">
+        <tr>
+            <th>Id Del Registro</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Teléfono</th>
+            <th>Email</th>
+            <!-- <th>Acciones</th> -->
+        </tr>
+        @foreach ($registros as $registro)
+            <tr>
+                <td>{{ $registro->id }}</td>
+                <td>{{ $registro->nombre_cliente }}</td>
+                <td>{{ $registro->apellido_cliente }}</td>
+                <td>{{ $registro->telefono_cliente }}</td>
+                <td>{{ $registro->correo }}</td>
+               <!---<td>
+                    <form action="{{ route('registros.destroy', $registro->id) }}" method="POST" style="display:inline;">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit">Eliminar</button>
+                    </form>
+                </td>-->
+            </tr>
+        @endforeach
+    </table>    
+    <x-footer></x-footer>
 </body>
 <x-footer></x-footer>
 </html>
