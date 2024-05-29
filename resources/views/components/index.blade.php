@@ -46,20 +46,20 @@
 
                      <ul class="dropdown__menu">
                         <li>
-                           <a href="#" class="dropdown__link">
+                           <a href="{{ route('buffet') }}" class="dropdown__link">
                               <i class="ri-pie-chart-line"></i> Buffet
                            </a>                          
                         </li>
 
                         <li>
-                           <a href="#" class="dropdown__link">
+                           <a href="{{ route('picadera') }}" class="dropdown__link">
                               <i class="ri-arrow-up-down-line"></i> Picaderas
                            </a>
                         </li>
 
                         <!--=============== DROPDOWN SUBMENU ===============-->
                         <li>
-                           <a href="#" class="dropdown__link">
+                           <a href="{{ route('decoracion') }}" class="dropdown__link">
                               <i class="ri-arrow-up-down-line"></i> Decoracion
                            </a>
                         </li>

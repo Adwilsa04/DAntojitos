@@ -58,6 +58,19 @@ Route::get('pedidos', function() {
     return view('pedidos/index');
 }) ->name('pedidos');
 
+Route::get('/pedidos/buffet', function () {
+    return view('pedidos.buffet');
+})->name('buffet');
+
+Route::get('/pedidos/decoracion', function () {
+    return view('pedidos.decoracion');
+})->name('decoracion');
+
+Route::get('/pedidos/picadera', function () {
+    return view('pedidos.picadera');
+})->name('picadera');
+
+
 
 Route::get('pantadmin', function(){
     return view('pantadmin');
