@@ -54,17 +54,9 @@ Route::get('Formularios/registro', function() {
 }) ->name('registro');
 
 
-Route::get('/products', function () {
-    $path = storage_path('pedidos/product.json'); // Ruta al archivo JSON en la carpeta pedidos
-    if (!File::exists($path)) {
-        abort(404); // Muestra un error 404 si el archivo no existe
-    }
-    $file = File::get($path); // Obtiene el contenido del archivo
-    $products = json_decode($file, true); // Decodifica el contenido JSON a un array
-    return view('products.index', ['products' => $products]); // Pasa los productos a la vista
-});
-
-
+Route::get('pedidos', function() {
+    return view('pedidos/index');
+}) ->name('pedidos');
 
 
 Route::get('pantadmin', function(){

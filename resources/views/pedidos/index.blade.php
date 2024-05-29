@@ -3,329 +3,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="">
-    
+    <title>Tienda de moda</title>
+    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
 </head>
-<x-index></x-index>
-<br>
 <body>
-
     <header>
-        <h1>Buffet</h1>
+        <h1>Tienda de moda</h1>
+        <nav>
+            <ul>
+                <li><a href="#products">Productos</a></li>
+                <li><a href="#cart">Carrito</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <div class="container">
-        <header>        
-            <h1>Lista de buffet</h1>
-            <div class="iconCart">
-            <div class="totalQuantity">0</div>
-            <img src="icon.png" alt="carrito">
-            </div>
-        </header>
-<br>
+    <main>
+        <section id="products">
+            <h2>Productos</h2>
+            <!-- Los productos se cargarán aquí -->
+        </section>
+        <section id="cart">
+            <h2>Carrito</h2>
+            <ul id="cart-items">
+                <!-- Los elementos del carrito se cargarán aquí -->
+            </ul>
+            <p id="cart-total">Total: $0.00</p>
+            <button id="checkout">Pedir</button>
+        </section>
+    </main>
 
+    <footer>
+        <p>&copy; 2024 Tienda de moda. Todos los derechos reservados.</p>
+    </footer>
 
-            <div class="listProduct">
-
-            <div class="item">
-            <img src="{{ asset('images/2.png') }}" alt="Descripción de la imagen">
-            <center>
-                <h2>Menu 1</h2>
-                <div class="price">$10,000.00</div></center>
-                <button href="checkout.html">Añadir</button>
-            </div>
-
-        </div>
-    </div>
-
-    <div class="cart">
-        <h2>
-            Cart
-        </h2>
-
-        <div class="listCart">
-
-
-            <div class="item">
-            <img src="{{ asset('images/1.jpg') }}" alt="Descripción de la imagen">
-                <div class="content">
-                    <div class="name">Menú 2</div>
-                    <div class="price">$50,000</div>
-                </div>
-                <div class="quantity">
-                    <button>-</button>
-                    <span class="value">3</span>
-                    <button href="checkout.html">Añadir</button>
-
-                </div>
-            </div>
-
-
-        </div>
-
-        <div class="buttons">
-            <div class="close">
-                CLOSE
-            </div>
-            <div class="checkout">
-                <a href="checkout.html">CHECKOUT</a>
-            </div>
-        </div>
-    </div>
-
-
-    <script src="app.js"></script>
-
+    <script src="{{ asset('app.js') }}"></script>
     <style>
-        
-        body{
-    font-family: monospace;
-    overflow-x: hidden;
-    font-synthesis: 15px;
-}
-h1{
-    font-family: 'Cinzel';
-
-}
-a{
-    text-decoration: none;
-}
-.container{
-    width: 1200px;
-    margin: auto;
-    max-width: 90%;
-    transition: transform 1s;
-}
-header img{
-    width: 60px;
-}
-header{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-header .iconCart{
-    position: relative;
-    z-index: 1;
-}
-header .totalQuantity{
-    position: absolute;
-    top: 0;
-    right: 0;
-    font-size: x-large;
-    background-color: #b31010;
-    width: 40px;
-    height: 40px;
-    color: #fff;
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    transform: translateX(20px);
-}
-.listProduct{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-}
-.listProduct .item img{
-    width: 100%;
-        height: 430px;
-    object-fit: cover;
-}
-.listProduct .item{
-    position: relative;
-}
-.listProduct .item h2{
-    font-weight: 700;
-    font-size: x-large;
-}
-.listProduct .item .price{
-    font-size: x-large;
-}
-
-.listProduct .item button{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    background-color: #b31010;
-    color: #fff;
-    width: 50%;
-    border: none;
-    padding: 20px 30px;
-    box-shadow: 0 10px 50px #000;
-    cursor: pointer;
-    transform: translateX(-50%) translateY(100px);
-    opacity: 0;
-}
-.listProduct .item:hover button{
-    transition:  0.5s;
-    opacity: 1;
-    transform: translateX(-50%) translateY(0);
-}
-.cart{
-    color: #fff;
-    position: fixed;
-    width: 400px;
-    max-width: 80vw;
-    height: 100vh;
-    background-color: #181818eb;
-    top: 0px;
-    right: -100%;
-    display: grid;
-    grid-template-rows: 50px 1fr 50px;
-    gap: 20px;
-    transition: right 1s;
-}
-
-.cart .buttons .checkout{
-    background-color: #b31010;
-    color: #000000;
-}
-.cart h2{
-    color: #fff;
-    padding: 20px;
-    height: 30px;
+        /* Estilos básicos */
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
-    font-family: 'Cinzel';
-
+    padding: 0;
 }
 
-
-.cart .listCart .item{
-    display: grid;
-    grid-template-columns: 50px 1fr 70px;
-    align-items: center;
-    gap: 20px;
-    margin-bottom: 20px;
-    
-}
-.cart .listCart img{
-    width: 100%;
-    height: 70px;
-    object-fit: cover;
-    border-radius: 10px;
-}
-.cart .listCart .item .name{
-    font-weight: bold;
-}
-.cart .listCart .item .quantity{
-    display: flex;
-    justify-content: end;
-    align-items: center;
-}
-.cart .listCart .item .quantity span{
-    display: block;
-    width: 50px;
-    text-align: center;
-}
-
-.cart .listCart{
+header {
+    background-color: #333;
+    color: #fff;
     padding: 20px;
-    overflow: auto;
-}
-.cart .listCart::-webkit-scrollbar{
-    width: 0;
-}
-
-.cart .buttons{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
     text-align: center;
 }
-.cart .buttons div{
-    background-color: #000;
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
     display: flex;
     justify-content: center;
-    align-items: center;
-    font-weight: bold;
-    cursor: pointer;
 }
-.cart .buttons a{
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
     color: #fff;
     text-decoration: none;
 }
-.checkoutLayout{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 50px;
+
+main {
     padding: 20px;
 }
-.checkoutLayout .right{
-    background-color: #000;
-    border-radius: 20px;
-    padding: 40px;
+
+section {
+    margin-bottom: 40px;
+}
+
+.product {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px;
+    display: inline-block;
+    width: 200px;
+    text-align: center;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+}
+
+.product h2 {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.product p {
+    margin: 0 0 10px;
+}
+
+.add-to-cart {
+    background-color: #28a745;
     color: #fff;
-}
-.checkoutLayout .right .form{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    border-bottom: 1px solid #ababab;
-    padding-bottom: 20px;
-}
-.checkoutLayout .form h1,
-.checkoutLayout .form .group:nth-child(-n+3){
-    grid-column-start: 1;
-    grid-column-end: 3;
-}
-.checkoutLayout .form input, 
-.checkoutLayout .form select
-{
-    width: 100%;
-    padding: 10px 20px;
-    box-sizing: border-box;
-    border-radius: 20px;
-    margin-top: 10px;
-    border:none;
-    background-color: #ffffff;
-    color: #000;
-}
-.checkoutLayout .right .return .row{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 10px;
-}
-.checkoutLayout .right .return .row div:nth-child(2){
-    font-weight: bold;
-    font-size: x-large;
-}
-.buttonCheckout{
-    width: 100%;
-    height: 40px;
     border: none;
-    border-radius: 20px;
-    background-color: #b31010;
-    margin-top: 20px;
-    font-weight: bold;
+    padding: 10px 20px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.add-to-cart:hover {
+    background-color: #218838;
+}
+
+#cart ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#cart-items li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+#checkout {
+    background-color: #007bff;
     color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
 
-
-}
-.returnCart h1{
-    border-top: 1px solid #eee;  
-    padding: 20px 0;
-}
-.returnCart .list .item img{
-    height: 80px;
-}
-.returnCart .list .item{
-    display: grid;
-    grid-template-columns: 80px 1fr  50px 80px;
-    align-items: center;
-    gap: 20px;
-    margin-bottom: 30px;
-    padding: 0 10px;
-    box-shadow: 0 10px 20px #5555;
-    border-radius: 20px;
-}
-.returnCart .list .item .name,
-.returnCart .list .item .returnPrice{
-    font-size: large;
-    font-weight: bold;
+#checkout:hover {
+    background-color: #0056b3;
 }
 
     </style>
