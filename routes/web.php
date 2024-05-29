@@ -92,6 +92,10 @@ Route::get('Reserva Cita', function(){
     return view('Formularios/formCita');
 }) ->name('cita');
 
+Route::get('Editorial decoracion', function(){
+    return view('decoracion');
+}) ->name('decoracion');
+
 use App\Http\Controllers\PagoController;
 
 Route::post('/pagar', [PagoController::class, 'store'])->name('pagar.store');

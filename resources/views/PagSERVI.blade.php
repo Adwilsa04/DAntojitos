@@ -103,10 +103,9 @@ img{
 	background:#0d0f0f;
 }
 </style>
-
+<x-index></x-index>
 
 <body>
-<x-index></x-index>
 
 
 <div class="ui-card">
@@ -133,7 +132,7 @@ img{
 	<div class="description">
 		<h3>Decoracion</h3><br>
 		
-		<a href="#">VER</a>
+		<a href="{{route('decoracion')}}">VER</a>
 	</div>
 </div>
 <br>
