@@ -105,12 +105,25 @@ table {
         background-color: #f5f5f5;
     }
 
+    p{
+        font-family: 'Poppins';
+    }
+
 </style>
 
 <body>
     <x-index></x-index>
     <br><br><br><br><br>
     <h1>Gestión de registros</h1>
+    <br>
+    <center>
+    @if(isset($registros))
+        <p>{{ $registros->count() }} registros existentes.</p>
+    @else
+        <p>Variable $registros no está definida.</p>
+    @endif
+    </center>
+    <br>
     <br>
     <table border="0">
         <tr>
@@ -119,7 +132,7 @@ table {
             <th>Apellido</th>
             <th>Teléfono</th>
             <th>Email</th>
-            <th>Acciones</th>
+            <!-- <th>Acciones</th> -->
         </tr>
         @foreach ($registros as $registro)
             <tr>
@@ -128,17 +141,16 @@ table {
                 <td>{{ $registro->apellido_cliente }}</td>
                 <td>{{ $registro->telefono_cliente }}</td>
                 <td>{{ $registro->correo }}</td>
-                <td>
-                    <a href="{{ route('registros.edit', $registro->id) }}">Editar</a>
+               <!---<td>
                     <form action="{{ route('registros.destroy', $registro->id) }}" method="POST" style="display:inline;">
                         @csrf
                         @method('DELETE')
                         <button type="submit">Eliminar</button>
                     </form>
-                </td>
+                </td>-->
             </tr>
         @endforeach
-    </table>
+    </table>    
     <x-footer></x-footer>
 </body>
 <x-footer></x-footer>

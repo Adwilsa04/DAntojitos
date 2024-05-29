@@ -4,6 +4,7 @@
 /*=============== VARIABLES CSS ===============*/
 :root {
   --header-height: 3.5rem;
+  font-family: 'Cinzel';
 
   /*========== Colors ==========*/
   /*Color mode HSL(hue, saturation, lightness)*/
@@ -38,23 +39,28 @@
 * {
   box-sizing: border-box;
   margin: 0;
+  font-family: 'Cinzel';
+
 }
 
 body {
-  font-family: var(--body-font);
+  font-family: 'Cinzel';
   font-size: var(--normal-font-size);
   background-color: var(--body-color);
 }
 
 ul {
   list-style: none;
+  font-family: 'Cinzel';
+
   /* Color highlighting when pressed on mobile devices */
   /*-webkit-tap-highlight-color: transparent;*/
 }
 
 a {
   text-decoration: none;
-  
+  font-family: 'Cinzel';
+
 }
 
 /*=============== REUSABLE CSS CLASSES ===============*/
@@ -72,6 +78,8 @@ a {
   background-color: var(--black-color);
   box-shadow: 0 2px 16px hsla(0, 0%, 2%, 0.3);
   z-index: var(--z-fixed);
+  font-family: 'Cinzel';
+
 }
 
 /*=============== NAV ===============*/
@@ -209,6 +217,8 @@ a {
 .dropdown__sublink i {
   font-size: 1.25rem;
   font-weight: initial;
+  font-family: 'Cinzel';
+
 }
 
 .dropdown__link:hover, 

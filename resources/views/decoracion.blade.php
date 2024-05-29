@@ -146,6 +146,32 @@ h1 {
   padding-right: 0.5em;
   color: #444;
 }
+
+/* Estilos para el cuadro de información */
+.info-card {
+            background-color: #f5f5f5;
+            padding: 30px;
+            border-radius: 8 px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            font-size: 18px;
+        }
+
+        /* Estilos para el botón */
+        .btn-reserva {
+            background-color: black;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-reserva:hover {
+            background-color: red;
+        }
 </style>
 <x-index></x-index>
 <body>
@@ -156,6 +182,11 @@ h1 {
 <br><br><br><br><br><br>
 <section class="section">
   <center><h1>EDITORIAL</h1></center>
+  <br><br>
+    <div class="info-card">
+        <p>Si deseas realizar este pedido, comunícate con nosotros vía WhatsApp y reserva tu cita para conocer más detalles de tus gustos y estilos preferidos.</p>
+        <br><button class="btn-reserva" href="{{route('cita')}}" >Reserva tu cita aquí</button>
+    </div><br><br>
   <div class="grid">
     <div class="item">
       <div class="item__details">
@@ -226,6 +257,8 @@ h1 {
   </div>
 </div>
 <!-- partial -->
+
+
 <br><br><br>
   <x-footer></x-footer>
 </body>

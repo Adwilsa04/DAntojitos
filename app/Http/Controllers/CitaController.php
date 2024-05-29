@@ -2,65 +2,43 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\cita;
-use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Cita;
 
 class CitaController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+
     public function index()
     {
-        //
+        try {
+            $citas = Cita::all();
+            return view('manejoadmin.citas', compact('citas'));
+        } catch (\Exception $e) {
+            return back()->withError($e->getMessage())->withInput();
+        }
     }
-
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     */
+    
     public function store(Request $request)
     {
-        //
+        $validatedData = $request->validate([
+            'nombre_cliente' => 'required|string|max:255',
+            'email' => 'required|email|max:255',
+            'direccion' => 'required|string|max:255',
+            'fecha' => 'required|date',
+            'hora' => 'required|date_format:H:i',
+        ]);
+
+        Cita::create($validatedData);
+
+        return redirect()->back()->with('success', 'Cita creada exitosamente');
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(cita $cita)
+    public function destroy($id)
     {
-        //
-    }
+        $cita = Cita::findOrFail($id);
+        $cita->delete();
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(cita $cita)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, cita $cita)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(cita $cita)
-    {
-        //
+        return redirect()->route('citas.index')->with('success', 'Cita eliminada exitosamente');
     }
 }
+

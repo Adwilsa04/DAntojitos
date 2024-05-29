@@ -4,6 +4,15 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Gestor de Citas</title>
+<script type="text/javascript">
+        function confirmDeletion(event) {
+            event.preventDefault();
+            var form = event.target.form;
+            if (confirm("¿Desea eliminar? Los registros no se pueden recuperar después de eliminados.")) {
+                form.submit();
+            }
+        }
+    </script>
 </head>
 
 <style>
@@ -105,6 +114,10 @@ table {
         background-color: #f5f5f5;
     }
 
+    p{
+        font-family: 'Poppins';
+    }
+
 </style>
 
 <body>
@@ -112,32 +125,48 @@ table {
 <br><br><br><br><br>
 <h1>Gestión de Citas</h1>
 <br>
-<table border="0">
-    <tr>
-        <th>Id De Cita</th>
-        <th>Nombre</th>
-        <th>Email</th>
-        <th>Dirección</th>
-        <th>Ciudad</th>
-        <th>Fecha</th>
-        <th>Hora</th>
-    </tr>
-<?php
-include_once 'conex.blade.php';
-
-$query = "SELECT id_cita, nombre, email, direccion, ciudad, fecha, hora FROM cita";
-$data = mysqli_query($mysqli, $query);
-$total = mysqli_num_rows($data); 
-
-
-if($total!=0){
-    while($row=mysqli_fetch_assoc($data)){
-        echo "<tr> <td>" . $row['id_cita'] . "</td> <td>" . $row['nombre'] . "</td> <td>" . $row['email'] . "</td> <td>" . $row['direccion'] . "</td> <td>" . $row['ciudad'] . "</td> <td>" . $row['fecha'] . "</td> <td>" . $row['hora'] . "</td> <td> <button href='editarusu.php?rn=$row[id_cita]'>Aceptar</button></td> </tr>";
-    }
-}
-
-?>
-</table>
+@if(session('success'))
+        <div style="color: green;">
+            {{ session('success') }}
+        </div>
+    @endif
+    <center>
+    @if(isset($citas))
+        <p>{{ $citas->count() }} registros de citas existentes.</p>
+    @else
+        <p>Variable $citas no está definida.</p>
+    @endif
+    </center>
+    <br>
+    <br>
+    <table border="0">
+        <tr>
+            <th>Id De Cita</th>
+            <th>Nombre</th>
+            <th>Email</th>
+            <th>Dirección</th>
+            <th>Fecha</th>
+            <th>Hora</th>
+            <th>Acciones</th>
+        </tr>
+        @foreach($citas as $cita)
+            <tr>
+                <td>{{ $cita->id }}</td>
+                <td>{{ $cita->nombre_cliente }}</td>
+                <td>{{ $cita->email }}</td>
+                <td>{{ $cita->direccion }}</td>
+                <td>{{ $cita->fecha }}</td>
+                <td>{{ $cita->hora }}</td>
+                <td>
+                    <form action="{{ route('citas.destroy', $cita->id) }}" method="POST" style="display:inline;">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" onclick="confirmDeletion(event)">Eliminar</button>
+                    </form>
+                </td>
+            </tr>
+        @endforeach
+    </table>
 </body>
 <x-footer></x-footer>
 </html>

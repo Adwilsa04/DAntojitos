@@ -62,8 +62,8 @@ return [
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
-            'model' => App\Models\Registro_cliente::class, 
-        ],
+            'model' => App\Models\Registro_cliente::class,
+        ],    
     
 
         // 'users' => [

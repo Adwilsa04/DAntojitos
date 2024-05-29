@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=1">
-<title>Portafolio</title>
+<title>Servicios</title>
 </head>
 <br>
 <br>
@@ -107,6 +107,11 @@ img{
 
 <body>
 
+<br>
+<br>
+<br>
+<br>
+<br>
 
 <div class="ui-card">
 	<img src="{{asset('imagenes/img3.jpg')}}" type="images/jpg">
