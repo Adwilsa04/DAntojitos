@@ -153,6 +153,7 @@ h1 {
 <div class="message">
   Sorry, your browser does not support CSS Grid. 😅
 </div>
+<br><br><br><br><br><br>
 <section class="section">
   <center><h1>EDITORIAL</h1></center>
   <div class="grid">
@@ -216,16 +217,7 @@ h1 {
       Boda Estilo Vintage Moderno
       </div>
     </div>
-    <div class="item item--medium">
-      <div class="item__details">
-      Fiesta Estilo Elefante
-      </div>
-    </div>
-    <div class="item item--large">
-      <div class="item__details">
-      Fiesta Estilo Elefante
-      </div>
-    </div>
+   
     <div class="item">
       <div class="item__details">
      Fiesta Estilo Vintage 
@@ -234,6 +226,7 @@ h1 {
   </div>
 </div>
 <!-- partial -->
-  
+<br><br><br>
+  <x-footer></x-footer>
 </body>
 </html>
