@@ -4,6 +4,15 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Gestor de Citas</title>
+<script type="text/javascript">
+        function confirmDeletion(event) {
+            event.preventDefault();
+            var form = event.target.form;
+            if (confirm("¿Desea eliminar? Los registros no se pueden recuperar después de eliminados.")) {
+                form.submit();
+            }
+        }
+    </script>
 </head>
 
 <style>
@@ -116,8 +125,13 @@ table {
 <br><br><br><br><br>
 <h1>Gestión de Citas</h1>
 <br>
-<center>
-@if(isset($citas))
+@if(session('success'))
+        <div style="color: green;">
+            {{ session('success') }}
+        </div>
+    @endif
+    <center>
+    @if(isset($citas))
         <p>{{ $citas->count() }} registros de citas existentes.</p>
     @else
         <p>Variable $citas no está definida.</p>
@@ -147,13 +161,12 @@ table {
                     <form action="{{ route('citas.destroy', $cita->id) }}" method="POST" style="display:inline;">
                         @csrf
                         @method('DELETE')
-                        <button type="submit">Eliminar</button>
+                        <button type="submit" onclick="confirmDeletion(event)">Eliminar</button>
                     </form>
                 </td>
             </tr>
         @endforeach
     </table>
-
 </body>
 <x-footer></x-footer>
 </html>
