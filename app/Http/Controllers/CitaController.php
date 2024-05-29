@@ -7,6 +7,17 @@ use App\Models\Cita;
 
 class CitaController extends Controller
 {
+
+    public function index()
+    {
+        try {
+            $citas = Cita::all();
+            return view('manejoadmin.citas', compact('citas'));
+        } catch (\Exception $e) {
+            return back()->withError($e->getMessage())->withInput();
+        }
+    }
+    
     public function store(Request $request)
     {
         $validatedData = $request->validate([
@@ -22,9 +33,12 @@ class CitaController extends Controller
         return redirect()->back()->with('success', 'Cita creada exitosamente');
     }
 
-    public function index()
+    public function destroy($id)
     {
-        $citas = Cita::all();
-        return view('citas.index', compact('citas'));
+        $cita = Cita::findOrFail($id);
+        $cita->delete();
+
+        return redirect()->route('citas.index')->with('success', 'Cita eliminada exitosamente');
     }
 }
+

@@ -92,22 +92,26 @@ Route::get('Reserva Cita', function(){
     return view('Formularios/formCita');
 }) ->name('cita');
 
+
 use App\Http\Controllers\PagoController;
 
 Route::post('/pagar', [PagoController::class, 'store'])->name('pagar.store');
 
 use App\Http\Controllers\RegitroClienteController;
 
-Route::resource('registro', RegitroClienteController::class);
+Route::resource('registros', RegitroClienteController::class);
 
-Route::get('/registro', [App\Http\Controllers\RegitroClienteController::class, 'index'])->name('registros.index');
+Route::get('/usuarios', [RegitroClienteController::class, 'index'])->name('usuarios.index');
 
 
-use App\Http\Controllers\Auth\InicioController;
+use App\Http\Controllers\AuthController;
 
-Route::get('login', [InicioController::class, 'showLoginForm'])->name('login');
-Route::post('login', [InicioController::class, 'login']);
-Route::post('logout', [InicioController::class, 'logout'])->name('logout');
+Route::get('login', function () {
+    return view('Formularios/inicio');
+})->name('login');
+
+Route::post('login', [AuthController::class, 'login'])->name('login');
+Route::post('logout', [AuthController::class, 'logout'])->name('logout');
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard', function () {
@@ -117,10 +121,17 @@ Route::middleware(['auth'])->group(function () {
 
 use App\Http\Controllers\CitaController;
 
+Route::get('Manejo Cita', function(){
+    return view('manejoadmin/citas');
+}) ->name('citas');
+
+
 Route::resource('citas', CitaController::class);
 
 Route::get('/citas', [App\Http\Controllers\CitaController::class, 'index'])->name('citas.index');
 Route::post('/citas', [App\Http\Controllers\CitaController::class, 'store'])->name('citas.store');
+Route::delete('/citas/{id}', [App\Http\Controllers\CitaController::class, 'destroy'])->name('citas.destroy');
+
 
 
 
