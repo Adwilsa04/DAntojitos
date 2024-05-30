@@ -143,13 +143,14 @@
             <h1>OUR STORY</h1>
         </section>
     </main>
-
-    <section class="faqs">
+<br><br>
+    <center><section class="faqs">
             <h2>Contactanos</h2>
-            <p>Transforma tus eventos en experiencias inolvidables con nuestro exquisito buffet, elegantes picaderas y deslumbrantes decoraciones.
-                Nos apasiona crear momentos únicos y personalizados para cada ocasión. 
-                Contáctanos hoy mismo y descubre cómo podemos hacer realidad la celebración de tus sueños.</p>
-        </section>
+            <p>Transforma tus eventos en experiencias inolvidables con nuestro exquisito buffet, 
+                elegantes picaderas y deslumbrantes decoraciones. Nos apasiona crear momentos únicos 
+                y personalizados para cada ocasión. Contáctanos hoy mismo y descubre cómo 
+                podemos hacer realidad la celebración de tus sueños.</p>
+        </section></center><br><br>
 
     <div class="container">
         <div class="image-container">
