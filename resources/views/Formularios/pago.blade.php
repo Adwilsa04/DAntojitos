@@ -4,13 +4,107 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario de Pago</title>
-    <link rel="stylesheet" href="pago.css">
     <link rel="icon" type="image/png" href="imagenes/Logo.icon">
 </head>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+* {
+    font-family:  Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+link[rel="icon"] {
+    background-image: url('imagenes/Logo.ico');
+  }
+
+.container {
+    padding: 25px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); 
+}
+
+.container form {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+    border: 3px solid #ccc ; 
+    border-radius: 10px;
+}
+
+.container form .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+
+.container form .row .col {
+    flex: 1 1 100%;
+}
+
+.container form .row .col .title {
+    font-size: 25px;
+    color: #f12f2f;
+    padding-bottom: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container form .row .col .inputBox {
+    margin: 15px 0;
+}
+
+.container form .row .col .inputBox span {
+    margin-bottom: 10px;
+    display: block;
+}
+
+.container form .row .col .inputBox input,
+.container form .row .col .inputBox select {
+    width: calc(100% - 30px); 
+    border: 1px solid #ccc;
+    padding: 10px 15px;
+    font-size: 15px;
+    text-transform: none;
+    border-radius: 5px;
+}
+
+.container form .row .col .inputBox input:focus,
+.container form .row .col .inputBox select:focus {
+    border: 1px solid #000;
+}
+
+.container form .submit-btn {
+    width: 100%;
+    text-decoration: none;
+    text-align: center;
+    color: #ffff;
+    background-color: transparent;
+    display: inline-block;
+    padding: 1rem;
+    text-transform: uppercase;
+    border-radius: 5px;
+    background: #f12f2f;
+}
+
+.container form .submit-btn:hover {
+    background: #000000;
+    color: #dcdcdc;
+}
+
+
+</style>
+
 <body>
 <div class="container">
 <form action="{{ route('pagar.store') }}" method="POST">
-    @csrf
     <div class="row">
         <div class="col">
             <center><h3 class="title">Formulario de Pago</h3></center>

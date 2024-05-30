@@ -1,19 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
+
 /*=============== VARIABLES CSS ===============*/
 :root {
   --header-height: 3.5rem;
-  font-family: 'Cinzel';
 
   /*========== Colors ==========*/
   /*Color mode HSL(hue, saturation, lightness)*/
-  --black-color: hsl(0, 0%, 0%);
-  --black-color-light: hsl(228, 8%, 12%);
-  --black-color-lighten: hsl(0, 0%, 100%);
-  --white-color: #ffffff;
-  --body-color: hsl(0, 0%, 100%);
+  --black-color: hsl(220, 24%, 12%);
+  --black-color-light: hsl(220, 24%, 15%);
+  --black-color-lighten: hsl(220, 20%, 18%);
+  --white-color: #fff;
+  --body-color: hsl(220, 100%, 97%);
 
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
-  --body-font: 'Cinzel';
+  font-family: 'Cinzel';
   --normal-font-size: .938rem;
 
   /*========== Font weight ==========*/
@@ -35,25 +36,38 @@
 /*=============== BASE ===============*/
 * {
   box-sizing: border-box;
+  padding: 0;
   margin: 0;
   font-family: 'Cinzel';
+
 }
 
 body {
-  font-family: 'Cinzel';
+  font-family: var(--body-font);
   font-size: var(--normal-font-size);
   background-color: var(--body-color);
+  font-family: 'Cinzel';
 }
 
 ul {
   list-style: none;
+  /* Color highlighting when pressed on mobile devices */
+  /*-webkit-tap-highlight-color: transparent;*/
   font-family: 'Cinzel';
+
 }
 
-a {
+i {
+  font-family: 'Cinzel';
+
+}
+
+
+a  {
   text-decoration: none;
   font-family: 'Cinzel';
-  margin-bottom: 1cm; /* Add space of 1 centimeter */
+
+
 }
 
 /*=============== REUSABLE CSS CLASSES ===============*/
@@ -69,9 +83,10 @@ a {
   left: 0;
   width: 100%;
   background-color: var(--black-color);
-  box-shadow: 0 2px 16px hsla(0, 0%, 2%, 0.3);
+  box-shadow: 0 2px 16px hsla(220, 32%, 8%, .3);
   z-index: var(--z-fixed);
   font-family: 'Cinzel';
+
 }
 
 /*=============== NAV ===============*/
@@ -97,6 +112,8 @@ a {
   align-items: center;
   column-gap: .25rem;
   font-weight: var(--font-semi-bold);
+  /* Color highlighting when pressed on mobile devices */
+  /*-webkit-tap-highlight-color: transparent;*/
 }
 
 .nav__logo i {
@@ -157,8 +174,6 @@ a {
   justify-content: space-between;
   align-items: center;
   transition: background-color .3s;
-  font-size: 0.85rem; /* Smaller font size */
-  margin-bottom: 1cm; /* Add space of 1 centimeter */
 }
 
 .nav__link:hover {
@@ -200,11 +215,9 @@ a {
   background-color: var(--black-color-light);
   display: flex;
   align-items: center;
-  column-gap: .25rem; /* Closer arrow */
+  column-gap: .5rem;
   font-weight: var(--font-semi-bold);
   transition: background-color .3s;
-  font-size: 0.85rem; /* Smaller font size */
-  margin-bottom: 1cm; /* Add space of 1 centimeter */
 }
 
 .dropdown__link i, 
