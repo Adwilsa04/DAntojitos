@@ -25,7 +25,7 @@
             <div class="foot">
                 <h3>Total</h3>
                 <h2 id="total">$ 0.00</h2>
-                <button id="pay-button">Pagar</button>
+                <button id="pay-button"><a href="{{ route('pago') }}">Pagar</a></button>
             </div>
         </div>
     </div>
@@ -390,6 +390,10 @@
 
     .cart-item .fas:hover {
         color: darkred;
+    }
+
+    a {
+        color: white;
     }
 </style>
 </body>
