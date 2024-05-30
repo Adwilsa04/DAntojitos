@@ -116,8 +116,6 @@ img{
 
 		<a href="{{route('buffet')}}">VER</a>
 
-		<a href="{{ route('buffet') }}">VER</a>
-
 	</div>
 </div>
 
@@ -128,8 +126,6 @@ img{
 		
 
 		<a href="{{route('picadera')}}">VER</a>
-
-		<a href="{{ route('picadera') }}">VER</a>
 
 	</div>
 </div>
