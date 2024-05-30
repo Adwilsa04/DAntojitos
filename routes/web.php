@@ -55,19 +55,19 @@ Route::get('Formularios/registro', function() {
 
 
 Route::get('pedidos', function() {
-    return view('pedidos/index');
+    return view('pedidos/buffet');
 }) ->name('pedidos');
 
 Route::get('/pedidos/buffet', function () {
-    return view('pedidos.buffet');
+    return view('pedidos/buffet');
 })->name('buffet');
 
 Route::get('/pedidos/decoracion', function () {
-    return view('pedidos.decoracion');
+    return view('pedidos/decoracion');
 })->name('decoracion');
 
 Route::get('/pedidos/picadera', function () {
-    return view('pedidos.picadera');
+    return view('pedidos/picadera');
 })->name('picadera');
 
 

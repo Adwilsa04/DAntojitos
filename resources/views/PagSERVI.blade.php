@@ -119,7 +119,7 @@ img{
 	<div class="description">
 		<h3>Buffet</h3><br>
 		
-		<a href="#">VER</a>
+		<a href="{{route('buffet')}}">VER</a>
 	</div>
 </div>
 
@@ -128,7 +128,7 @@ img{
 	<div class="description">
 		<h3>Picadera</h3><br>
 		
-		<a href="#">VER</a>
+		<a href="{{route('picadera')}}">VER</a>
 	</div>
 </div>
 
