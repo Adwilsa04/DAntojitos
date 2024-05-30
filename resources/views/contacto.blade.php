@@ -168,7 +168,7 @@
             <img src="imagenes/deco1.jpg" alt="Imagen descriptiva"> <!-- Replace with your image URL -->
         </section>
         <section class="faqs">
-            <h2>Contact</h2>
+            <h2>Contactanos</h2>
             <p>Transforma tus eventos en experiencias inolvidables con nuestro exquisito buffet, elegantes picaderas y deslumbrantes decoraciones.
                 Nos apasiona crear momentos únicos y personalizados para cada ocasión. 
                 Contáctanos hoy mismo y descubre cómo podemos hacer realidad la celebración de tus sueños.</p>

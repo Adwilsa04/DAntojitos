@@ -185,7 +185,7 @@ h1 {
   <br><br>
     <div class="info-card">
         <p>Si deseas realizar este pedido, comunícate con nosotros vía WhatsApp y reserva tu cita para conocer más detalles de tus gustos y estilos preferidos.</p>
-        <br><button class="btn-reserva" href="{{route('cita')}}" >Reserva tu cita aquí</button>
+        <br><button class="btn-reserva" href="{{route('registro')}}" >Reserva tu cita aquí</button>
     </div><br><br>
   <div class="grid">
     <div class="item">

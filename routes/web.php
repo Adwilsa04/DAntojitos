@@ -57,6 +57,10 @@ Route::get('Formularios/registro', function() {
     return view('/Formularios/formCita');
 }) ->name('registro');
 
+Route::get('Nuestra historia', function() {
+    return view('nosotros');
+}) ->name('nosotros');
+
 Route::get('Contactanos', function() {
     return view('contacto');
 }) ->name('contacto');
