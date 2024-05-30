@@ -50,8 +50,16 @@ Route::get('Formularios/inicio', function() {
 }) ->name('sesion');
 
 Route::get('Formularios/registro', function() {
-    return view('/Formularios/registro');
+    return view('/Formularios/formCita');
 }) ->name('registro');
+
+Route::get('Formularios/registro', function() {
+    return view('/Formularios/formCita');
+}) ->name('registro');
+
+Route::get('Contactanos', function() {
+    return view('contacto');
+}) ->name('contacto');
 
 
 Route::get('pedidos', function() {

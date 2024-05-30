@@ -109,7 +109,7 @@ button:hover{
 /*aqui comienza la galeria de imagenes y el body */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f8efed;
+    background-color: #f3eae8;
     color: #4a5157;
     text-align: center;
     margin: 0;
@@ -211,6 +211,10 @@ p {
     background-color: #4d5d4f;
 }
 
+a{
+    font-size: arial;
+    color:white;
+}
 
     </style>
   <x-index></x-index>
@@ -243,31 +247,35 @@ p {
 <br>
 
        <center> <h1>WELCOME TO D' antojitos</h1><br>
-        <p>Tucked away on charming Queen Street, Poogan’s Porch is Charleston’s oldest independent culinary establishment, </p>
-           <p> with a fresh approach to Lowcountry cuisine. Recognized by Martha Stewart Living, Southern Living and The </p>
-           <p>Travel Channel among many others, this beautifully restored Victorian house is the perfect southern spot for </p>
-           <p>daily brunch and dinner.</p>
+     <p> Nos enorgullece ofrecer una experiencia gastronómica y decorativa inigualable para sus eventos más especiales. 
+       Con un compromiso inquebrantable con la excelencia, nuestro equipo de expertos culinarios y diseñadores de eventos 
+       trabaja meticulosamente para crear ambientes elegantes y menús exquisitos que deleitan los sentidos. Ya sea un íntimo encuentro familiar, 
+       una celebración corporativa o una majestuosa boda.
+       </p><br>
+       <p>nos dedicamos a transformar sus sueños en realidad, 
+       cuidando cada detalle para garantizar que su ocasión sea memorable y distintiva. Bienvenidos a un mundo de sofisticación y buen gusto, 
+       donde cada evento es una obra maestra y cada invitado se siente especial.</p>
   </center><br><br><br><br>
     <section class="gallery">
         <div class="gallery-item image-item"><img src="imagenes/deco1.jpg" alt="Image 1"></div>
         <div class="gallery-item text-item">
             <div class="text-content">
-                <!--<img src="icon1.png" alt="Icon 1">-->
-                <p>OUR MENUS</p>
+                <img src="imagenes/icono.png" alt="Icon 1">
+                <link rel="stylesheet" href="">Contactos
             </div>
         </div>
         <div class="gallery-item image-item"><img src="imagenes/deco1.jpg" alt="Image 2"></div>
         <div class="gallery-item text-item">
             <div class="text-content">
-                <!--<img src="icon2.png" alt="Icon 2">-->
-                <p>ABOUT US</p>
+                <img src="imagenes/icono4.png" alt="Icon 2">
+                <link rel="stylesheet" href="">Nosotros
             </div>
         </div>
         <div class="gallery-item image-item"><img src="imagenes/deco2.jpg" alt="Image 3"></div>
         <div class="gallery-item text-item">
             <div class="text-content">
-                <!--<img src="icon3.png" alt="Icon 3">-->
-                <p>CAREERS</p>
+                <img src="imagenes/icono2.png" alt="Icon 3">
+                <a href="{{route('registro')}}">Registrate</a>
             </div>
         </div>
     </section>
@@ -277,7 +285,7 @@ p {
         <div class="address">
             <h2>Direccion y telefono</h2>
             <p>Santiago,Republica Dominica, Carr.Punal</p>
-            <p>(829) 622-356, </p>
+            <p>(829) 622-356, (829) 208-3086</p>
         </div>
         <div class="hours">
             <h2>Horas</h2>

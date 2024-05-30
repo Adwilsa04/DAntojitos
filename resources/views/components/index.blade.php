@@ -98,7 +98,7 @@
                      </ul>
                   </li>
 
-                  <li><a href="#" class="nav__link">Contacto</a></li>
+                  <li><a href="{{route('contacto')}}" class="nav__link">Contacto</a></li>
                </ul>
             </div>
          </nav>
