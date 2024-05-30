@@ -261,7 +261,7 @@ a{
         <div class="gallery-item text-item">
             <div class="text-content">
                 <img src="imagenes/icono.png" alt="Icon 1">
-                <link rel="stylesheet" href="">Contactos
+               <a href="{{route('contacto')}}">Contactos</a>
             </div>
         </div>
         <div class="gallery-item image-item"><img src="imagenes/deco1.jpg" alt="Image 2"></div>
