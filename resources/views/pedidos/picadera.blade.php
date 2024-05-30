@@ -131,6 +131,7 @@
     document.addEventListener('DOMContentLoaded', () => {
         displaycart();
     });
+    
 </script>
 
 <style>

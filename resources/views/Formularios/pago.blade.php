@@ -105,7 +105,6 @@ link[rel="icon"] {
 <body>
 <div class="container">
 <form action="{{ route('pagar.store') }}" method="POST">
-    @csrf
     <div class="row">
         <div class="col">
             <center><h3 class="title">Formulario de Pago</h3></center>
