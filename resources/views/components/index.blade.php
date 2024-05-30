@@ -7,6 +7,7 @@
       <!--=============== REMIXICONS ===============-->
       <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
 
+
        <!--=============== CSS ===============-->
       <link rel="stylesheet" href="{{asset('css/styles.css')}}">
 
@@ -63,16 +64,11 @@
                               <i class="ri-arrow-up-down-line"></i> Decoracion
                            </a>
                         </li>
-                              
-                        </li>
                      </ul>
-                  </li>
+                  
 
 
-                  <li>
-            <a href="{{ route('pedidos') }}" class="nav__link">Pedidos</a>
-        </li>
-
+               
                   <!--=============== DROPDOWN 2 ===============-->
                   <li class="dropdown__item">
                      <div class="nav__link">

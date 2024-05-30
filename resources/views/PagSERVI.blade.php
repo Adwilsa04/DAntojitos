@@ -104,14 +104,8 @@ img{
 }
 </style>
 <x-index></x-index>
-<x-footer></x-footer>
-<body>
 
-<br>
-<br>
-<br>
-<br>
-<br>
+<body>
 
 <div class="ui-card">
 	<img src="{{asset('imagenes/img3.jpg')}}" type="images/jpg">
