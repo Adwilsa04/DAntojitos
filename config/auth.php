@@ -63,8 +63,25 @@ return [
         'users' => [
             'driver' => 'eloquent',
             'model' => App\Models\Registro_cliente::class,
+            
         ],    
     
+        'guards' => [
+            'admin' => [
+                'driver' => 'session',
+                'provider' => 'admins',
+            ],
+            // otros guards
+        ],
+        
+        'providers' => [
+            'admins' => [
+                'driver' => 'eloquent',
+                'model' => App\Models\Administrador::class,
+            ],
+            // otros providers
+        ],
+        
 
         // 'users' => [
         //     'driver' => 'database',
@@ -114,6 +131,7 @@ return [
     'password_timeout' => 10800,
 
 
+    
 ];
 
 
