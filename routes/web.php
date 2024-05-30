@@ -101,6 +101,9 @@ Route::get('Editorial decoracion', function(){
     return view('decoracion');
 }) ->name('decoracion');
 
+Route::get('Formulario de Pago', function(){
+    return view('Formularios/pago');
+}) ->name('pago');
 
 use App\Http\Controllers\PagoController;
 
