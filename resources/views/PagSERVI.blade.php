@@ -131,7 +131,7 @@ img{
 </div>
 
 <div class="ui-card">
-<img src="{{asset('imagenes/img1.jpg')}}" type="imagenes/jpg">
+<img src="{{asset('imagenes/deco1.jpg')}}" type="imagenes/jpg">
 	<div class="description">
 		<h3>Decoracion</h3><br>
 
