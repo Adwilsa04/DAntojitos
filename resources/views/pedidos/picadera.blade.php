@@ -142,6 +142,7 @@
         padding: 0;
         box-sizing: border-box;
         font-family: 'Cinzel', serif;
+        font-size: 18px;
     }
 
     body {
@@ -230,6 +231,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        font-size: 20px;
     }
 
     .foot {
@@ -238,6 +240,12 @@
         margin: 20px 0px;
         padding: 10px 0px;
         border-top: 1px solid #333;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .foot h3, .foot h2 {
+        margin: 5px 0;
     }
 
     .foot button {
