@@ -103,10 +103,9 @@ img{
 	background:#0d0f0f;
 }
 </style>
-
+<x-index></x-index>
 
 <body>
-<x-index></x-index>
 
 <br>
 <br>
@@ -137,17 +136,15 @@ img{
 <img src="{{asset('imagenes/img1.jpg')}}" type="images/jpg">
 	<div class="description">
 		<h3>Decoracion</h3><br>
-		
-		
-		<a href="{{ route('decoracion') }}">VER</a>
+
+		<a href="{{route('decoracion')}}">VER</a>
+
 	</div>
 </div>
 <br>
 
 </body>
 
-<footer>
-<x-footer></x-footer>
-</footer>
+</html>
 
 </html>

@@ -21,7 +21,8 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
 
-*{
+
+        *{
     margin: 0;
     padding: 0;
     font-family: sans-serif;
@@ -106,6 +107,91 @@ button:hover{
     }
 }
 
+/*aqui comienza la galeria de imagenes y el body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f8efed;
+}
+
+p {
+    font-size: 20px;
+}
+
+header {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    color: #3a5a40;
+}
+
+header p {
+    font-size: 1.1em;
+    color: #666;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0; /* Elimina el espacio entre los elementos para unificar los bordes */
+    padding: 0;
+}
+
+.gallery-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;  /* Ajustado para una mejor visualización */
+    background-color: #1f1f1f;  /* Fondo oscuro similar al estilo de la imagen */
+    overflow: hidden;
+    border: 1px solid #f8efed;  /* Añadir borde para unificar los bordes */
+    box-sizing: border-box;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.text-item {
+    background-color: #333;  /* Color de fondo oscuro */
+    color: white;
+    font-size: 1.2em;
+    text-align: center;
+    position: relative;
+    border: 1px solid #f8efed;  /* Añadir borde para unificar los bordes */
+    box-sizing: border-box;
+}
+
+.text-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.text-content img {
+    width: 50px;  /* Tamaño del icono ajustado */
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.text-content p {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+
+
     </style>
   
   <x-index></x-index>
@@ -130,6 +216,42 @@ button:hover{
                 </div>
             </div>
         </div>
+<br><br><br>
+       <center> <h1>WELCOME TO POOGAN'S PORCH</h1><br>
+        <p>Tucked away on charming Queen Street, Poogan’s Porch is Charleston’s oldest independent culinary establishment, </p>
+           <p> with a fresh approach to Lowcountry cuisine. Recognized by Martha Stewart Living, Southern Living and The </p>
+           <p>Travel Channel among many others, this beautifully restored Victorian house is the perfect southern spot for </p>
+           <p>daily brunch and dinner.</p>
+  </center><br><br>
+    <section class="gallery">
+        <div class="gallery-item image-item"><img src="imagenes/deco1.jpg" alt="Image 1"></div>
+        <div class="gallery-item text-item">
+            <div class="text-content">
+                <!--<img src="icon1.png" alt="Icon 1">-->
+                <p>OUR MENUS</p>
+            </div>
+        </div>
+        <div class="gallery-item image-item"><img src="imagenes/deco1.jpg" alt="Image 2"></div>
+        <div class="gallery-item text-item">
+            <div class="text-content">
+                <!--<img src="icon2.png" alt="Icon 2">-->
+                <p>ABOUT US</p>
+            </div>
+        </div>
+        <div class="gallery-item image-item"><img src="imagenes/deco2.jpg" alt="Image 3"></div>
+        <div class="gallery-item text-item">
+            <div class="text-content">
+                <!--<img src="icon3.png" alt="Icon 3">-->
+                <p>CAREERS</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
+
+</body>
+</html>
+
     </body>
     <x-footer></x-footer>
 </html>
