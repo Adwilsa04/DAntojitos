@@ -217,7 +217,7 @@ a{
 }
 
     </style>
-  <x-index></x-index>
+<x-index></x-index>
 
 
     <body>
