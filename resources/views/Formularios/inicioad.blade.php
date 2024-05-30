@@ -48,25 +48,34 @@
           <div class="formbg">
             <div class="formbg-inner padding-horizontal--48">
               <span class="padding-bottom--15">Ingresa los datos</span>
+              <form action="{{ route('admin.login') }}" method="POST">
+        @csrf
+        <div class="field padding-bottom--24">
+            <label for="email">Email</label>
+            <input type="email" name="correo" placeholder="Correo predeterminado de Admin" required>
+        </div>
+        <div class="field padding-bottom--24">
+            <div class="grid--50-50">
+                <label for="contrasena">Contraseña</label>
+                <div class="reset-pass"></div>
+            </div>
+            <input type="password" name="contrasena" placeholder="Tu contraseña" required>
+        </div>
+        <div class="field padding-bottom--24">
+            <input type="submit" name="submit" value="Continue">
+        </div>
+        @if (session('success'))
+        <div class="alert alert-success">
+            {{ session('success') }}
+        </div>
+        @endif
 
-              <form action="crudregistro/inicioad.php" id="stripe-login" method="POST">
-              @csrf
-                <div class="field padding-bottom--24">
-                  <label for="email">Email</label>
-                  <input type="email" name="email" placeholder="Correo predeterminado de Admin">
-                </div>
-                <div class="field padding-bottom--24">
-                  <div class="grid--50-50">
-                    <label for="contrasena">Contraseña</label>
-                    <div class="reset-pass">
-                    </div>
-                  </div>
-                  <input type="password" name="contrasena" placeholder="Tu contraseña">
-                </div>
-                <div class="field padding-bottom--24">
-                  <input type="submit" name="submit" value="Continue">
-                </div>
-              </form>
+        @if (session('error'))
+        <div class="alert alert-danger">
+            {{ session('error') }}
+        </div>
+        @endif
+    </form>
             </div>
           </div>
           <div class="footer-link padding-top--24">

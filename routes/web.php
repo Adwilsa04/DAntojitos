@@ -105,6 +105,10 @@ Route::get('Formulario de Pago', function(){
     return view('Formularios/pago');
 }) ->name('pago');
 
+Route::get('Inicio de admin', function(){
+    return view('Formularios/inicioad');
+}) ->name('inicioad');
+
 use App\Http\Controllers\PagoController;
 
 Route::post('/pagar', [PagoController::class, 'store'])->name('pagar.store');
@@ -145,6 +149,17 @@ Route::post('/citas', [App\Http\Controllers\CitaController::class, 'store'])->na
 Route::delete('/citas/{id}', [App\Http\Controllers\CitaController::class, 'destroy'])->name('citas.destroy');
 
 
+use App\Http\Controllers\AdminAuthController;
+
+Route::get('admin/login', [AdminAuthController::class, 'showLoginForm'])->name('admin.login');
+Route::post('admin/login', [AdminAuthController::class, 'login']);
+Route::post('admin/logout', [AdminAuthController::class, 'logout'])->name('admin.logout');
+
+Route::middleware(['auth:admin'])->group(function () {
+    Route::get('admin/pantaadmin', function () {
+        return view('admin.pantaadmin');
+    })->name('admin.pantaadmin');
+});
 
 
 require __DIR__.'/auth.php';

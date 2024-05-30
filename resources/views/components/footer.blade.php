@@ -110,7 +110,7 @@ footer{
         </div>
         <div class="footerNav">
             <ul><li><a href="{{route('inicio')}}">Inicio</a></li>
-                <li><a href="{{route('pantadmin')}}">Administrador</a></li>
+                <li><a href="{{route('inicioad')}}">Administrador</a></li>
                 <li><a href="">Sobre nosotros</a></li>
                 <li><a href="">Contacto</a></li>
                 <li><a href="{{route('registro')}}">Registro</a></li>
