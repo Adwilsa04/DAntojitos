@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <title>D'antojitos Gourmet Decora</title>
 </head>
 <head>
@@ -110,14 +109,15 @@ button:hover{
 /*aqui comienza la galeria de imagenes y el body */
 body {
     font-family: Arial, sans-serif;
+    background-color: #f3eae8;
+    color: #4a5157;
+    text-align: center;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    background-color: #f8efed;
 }
 
 p {
-    font-size: 20px;
+    font-size: 25px;
 }
 
 .gallery {
@@ -134,7 +134,7 @@ p {
     height: 300px;  /* Ajustado para una mejor visualización */
     background-color: #1f1f1f;  /* Fondo oscuro similar al estilo de la imagen */
     overflow: hidden;
-    border: 1px solid #f8efed;  /* Añadir borde para unificar los bordes */
+    border: 0px  #f8efed;  /* Añadir borde para unificar los bordes */
     box-sizing: border-box;
 }
 
@@ -146,11 +146,11 @@ p {
 
 .text-item {
     background-color: #333;  /* Color de fondo oscuro */
-    color: white;
+    color: #f3eae8;
     font-size: 1.2em;
     text-align: center;
     position: relative;
-    border: 1px solid #f8efed;  /* Añadir borde para unificar los bordes */
+    border: 0px solid #f8efed;  /* Añadir borde para unificar los bordes */
     box-sizing: border-box;
 }
 
@@ -169,6 +169,51 @@ p {
 .text-content p {
     margin: 0;
     font-size: 1.2em;
+}
+
+/* nuestra ubi*/
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.address, .hours {
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1em;
+    margin: 5px 0;
+}
+
+.book-now {
+    background-color: #5a6e5d;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1em;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.book-now:hover {
+    background-color: #4d5d4f;
+}
+
+a{
+    font-size: arial;
+    color:white;
 }
 
     </style>
@@ -201,35 +246,54 @@ p {
 <br>
 <br>
 
-       <center> <h1>WELCOME TO POOGAN'S PORCH</h1><br>
-        <p>Tucked away on charming Queen Street, Poogan’s Porch is Charleston’s oldest independent culinary establishment, </p>
-           <p> with a fresh approach to Lowcountry cuisine. Recognized by Martha Stewart Living, Southern Living and The </p>
-           <p>Travel Channel among many others, this beautifully restored Victorian house is the perfect southern spot for </p>
-           <p>daily brunch and dinner.</p>
+       <center> <h1>WELCOME TO D' antojitos</h1><br>
+     <p> Nos enorgullece ofrecer una experiencia gastronómica y decorativa inigualable para sus eventos más especiales. 
+       Con un compromiso inquebrantable con la excelencia, nuestro equipo de expertos culinarios y diseñadores de eventos 
+       trabaja meticulosamente para crear ambientes elegantes y menús exquisitos que deleitan los sentidos. Ya sea un íntimo encuentro familiar, 
+       una celebración corporativa o una majestuosa boda.
+       </p><br>
+       <p>nos dedicamos a transformar sus sueños en realidad, 
+       cuidando cada detalle para garantizar que su ocasión sea memorable y distintiva. Bienvenidos a un mundo de sofisticación y buen gusto, 
+       donde cada evento es una obra maestra y cada invitado se siente especial.</p>
   </center><br><br><br><br>
     <section class="gallery">
         <div class="gallery-item image-item"><img src="imagenes/deco1.jpg" alt="Image 1"></div>
         <div class="gallery-item text-item">
             <div class="text-content">
-                <!--<img src="icon1.png" alt="Icon 1">-->
-                <p>OUR MENUS</p>
+                <img src="imagenes/icono.png" alt="Icon 1">
+                <link rel="stylesheet" href="">Contactos
             </div>
         </div>
         <div class="gallery-item image-item"><img src="imagenes/deco1.jpg" alt="Image 2"></div>
         <div class="gallery-item text-item">
             <div class="text-content">
-                <!--<img src="icon2.png" alt="Icon 2">-->
-                <p>ABOUT US</p>
+                <img src="imagenes/icono4.png" alt="Icon 2">
+                <link rel="stylesheet" href="">Nosotros
             </div>
         </div>
         <div class="gallery-item image-item"><img src="imagenes/deco2.jpg" alt="Image 3"></div>
         <div class="gallery-item text-item">
             <div class="text-content">
-                <!--<img src="icon3.png" alt="Icon 3">-->
-                <p>CAREERS</p>
+                <img src="imagenes/icono2.png" alt="Icon 3">
+                <a href="{{route('registro')}}">Registrate</a>
             </div>
         </div>
     </section>
+<br><br>
+    <div class="container">
+        <h1>Nuestra Ubicacion</h1>
+        <div class="address">
+            <h2>Direccion y telefono</h2>
+            <p>Santiago,Republica Dominica, Carr.Punal</p>
+            <p>(829) 622-356, (829) 208-3086</p>
+        </div>
+        <div class="hours">
+            <h2>Horas</h2>
+            <p>Lunes – Viernes: 8 am - 7 pm</p>
+            <p>Sabados: 9 am - 7 pm</p>
+        </div>
+        <button class="book-now">Mapa</button>
+    </div>
 
     </body>
     <x-footer></x-footer>

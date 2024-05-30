@@ -249,7 +249,7 @@ body {
 
                    
 
-        <form action="{{ route('citas.store') }}" method="POST">
+        <form action="{{route('citas.store') }}" method="POST">
         @csrf
         <h4>Cuenta</h4>
         <div class="input_group">
