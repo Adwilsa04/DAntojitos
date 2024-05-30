@@ -261,14 +261,14 @@ a{
         <div class="gallery-item text-item">
             <div class="text-content">
                 <img src="imagenes/icono.png" alt="Icon 1">
-                <link rel="stylesheet" href="">Contactos
+               <a href="{{route('contacto')}}">Contactos</a>
             </div>
         </div>
         <div class="gallery-item image-item"><img src="imagenes/deco1.jpg" alt="Image 2"></div>
         <div class="gallery-item text-item">
             <div class="text-content">
                 <img src="imagenes/icono4.png" alt="Icon 2">
-                <link rel="stylesheet" href="">Nosotros
+                <a href="{{route('nosotros')}}">Nosotros</a>
             </div>
         </div>
         <div class="gallery-item image-item"><img src="imagenes/deco2.jpg" alt="Image 3"></div>
