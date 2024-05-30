@@ -108,7 +108,7 @@ img{
 <body>
 
 <div class="ui-card">
-	<img src="{{asset('imagenes/img3.jpg')}}" type="images/jpg">
+	<img src="{{asset('imagenes/img3.jpg')}}" type="imagenes/jpg">
 
 	<div class="description">
 		<h3>Buffet</h3><br>
@@ -120,7 +120,7 @@ img{
 </div>
 
 <div class="ui-card">
-<img src="{{asset('imagenes/img2.jpg')}}" type="images/jpg">
+<img src="{{asset('imagenes/img2.jpg')}}" type="imagenes/jpg">
 	<div class="description">
 		<h3>Picadera</h3><br>
 		
@@ -131,7 +131,7 @@ img{
 </div>
 
 <div class="ui-card">
-<img src="{{asset('imagenes/img1.jpg')}}" type="images/jpg">
+<img src="{{asset('imagenes/img1.jpg')}}" type="imagenes/jpg">
 	<div class="description">
 		<h3>Decoracion</h3><br>
 
