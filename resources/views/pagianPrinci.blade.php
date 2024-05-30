@@ -120,25 +120,6 @@ p {
     font-size: 20px;
 }
 
-header {
-    text-align: center;
-    padding: 50px 20px;
-    background-color: #f9f9f9;
-}
-
-header h1 {
-    margin: 0;
-    font-size: 2.5em;
-    color: #3a5a40;
-}
-
-header p {
-    font-size: 1.1em;
-    color: #666;
-    max-width: 800px;
-    margin: 20px auto;
-}
-
 .gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -190,11 +171,10 @@ header p {
     font-size: 1.2em;
 }
 
-
-
     </style>
-  
   <x-index></x-index>
+
+
     <body>
         
         <div class="banner">
@@ -216,13 +196,17 @@ header p {
                 </div>
             </div>
         </div>
-<br><br><br>
+<br>
+<br>
+<br>
+<br>
+
        <center> <h1>WELCOME TO POOGAN'S PORCH</h1><br>
         <p>Tucked away on charming Queen Street, Poogan’s Porch is Charleston’s oldest independent culinary establishment, </p>
            <p> with a fresh approach to Lowcountry cuisine. Recognized by Martha Stewart Living, Southern Living and The </p>
            <p>Travel Channel among many others, this beautifully restored Victorian house is the perfect southern spot for </p>
            <p>daily brunch and dinner.</p>
-  </center><br><br>
+  </center><br><br><br><br>
     <section class="gallery">
         <div class="gallery-item image-item"><img src="imagenes/deco1.jpg" alt="Image 1"></div>
         <div class="gallery-item text-item">
@@ -246,11 +230,6 @@ header p {
             </div>
         </div>
     </section>
-</body>
-</html>
-
-</body>
-</html>
 
     </body>
     <x-footer></x-footer>
