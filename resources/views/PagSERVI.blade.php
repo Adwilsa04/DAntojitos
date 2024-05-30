@@ -104,7 +104,7 @@ img{
 }
 </style>
 <x-index></x-index>
-
+<x-footer></x-footer>
 <body>
 
 <br>
