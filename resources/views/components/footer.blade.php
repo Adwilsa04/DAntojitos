@@ -81,20 +81,28 @@ footer{
     font-weight: 400;
     margin: 0px 5px;
 }
-@media (max-width: 700px){
-    .footerNav ul{
-        flex-direction: column;
-    } 
-    .footerNav ul li{
-        width:100%;
-        text-align: center;
-        margin: 10px;
+
+@media (max-width: 700px) {
+    .footerContainer {
+        padding: 30px 10px 20px; /* Ajusta el padding para dispositivos móviles */
     }
-    .socialIcons a{
+
+    .socialIcons a {
         padding: 8px;
         margin: 4px;
     }
+
+    .footerNav ul {
+        flex-direction: column;
+    }
+
+    .footerNav ul li {
+        width: 100%;
+        text-align: center;
+        margin: 10px;
+    }
 }
+
     </style>
 </head>
 

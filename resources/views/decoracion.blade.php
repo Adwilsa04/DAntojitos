@@ -5,6 +5,8 @@
   <title>Portafolio de Decoracion</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
 <link rel="stylesheet" href="./style.css">
+<link rel="icon" type="image/x-icon" href="{{asset('imagenes/Logo.ico')}}">
+
 
 </head>
 <style>
@@ -170,7 +172,7 @@ h1 {
         }
 
         .btn-reserva:hover {
-            background-color: red;
+            background-color: #8B0000;
         }
 </style>
 <x-index></x-index>

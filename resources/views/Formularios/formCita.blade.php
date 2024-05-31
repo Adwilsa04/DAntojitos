@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="imagenes/Logo.ico">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/x-icon" href="{{asset('imagenes/Logo.ico')}}">
+
 </head>
 
 <head>

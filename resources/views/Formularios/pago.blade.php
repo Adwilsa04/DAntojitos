@@ -4,13 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario de Pago</title>
-    <link rel="icon" type="image/png" href="imagenes/Logo.icon">
+    <link rel="icon" type="image/x-icon" href="{{asset('imagenes/Logo.ico')}}">
 </head>
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
 
     * {
-        font-family: Arial, Helvetica, sans-serif;
         margin: 0;
         padding: 0;
         box-sizing: border-box;
@@ -51,9 +50,8 @@
 
     .container form .row .col .title {
         font-size: 25px;
-        color: #f12f2f;
+        color: #8B0000;
         padding-bottom: 5px;
-        font-family: Arial, Helvetica, sans-serif;
     }
 
     .container form .row .col .inputBox {
@@ -90,7 +88,7 @@
         padding: 1rem;
         text-transform: uppercase;
         border-radius: 5px;
-        background: #f12f2f;
+        background: #8B0000;
     }
 
     .container form .submit-btn:hover {
