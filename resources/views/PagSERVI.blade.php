@@ -6,146 +6,133 @@
 <title>Servicios</title>
 <link rel="icon" type="image/x-icon" href="{{asset('imagenes/Logo.ico')}}">
 
-</head>
-
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
-    :after,*:before{
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-ms-box-sizing: border-box;
-	box-sizing: border-box;
+:after, *:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
 }
-body{
-	font-family: 'Cinzel';
-	font-size: 16px;
-	margin:0;
-	background: #fcfdfe;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	min-height: 100vh;
+body {
+    font-family: 'Cinzel';
+    font-size: 16px;
+    margin: 0;
+    background: #fcfdfe;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; /* Align items in a column */
+    min-height: 100vh;
 }
-img{
-	max-width: 100%;
+h1 {
+    color: #D2B48C; /* Light brown color */
+    margin-bottom: 20px; /* Space between the title and the cards */
+    text-align: center; /* Center the text */
+    width: 100%; /* Take full width of the parent container */
 }
-
-.ui-card{
-	width: 100px;
+img {
+    max-width: 100%;
+}
+.ui-card {
     width: calc((100% - 40px) / 3);
     height: 400px;
     margin-bottom: 20px;
     max-width: 600px;
-	position: relative;
-	overflow: hidden;
-	transition: all 0.3s ease-out;
-	background:radial-gradient(#111 50%, #000 100%);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease-out;
+    background: radial-gradient(#111 50%, #000 100%);
 }
-
-@media (max-width: 600px){
-    .ui-card{
-        width: calc(100% -20px);
+@media (max-width: 600px) {
+    .ui-card {
+        width: calc(100% - 20px);
         margin: 0 auto 20px auto;
     }
 }
-.ui-card img{
+.ui-card img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center;
-	transform: scale(1.3);
-	transition: all 0.3s ease-out;
+    transform: scale(1.3);
+    transition: all 0.3s ease-out;
 }
-
-/*
-.ui-card:last-child{
-    margin-bottom: 5px;
-}*/
-
-.ui-card .description{
-	position: absolute;
-	top: 50%; /* Place the description in the middle of the card */
-	left: 50%; /* Place the description in the middle of the card */
-	transform: translate(-50%, -50%); /* Center the description */
-	padding: 15px;
-	width: 100%;
-	text-align: center;
-	color: #fff;
-	font-size: 18px;
+.ui-card .description {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 15px;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
 }
 .ui-card .description h3,
 .ui-card .description p,
 .ui-card .description a {
     margin: 0;
 }
-.ui-card .description a{
-	font-family: 'Cinzel';
+.ui-card .description a {
+    font-family: 'Cinzel';
     width: 50px;
     padding: 15px;
     margin: 10px 5px;
     text-align: center;
     border-radius: 0;
-    color:#ffffff;
+    color: #ffffff;
     border: 2px;
     font-size: 15px;
     cursor: pointer;
     font-weight: 400;
     position: left;
-	background-color: transparent ;
-	
-	padding: 1rem 3rem;
-	border: 1px solid #ffffff;
+    background-color: transparent;
+    padding: 1rem 3rem;
+    border: 1px solid #ffffff;
+}
+.ui-card .description a:hover {
+    background: #0d0f0f;
 }
 
-
-.ui-card .description a:hover{
-	background:#0d0f0f;
+h1 {
+    color: #D2B48C; /* Light brown color */
+    margin-bottom: 20px; /* Space between the title and the cards */
+    text-align: center; /* Center the text */
+    width: 100%; /* Take full width of the parent container */
 }
+
 </style>
-<x-index></x-index>
-<br><br><br><br><br>
-<br>
-<br>
-<br>
-
+</head>
 
 <body>
-
-<div class="ui-card">
-	<img src="{{asset('imagenes/img3.jpg')}}" type="imagenes/jpg">
-
-	<div class="description">
-		<h3>Buffet</h3><br>
-		
-
-		<a href="{{route('buffet')}}">VER</a>
-
-	</div>
-</div>
-
-<div class="ui-card">
-<img src="{{asset('imagenes/img6.jpg')}}" type="imagenes/img12.jpg">
-	<div class="description">
-		<h3>Picadera</h3><br>
-		
-
-		<a href="{{route('picadera')}}">VER</a>
-
-	</div>
-</div>
-
-<div class="ui-card">
-<img src="{{asset('imagenes/deco7.jpg')}}" type="imagenes/jpg">
-	<div class="description">
-		<h3>Decoracion</h3><br>
-
-		<a href="{{route('decoracion')}}">VER</a>
-
-	</div>
-</div>
-<br>
+    <x-index></x-index>
+    <br><br><br><br><br>
+    <br><br><br>
+    <h1>Editorial</h1> <!-- Added title -->
+    <div class="ui-card">
+        <img src="{{asset('imagenes/img3.jpg')}}" type="imagenes/jpg">
+        <div class="description">
+            <h3>Buffet</h3><br>
+            <a href="{{route('buffet')}}">VER</a>
+        </div>
+    </div>
+    <div class="ui-card">
+        <img src="{{asset('imagenes/img6.jpg')}}" type="imagenes/img12.jpg">
+        <div class="description">
+            <h3>Picadera</h3><br>
+            <a href="{{route('picadera')}}">VER</a>
+        </div>
+    </div>
+    <div class="ui-card">
+        <img src="{{asset('imagenes/deco7.jpg')}}" type="imagenes/jpg">
+        <div class="description">
+            <h3>Decoracion</h3><br>
+            <a href="{{route('decoracion')}}">VER</a>
+        </div>
+    </div>
+    <br>
 </body>
-
 </html>
 
-</html>
+
