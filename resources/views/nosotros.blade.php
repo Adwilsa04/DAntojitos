@@ -132,9 +132,85 @@
             font-size: 2em; /* Adjust as needed */
         }
     
+/*Codigo de la carta */
 
+/* styles.css */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    height: 50vh;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.image-section {
+    flex: 1;
+    background-color: #333333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.image-section img {
+    width: 97%;
+    height: auto;
+    border: 5px solid #333333;
+}
+
+.image-section::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 10px;
+    background: repeating-linear-gradient(
+        90deg,
+        #d4af37,
+        #d4af37 10px,
+        #333333 10px,
+        #333333 20px
+    );
+}
+
+.text-section {
+    flex: 1;
+    padding: 40px;
+    background-color: #333333;
+    color: #ffffff;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 24px;
+    color: #d4af37;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.artist {
+    font-style: italic;
+    font-size: 14px;
+}
     </style>
 </head>
+
 <body>
 <x-index></x-index>
     <main>
@@ -142,18 +218,19 @@
             <img src="imagenes/img12.jpg" alt="Imagen descriptiva"> <!-- Reemplaza con la URL de tu imagen -->
             <h1>OUR STORY</h1>
         </section>
-    </main><br><br>
-
+    </main>
+<br><br>
     <div class="container">
-        <div class="logo">
-            <img src="logo.png" alt="Poogan's Porch Logo">
+        <div class="image-section">
+            <img src="imagenes/img12.jpg" alt="Portrait of Poogan">
         </div>
-        <div class="content">
-            <h1>AN UNFORGETTABLE MEAL</h1>
-            <p>Since opening in 1976, Poogan's Porch has been a favorite of well-known celebrities, politicians, tourists, and locals alike who rave about this Southern institution. Whether it's a warm homemade buttermilk biscuit and sausage gravy, a bowl of she-crab soup, or our signature buttermilk fried chicken, your meal at Poogan's Porch will be unforgettable.</p>
+        <div class="text-section">
+            <h1>HOW WE GOT OUR NAME</h1>
+            <p>From the moment you step into the parlor of Poogan’s Porch, there is a pervasive sense of history: the knotted heart-of-pine floors.</p>
+            <p>Poogan’s Porch was originally a spacious, commodious home, erected in 1891. By 1976, the character of the neighborhood had changed suitably to allow for the conversion of t</p>
+            <p class="artist">Poogan's Portrait Artist: Jordan Cave (www.jordancavestudio.com)</p>
         </div>
     </div>
-
 
 </body>
 </html>

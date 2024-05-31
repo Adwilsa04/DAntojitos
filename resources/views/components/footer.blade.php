@@ -113,7 +113,7 @@ footer{
                 <li><a href="{{route('inicioad')}}">Administrador</a></li>
                 <li><a href="">Sobre nosotros</a></li>
                 <li><a href="">Contacto</a></li>
-                <li><a href="{{route('registro')}}">Registro</a></li>
+                <li><a href="{{route('registrate')}}">Registro</a></li>
                 <li><a href="{{route('cita')}}">Reserva tu cita</a></li>
             </ul>
         </div>

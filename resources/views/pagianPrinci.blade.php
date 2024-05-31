@@ -267,7 +267,7 @@ a{
         <div class="gallery-item text-item">
             <div class="text-content">
                 <img src="imagenes/icono2.png" alt="Icon 3">
-                <a href="{{route('registro')}}">Registrate</a>
+                <a href="{{route('registrate')}}">Registrate</a>
             </div>
         </div>
     </section>
