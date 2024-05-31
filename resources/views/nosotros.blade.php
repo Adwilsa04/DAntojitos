@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nuestra Historia</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="{{asset('imagenes/Logo.ico')}}">
+
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -132,9 +134,85 @@
             font-size: 2em; /* Adjust as needed */
         }
     
+/*Codigo de la carta */
 
+/* styles.css */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    height: 50vh;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.image-section {
+    flex: 1;
+    background-color: #333333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.image-section img {
+    width: 97%;
+    height: auto;
+    border: 5px solid #333333;
+}
+
+.image-section::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 10px;
+    background: repeating-linear-gradient(
+        90deg,
+        #d4af37,
+        #d4af37 10px,
+        #333333 10px,
+        #333333 20px
+    );
+}
+
+.text-section {
+    flex: 1;
+    padding: 40px;
+    background-color: #333333;
+    color: #ffffff;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 24px;
+    color: #d4af37;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.artist {
+    font-style: italic;
+    font-size: 14px;
+}
     </style>
 </head>
+
 <body>
 <x-index></x-index>
     <main>
@@ -144,35 +222,17 @@
         </section>
     </main>
 <br><br>
-    <center><section class="faqs">
-            <h2>Nuestra historia</h2>
-            <p>Transforma tus eventos en experiencias inolvidables con nuestro exquisito buffet,
-               elegantes picaderas y deslumbrantes decoraciones.</p>
-               <p>Nos apasiona crear momentos únicos y personalizados para cada ocasión.Contáctanos hoy mismo 
-                y descubre cómo </p> <p>podemos hacer realidad la celebración de tus sueños.</p>
-        </section></center><br><br>
-
     <div class="container">
-        <div class="image-container">
-            <img src="imagenes/deco7.jpg" alt="Portrait of Poogan">
+        <div class="image-section">
+            <img src="imagenes/img12.jpg" alt="Portrait of Poogan">
         </div>
-        <div class="text-container">
-        <div class="image-section"></div>
         <div class="text-section">
-            <h1 class="title">Como surgio nuestro nombre</h1>
-            <p>From the moment you step into our office...</p>
-            <!-- Rest of your text goes here -->
+            <h1>HOW WE GOT OUR NAME</h1>
+            <p>From the moment you step into the parlor of Poogan’s Porch, there is a pervasive sense of history: the knotted heart-of-pine floors.</p>
+            <p>Poogan’s Porch was originally a spacious, commodious home, erected in 1891. By 1976, the character of the neighborhood had changed suitably to allow for the conversion of t</p>
+            <p class="artist">Poogan's Portrait Artist: Jordan Cave (www.jordancavestudio.com)</p>
         </div>
     </div>
-    </div>
-    <br><br>
-    <center><section class="faqs">
-            <h2>Nuestra historia</h2>
-            <p>Transforma tus eventos en experiencias inolvidables con nuestro exquisito buffet,
-               elegantes picaderas y deslumbrantes decoraciones.</p>
-               <p>Nos apasiona crear momentos únicos y personalizados para cada ocasión.Contáctanos hoy mismo 
-                y descubre cómo </p> <p>podemos hacer realidad la celebración de tus sueños.</p>
-        </section></center><br><br>
 
 </body>
 </html>

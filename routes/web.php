@@ -49,13 +49,8 @@ Route::get('Formularios/inicio', function() {
     return view('Formularios/inicio');
 }) ->name('sesion');
 
-Route::get('Formularios/registro', function() {
-    return view('/Formularios/formCita');
-}) ->name('registro');
 
-Route::get('Formularios/registro', function() {
-    return view('/Formularios/formCita');
-}) ->name('registro');
+
 
 Route::get('Nuestra historia', function() {
     return view('nosotros');
@@ -74,9 +69,7 @@ Route::get('/pedidos/buffet', function () {
     return view('pedidos/buffet');
 })->name('buffet');
 
-Route::get('/pedidos/decoracion', function () {
-    return view('pedidos/decoracion');
-})->name('decoracion');
+
 
 Route::get('/pedidos/picadera', function () {
     return view('pedidos/picadera');

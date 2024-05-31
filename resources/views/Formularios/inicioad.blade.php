@@ -3,6 +3,8 @@
   <meta charset="utf-8">
   <title>Inicio de Sección de Administrador</title>
   <link rel="stylesheet" type="text/css" href="regristro.css">
+  <link rel="icon" type="image/x-icon" href="{{asset('imagenes/Logo.ico')}}">
+
 </head>
 
 <body>

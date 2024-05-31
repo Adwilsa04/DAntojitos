@@ -81,20 +81,28 @@ footer{
     font-weight: 400;
     margin: 0px 5px;
 }
-@media (max-width: 700px){
-    .footerNav ul{
-        flex-direction: column;
-    } 
-    .footerNav ul li{
-        width:100%;
-        text-align: center;
-        margin: 10px;
+
+@media (max-width: 700px) {
+    .footerContainer {
+        padding: 30px 10px 20px; /* Ajusta el padding para dispositivos móviles */
     }
-    .socialIcons a{
+
+    .socialIcons a {
         padding: 8px;
         margin: 4px;
     }
+
+    .footerNav ul {
+        flex-direction: column;
+    }
+
+    .footerNav ul li {
+        width: 100%;
+        text-align: center;
+        margin: 10px;
+    }
 }
+
     </style>
 </head>
 
@@ -113,7 +121,7 @@ footer{
                 <li><a href="{{route('pantadmin')}}">Administrador</a></li>
                 <li><a href="">Sobre nosotros</a></li>
                 <li><a href="">Contacto</a></li>
-                <li><a href="{{route('registro')}}">Registro</a></li>
+                <li><a href="{{route('registrate')}}">Registro</a></li>
                 <li><a href="{{route('cita')}}">Reserva tu cita</a></li>
             </ul>
         </div>

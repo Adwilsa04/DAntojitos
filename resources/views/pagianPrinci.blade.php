@@ -18,13 +18,45 @@
     font-family: sans-serif;
     box-sizing: border-box;
 }
-.banner{
+.banner {
+    position: relative;
     width: 100%;
     height: 100vh;
-    background-image: linear-gradient(rgba(0,0,0,0.40),rgba(0,0,0,0.40));
-    background-position: center;
-    background-size: center;
+    overflow: hidden;
 }
+
+.banner video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    
+}
+
+.banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+    z-index: 0;
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: white;
+    text-align: center;
+}
+
 .navbar{
     width: 90%;
     padding: 30px;
@@ -41,14 +73,7 @@
 .navbar a:hover{
     color: black;
 }
-.content{
-    width: 100%;
-    position: absolute;
-    color: white;
-    top: 45%;
-    transform: translateY(-50%);
-    text-align: center;
-}
+
 .content h1{
     font-family: 'Cinzel';
     margin-top: 80px;
@@ -84,12 +109,15 @@ button:hover{
 button:hover{
     color: rgb(255, 255, 255);
 }
-.banner video{
+.banner video {
     position: absolute;
-    right: 0;
-    bottom: 0;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
     z-index: -1;
 }
+
 @media(min-aspect-ratio: 16/9){
     .banner video{
         width: 100%;
@@ -206,16 +234,24 @@ a{
     font-size: arial;
     color:white;
 }
-
+@media screen and (max-width: 768px) {
+    /* Estilos específicos para pantallas pequeñas */
+    .content h1 {
+        font-size: 10vw; /* Tamaño de fuente para pantallas pequeñas */
+    }
+    button {
+        font-size: 5vw; /* Tamaño de fuente del botón para pantallas pequeñas */
+        padding: 2vw 4vw; /* Padding del botón para pantallas pequeñas */
+    }
+}
     </style>
 <x-index></x-index>
 <br>
 <br>
 <br>
 <br>
-<br>
+
     <body>
-        
         <div class="banner">
             <video autoplay loop muted plays-inline>
                 <source src="{{asset('video/Video.mp4')}}" type="video/mp4">
@@ -267,7 +303,7 @@ a{
         <div class="gallery-item text-item">
             <div class="text-content">
                 <img src="imagenes/icono2.png" alt="Icon 3">
-                <a href="{{route('registro')}}">Registrate</a>
+                <a href="{{route('registrate')}}">Registrate</a>
             </div>
         </div>
     </section>
@@ -284,7 +320,7 @@ a{
             <p>Lunes – Viernes: 8 am - 7 pm</p>
             <p>Sabados: 9 am - 7 pm</p>
         </div>
-        <button class="book-now" href="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3750.2156553654054!2d-70.6595640225756!3d19.402230394124924!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTnCsDI0JzA4LjAiTiA3MMKwMzknMjUuMiJX!5e0!3m2!1ses!2sdo!4v1717100614274!5m2!1ses!2sdo" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" >Mapa</button>
+        <button class="book-now" href="https://www.google.com/maps/place/19%C2%B024'08.0%22N+70%C2%B039'25.2%22W/@19.4022312,-70.659565,17z/data=!3m1!4b1!4m4!3m3!8m2!3d19.4022312!4d-70.6569901?entry=ttu">Mapa</button>
     </div>
 
     </body>

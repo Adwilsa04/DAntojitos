@@ -171,7 +171,7 @@
             background-color: #8B0000;
             border: none;
             border-radius: 5px;
-            padding: 15px 30px;
+            padding: 10px 30px; /* Aumentar el padding */
             font-size: 18px;
             cursor: pointer;
         }
