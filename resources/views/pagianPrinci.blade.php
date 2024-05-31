@@ -1,21 +1,12 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="{{asset('imagenes/Logo.ico')}}">
     <title>D'antojitos Gourmet Decora</title>
 </head>
-<head>
-
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>D' antojitos Gourmet Decora</title>
-        <link rel="icon" type="image/x-icon" href="{{asset('imagenes/Logo.ico')}}">
-    </head>
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
@@ -218,8 +209,11 @@ a{
 
     </style>
 <x-index></x-index>
-
-
+<br>
+<br>
+<br>
+<br>
+<br>
     <body>
         
         <div class="banner">
@@ -241,8 +235,6 @@ a{
                 </div>
             </div>
         </div>
-<br>
-<br>
 <br>
 <br>
 
