@@ -5,9 +5,6 @@
 <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=1">
 <title>Servicios</title>
 </head>
-<br>
-<br>
-<br>
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
@@ -104,11 +101,14 @@ img{
 }
 </style>
 <x-index></x-index>
-
-<br>
-<body>
-<x-index></x-index>
 <br><br><br><br><br>
+<br>
+<br>
+<br>
+
+
+<body>
+
 <div class="ui-card">
 	<img src="{{asset('imagenes/img3.jpg')}}" type="imagenes/jpg">
 
