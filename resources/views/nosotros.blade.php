@@ -152,7 +152,7 @@
     </style>
 </head>
 <body>
-    <x-index></x-index>
+<x-index></x-index>
     <main>
         <section class="hero">
             <img src="imagenes/img12.jpg" alt="Imagen descriptiva">
