@@ -173,5 +173,9 @@ Route::middleware(['auth:admin'])->group(function () {
     })->name('admin.pantaadmin');
 });
 
+use App\Http\Controllers\MessageController;
+
+Route::post('/contacto', [MessageController::class, 'store'])->name('contacto.store');
+
 
 require __DIR__.'/auth.php';

@@ -149,6 +149,12 @@
                 width: 100%; /* Ensure button remains full width on smaller screens */
             }
         }
+
+        .success-message {
+    color: green;
+    font-weight: bold;
+    margin-top: 20px;
+}
     </style>
 </head>
 <body>
@@ -186,13 +192,20 @@
                     <i class="fas fa-map-marker-alt"></i> Dirección: carretera Punal, Santiago de los Caballeros, República Dominicana
                 </div>
                 <div class="contact-form">
-                    <h2>Envíanos un mensaje</h2>
-                    <form>
-                        <input type="text" name="name" placeholder="Nombre" required>
-                        <input type="email" name="email" placeholder="Correo electrónico" required>
-                        <textarea name="message" rows="4" placeholder="Mensaje" required></textarea>
-                        <button type="submit">Enviar</button>
-                    </form>
+@if(session('success'))
+    <div style="color: green; font-weight: bold; margin-top: 20px;">
+        {{ session('success') }}
+    </div>
+@endif
+
+<form action="{{ route('contacto.store') }}" method="POST">
+    @csrf
+    <input type="text" name="nombre" placeholder="Nombre" required>
+    <input type="email" name="correo" placeholder="Correo electrónico" required>
+    <textarea name="mensaje" rows="4" placeholder="Mensaje" required></textarea>
+    <button type="submit">Enviar</button>
+</form>
+
                 </div>
             </div>
             <div id="map" class="map-container">
