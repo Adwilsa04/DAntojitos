@@ -284,7 +284,7 @@ a{
             <p>Lunes – Viernes: 8 am - 7 pm</p>
             <p>Sabados: 9 am - 7 pm</p>
         </div>
-        <button class="book-now" href="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3750.2156553654054!2d-70.6595640225756!3d19.402230394124924!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTnCsDI0JzA4LjAiTiA3MMKwMzknMjUuMiJX!5e0!3m2!1ses!2sdo!4v1717100614274!5m2!1ses!2sdo" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" >Mapa</button>
+        <button class="book-now" href="https://www.google.com/maps/place/19%C2%B024'08.0%22N+70%C2%B039'25.2%22W/@19.4022312,-70.659565,17z/data=!3m1!4b1!4m4!3m3!8m2!3d19.4022312!4d-70.6569901?entry=ttu">Mapa</button>
     </div>
 
     </body>

@@ -142,37 +142,18 @@
             <img src="imagenes/img12.jpg" alt="Imagen descriptiva"> <!-- Reemplaza con la URL de tu imagen -->
             <h1>OUR STORY</h1>
         </section>
-    </main>
-<br><br>
-    <center><section class="faqs">
-            <h2>Nuestra historia</h2>
-            <p>Transforma tus eventos en experiencias inolvidables con nuestro exquisito buffet,
-               elegantes picaderas y deslumbrantes decoraciones.</p>
-               <p>Nos apasiona crear momentos únicos y personalizados para cada ocasión.Contáctanos hoy mismo 
-                y descubre cómo </p> <p>podemos hacer realidad la celebración de tus sueños.</p>
-        </section></center><br><br>
+    </main><br><br>
 
     <div class="container">
-        <div class="image-container">
-            <img src="imagenes/deco7.jpg" alt="Portrait of Poogan">
+        <div class="logo">
+            <img src="logo.png" alt="Poogan's Porch Logo">
         </div>
-        <div class="text-container">
-        <div class="image-section"></div>
-        <div class="text-section">
-            <h1 class="title">Como surgio nuestro nombre</h1>
-            <p>From the moment you step into our office...</p>
-            <!-- Rest of your text goes here -->
+        <div class="content">
+            <h1>AN UNFORGETTABLE MEAL</h1>
+            <p>Since opening in 1976, Poogan's Porch has been a favorite of well-known celebrities, politicians, tourists, and locals alike who rave about this Southern institution. Whether it's a warm homemade buttermilk biscuit and sausage gravy, a bowl of she-crab soup, or our signature buttermilk fried chicken, your meal at Poogan's Porch will be unforgettable.</p>
         </div>
     </div>
-    </div>
-    <br><br>
-    <center><section class="faqs">
-            <h2>Nuestra historia</h2>
-            <p>Transforma tus eventos en experiencias inolvidables con nuestro exquisito buffet,
-               elegantes picaderas y deslumbrantes decoraciones.</p>
-               <p>Nos apasiona crear momentos únicos y personalizados para cada ocasión.Contáctanos hoy mismo 
-                y descubre cómo </p> <p>podemos hacer realidad la celebración de tus sueños.</p>
-        </section></center><br><br>
+
 
 </body>
 </html>
