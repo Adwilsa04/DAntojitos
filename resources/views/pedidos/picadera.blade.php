@@ -176,7 +176,7 @@ button a {
 
 button#button {
     font-size: 24px; /* Aumentar el tamaño de fuente */
-    padding: 15px 30px; /* Aumentar el padding */
+    padding: 5px 30px; /* Aumentar el padding */
     background-color: #8B0000;
     border: none;
     border-radius: 5px;
@@ -449,7 +449,13 @@ button i {
     }
 
 
-}
+
+@media screen and (max-width: 768px) {
+    .sidebar {
+        width: 100%; /* Ocupar todo el ancho en pantallas pequeñas */
+        margin-left: 0; /* Eliminar el margen izquierdo */
+        padding: 10px; /* Reducir el padding */
+    }
 </style>
 </body>
 </html>

@@ -18,13 +18,44 @@
     font-family: sans-serif;
     box-sizing: border-box;
 }
-.banner{
+.banner {
+    position: relative;
     width: 100%;
     height: 100vh;
-    background-image: linear-gradient(rgba(0,0,0,0.40),rgba(0,0,0,0.40));
-    background-position: center;
-    background-size: center;
+    overflow: hidden;
 }
+
+.banner video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+    z-index: 0;
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: white;
+    text-align: center;
+}
+
 .navbar{
     width: 90%;
     padding: 30px;
@@ -41,14 +72,7 @@
 .navbar a:hover{
     color: black;
 }
-.content{
-    width: 100%;
-    position: absolute;
-    color: white;
-    top: 45%;
-    transform: translateY(-50%);
-    text-align: center;
-}
+
 .content h1{
     font-family: 'Cinzel';
     margin-top: 80px;
@@ -84,12 +108,15 @@ button:hover{
 button:hover{
     color: rgb(255, 255, 255);
 }
-.banner video{
+.banner video {
     position: absolute;
-    right: 0;
-    bottom: 0;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
     z-index: -1;
 }
+
 @media(min-aspect-ratio: 16/9){
     .banner video{
         width: 100%;
@@ -213,9 +240,8 @@ a{
 <br>
 <br>
 <br>
-<br>
+
     <body>
-        
         <div class="banner">
             <video autoplay loop muted plays-inline>
                 <source src="{{asset('video/Video.mp4')}}" type="video/mp4">
