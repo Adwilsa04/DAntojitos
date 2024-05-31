@@ -67,15 +67,17 @@
 
         .container {
             display: flex;
-            width: 200%;
-            height: 300px; /* Ajustar la altura según sea necesario */
-            margin: 0;
+            width: 100vw; /* Ocupar todo el ancho del viewport */
+            height: 400px; /* Ajustar la altura según sea necesario */
+            margin: 0; /* Eliminar márgenes */
             background-color: #333;
             color: #fff;
+            border-radius: 15px;
+            overflow: hidden;
         }
 
         .image-container, .text-container {
-            flex: 2;
+            flex: 1;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -133,12 +135,12 @@
         @media (max-width: 768px) {
             .container {
                 flex-direction: column;
-                height: 600px; /* Mantiene una altura reducida en dispositivos móviles */
+                height: auto;
             }
 
             .image-container, .text-container {
                 width: 100%;
-                height: 50%; /* Cada sección ocupará la mitad de la pantalla en dispositivos móviles */
+                height: auto;
             }
 
             .image-container img {
@@ -188,4 +190,3 @@
   </center><br><br><br><br>
 </body>
 </html>
-
