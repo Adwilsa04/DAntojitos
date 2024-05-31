@@ -84,7 +84,7 @@ Route::get('/pedidos/picadera', function () {
 
 
 
-Route::get('pantadmin', function(){
+Route::get('/pantadmin', function(){
     return view('pantadmin');
 }) ->name('pantadmin');
 
