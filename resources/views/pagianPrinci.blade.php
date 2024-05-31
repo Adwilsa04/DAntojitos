@@ -189,7 +189,7 @@ p {
 }
 
 .book-now {
-    background-color: #5a6e5d;
+    background-color: #103349;
     color: white;
     border: none;
     padding: 15px 30px;
@@ -199,7 +199,7 @@ p {
 }
 
 .book-now:hover {
-    background-color: #4d5d4f;
+    background-color: #292b4b;
 }
 
 a{
@@ -256,14 +256,14 @@ a{
                <a href="{{route('contacto')}}">Contactos</a>
             </div>
         </div>
-        <div class="gallery-item image-item"><img src="imagenes/deco1.jpg" alt="Image 2"></div>
+        <div class="gallery-item image-item"><img src="imagenes/img4.jpg" alt="Image 2"></div>
         <div class="gallery-item text-item">
             <div class="text-content">
                 <img src="imagenes/icono4.png" alt="Icon 2">
                 <a href="{{route('nosotros')}}">Nosotros</a>
             </div>
         </div>
-        <div class="gallery-item image-item"><img src="imagenes/deco2.jpg" alt="Image 3"></div>
+        <div class="gallery-item image-item"><img src="imagenes/img2.jpg" alt="Image 3"></div>
         <div class="gallery-item text-item">
             <div class="text-content">
                 <img src="imagenes/icono2.png" alt="Icon 3">

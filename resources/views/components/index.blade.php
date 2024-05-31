@@ -37,7 +37,7 @@
 
                  
 
-                  <li><a href="#" class="nav__link">Sobre Nosotros</a></li>
+                  <li><a href="{{route('nosotros')}}" class="nav__link">Sobre Nosotros</a></li>
 
                   <!--=============== DROPDOWN 1 ===============-->
                   <li class="dropdown__item">
