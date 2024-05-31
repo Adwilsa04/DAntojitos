@@ -128,7 +128,7 @@ button:hover{
 /*aqui comienza la galeria de imagenes y el body */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f3eae8;
+    background-color: #fffbf4;
     color: #4a5157;
     text-align: center;
     margin: 0;
@@ -137,6 +137,8 @@ body {
 
 p {
     font-size: 25px;
+    margin:justify;
+
 }
 
 .gallery {
@@ -217,7 +219,7 @@ p {
 }
 
 .book-now {
-    background-color: #103349;
+    background-color: #8B0000;
     color: white;
     border: none;
     padding: 15px 30px;
@@ -227,7 +229,7 @@ p {
 }
 
 .book-now:hover {
-    background-color: #292b4b;
+    background-color: #000;
 }
 
 a{

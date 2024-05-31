@@ -188,5 +188,6 @@
        <p>familiar, una celebración corporativa o una majestuosa boda. </p>
        </p><br>
   </center><br><br><br><br>
+  <x-footer></x-footer>
 </body>
 </html>

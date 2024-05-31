@@ -296,6 +296,7 @@ body {
                     <button type="submit">RESERVAR</button>
                 </div>
             </div>
+            </div>
         </center>
     </form>
             <br><br>
