@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="header">
-    <button id="button"> <a href="{{route('pagservi')}}" style="text-decoration:none; color:white;"> Volver</a></button> 
+        <button id="button"> <a href="{{route('pagservi')}}" style="text-decoration:none; color:white;"> Volver</a></button> 
         <p class="logo">Mi Tienda</p>
         <div class="cart-container" onclick="toggleCart()">
             <div class="cart">
@@ -37,14 +37,14 @@
         { id: 1, image: '{{ asset('image/b.jpg') }}', title: 'Pastelistos', price: 60 },
         { id: 2, image: '{{ asset('image/c.jpg') }}', title: 'Quipes', price: 70 },
         { id: 3, image: '{{ asset('image/d.jpg') }}', title: 'Wraps', price: 80 },
-        { id: 4, image: '{{ asset('image/e.jpg') }}', title: 'Producto 5', price: 90 },
+        { id: 4, image: '{{ asset('image/e.jpg') }}', title: 'Sándwich', price: 90 },
         { id: 5, image: '{{ asset('image/f.jpg') }}', title: 'Producto 6', price: 100 },
-        { id: 6, image: '{{ asset('image/g.jpg') }}', title: 'Producto 7', price: 110 },
-        { id: 7, image: '{{ asset('image/h.jpg') }}', title: 'Producto 8', price: 120 },
-        { id: 8, image: '{{ asset('image/i.jpg') }}', title: 'Producto 9', price: 130 },
-        { id: 9, image: '{{ asset('image/j.jpg') }}', title: 'Producto 10', price: 140 },
-        { id: 10, image: '{{ asset('image/k.jpg') }}', title: 'Producto 11', price: 150 },
-        { id: 11, image: '{{ asset('image/l.jpg') }}', title: 'Producto 12', price: 160 }
+        { id: 6, image: '{{ asset('image/g.jpg') }}', title: 'Croisant rellenos', price: 110 },
+        { id: 7, image: '{{ asset('image/h.jpg') }}', title: 'Croquetas', price: 120 },
+        { id: 8, image: '{{ asset('image/i.jpg') }}', title: 'Tabla de quesos y embutidos', price: 130 },
+        { id: 9, image: '{{ asset('image/j.jpg') }}', title: 'Pinchos caprese', price: 140 },
+        { id: 10, image: '{{ asset('image/k.jpg') }}', title: 'Bizcocho de maiz', price: 150 },
+        { id: 11, image: '{{ asset('image/l.jpg') }}', title: 'P con salsa', price: 160 }
     ];
 
     const categories = [...new Set(product.map((item) => item))];
@@ -172,12 +172,15 @@ a {
 button a {
     color: white;
     text-decoration: none; /* Quitar la subrayado */
-    height: 100px; /* Reducir la altura del botón */
-    width: 100px;
+}
+
+button#button {
+    font-size: 24px; /* Aumentar el tamaño de fuente */
+    padding: 15px 30px; /* Aumentar el padding */
     background-color: #8B0000;
     border: none;
-    border-radius: 0px;
-
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 .header {
@@ -439,7 +442,14 @@ button i {
 .cart-item .fas:hover {
     color: darkred;
 }
+/* Estilos para pantallas de hasta 480px de ancho */
+@media screen and (max-width: 480px) {
+    #root {
+        grid-template-columns: repeat(1, 1fr); /* Cambiar a una sola columna */
+    }
 
+
+}
 </style>
 </body>
 </html>
