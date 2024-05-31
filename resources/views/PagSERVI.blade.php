@@ -122,7 +122,7 @@ img{
 </div>
 
 <div class="ui-card">
-<img src="{{asset('imagenes/img6.jpg')}}" type="imagenes/jpg">
+<img src="{{asset('imagenes/img6.jpg')}}" type="imagenes/img12.jpg">
 	<div class="description">
 		<h3>Picadera</h3><br>
 		
