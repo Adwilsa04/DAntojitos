@@ -122,8 +122,9 @@ Route::get('Inicio de admin', function(){
 }) ->name('inicioad');
 
 use App\Http\Controllers\PagoController;
-
 Route::post('/pagar', [PagoController::class, 'store'])->name('pagar.store');
+Route::get('/pagos', [PagoController::class, 'index'])->name('pagos.index');
+Route::put('/pagos/{id}/toggle', [PagoController::class, 'toggle'])->name('pagos.toggle');
 
 
 use App\Http\Controllers\RegitroClienteController;

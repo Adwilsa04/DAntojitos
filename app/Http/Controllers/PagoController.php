@@ -6,6 +6,11 @@ use Illuminate\Http\Request;
 
 class PagoController extends Controller
 {
+    public function index()
+    {
+        $pagos = Pago::all();
+        return view('manejoadmin.pagos', ['pagos' => $pagos]);
+    }
     public function store(Request $request)
     {
         $validatedData = $request->validate([
@@ -24,5 +29,14 @@ class PagoController extends Controller
         Pago::create($validatedData);
 
         return redirect()->back()->with('success', 'Pago realizado con éxito');
+    }
+
+    public function toggle($id)
+    {
+        $pago = Pago::findOrFail($id);
+        $pago->activo = !$pago->activo;
+        $pago->save();
+
+        return redirect()->back()->with('success', 'Estado del pago actualizado con éxito.');
     }
 }

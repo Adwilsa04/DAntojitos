@@ -103,7 +103,7 @@ footer{
     <div class="image-box">
         <img src="{{asset('imagenes/img3.jpg')}}" alt="Image 1">
         <div class="label">Pedidos</div>
-        <button class="button"><a href="">Gestionar</a></button>
+        <button class="button"><a href="{{route('pagos.index')}}">Gestionar</a></button>
     </div>
     <div class="image-box">
         <img src="{{asset('imagenes/img2.jpg')}}" alt="Image 2">
