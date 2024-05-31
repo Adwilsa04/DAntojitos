@@ -10,6 +10,7 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            background-color: #f5f5f5;
         }
 
         header {
@@ -37,18 +38,18 @@
 
         .hero {
             width: 100%;
-            height: 400px; /* Establecer la altura fija del contenedor */
-            overflow: hidden; /* Asegura que cualquier parte de la imagen que se salga del cuadro sea recortada */
+            height: 100vh; /* Hacer que la imagen cubra toda la página */
+            overflow: hidden;
             position: relative;
-            text-align: center; /* Centrar el contenido */
+            text-align: center;
             color: white;
         }
 
         .hero img {
             width: 100%;
             height: 100%;
-            object-fit: cover; /* Esto asegura que la imagen cubra todo el contenedor */
-            object-position: center; /* Centra la imagen dentro del contenedor */
+            object-fit: cover;
+            object-position: center;
         }
 
         .hero h1 {
@@ -57,72 +58,87 @@
             left: 50%;
             transform: translate(-50%, -50%);
             font-size: 3em;
-            /* background: rgba(0, 0, 0, 0.5); Fondo semitransparente removido */
             padding: 20px;
             border-radius: 10px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Añadir sombra al texto para mejorar la legibilidad */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
         }
 
-        body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f5f5f5;
-}
+        .gold-line {
+            border-top: 4px solid #daa520; /* Línea dorada */
+            margin: 0 auto;
+            width: 80%;
+        }
 
-.container {
-    display: flex;
-    max-width: 1200px;
-    margin: 0 auto;
-    background-color: #333;
-    color: #fff;
-}
+        .container {
+            display: flex;
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: #333;
+            color: #fff;
+        }
 
-.image-container {
-    flex: 1;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+        .image-container {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-.image-container img {
-    max-width: 100%;
-    height: auto;
-    border: 10px solid #f5f5f5;
-}
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border: 10px solid #f5f5f5;
+        }
 
-.text-container {
-    flex: 2;
-    padding: 20px;
-    border-left: 1px solid #444;
-}
+        .text-container {
+            flex: 2;
+            padding: 20px;
+            border-left: 1px solid #444;
+        }
 
-.text-container h1 {
-    font-size: 24px;
-    margin-bottom: 20px;
-}
+        .text-container h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #8b4513; /* Color marrón */
+        }
 
-.text-container p {
-    font-size: 16px;
-    line-height: 1.5;
-    margin-bottom: 20px;
-}
+        .text-container p {
+            font-size: 16px;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
 
-.text-container .artist {
-    font-size: 14px;
-    margin-top: 20px;
-}
+        .text-container .artist {
+            font-size: 14px;
+            margin-top: 20px;
+        }
 
-.text-container a {
-    color: #ffa500;
-    text-decoration: none;
-}
+        .text-container a {
+            color: #ffa500;
+            text-decoration: none;
+        }
 
-.text-container a:hover {
-    text-decoration: underline;
-}
+        .text-container a:hover {
+            text-decoration: underline;
+        }
 
+        .faqs {
+            text-align: center;
+            padding: 20px;
+            background-color: #444;
+            color: #fff;
+        }
+
+        .faqs h2 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .faqs p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
     </style>
 </head>
 <body>
@@ -142,14 +158,15 @@
             <img src="imagenes/deco2.jpg" alt="Imagen descriptiva"> <!-- Reemplaza con la URL de tu imagen -->
             <h1>OUR STORY</h1>
         </section>
+        <div class="gold-line"></div> <!-- Línea dorada debajo de la imagen -->
     </main>
 
     <section class="faqs">
-            <h2>Contactanos</h2>
-            <p>Transforma tus eventos en experiencias inolvidables con nuestro exquisito buffet, elegantes picaderas y deslumbrantes decoraciones.
-                Nos apasiona crear momentos únicos y personalizados para cada ocasión. 
-                Contáctanos hoy mismo y descubre cómo podemos hacer realidad la celebración de tus sueños.</p>
-        </section>
+        <h2>Contactanos</h2>
+        <p>Transforma tus eventos en experiencias inolvidables con nuestro exquisito buffet, elegantes picaderas y deslumbrantes decoraciones.
+            Nos apasiona crear momentos únicos y personalizados para cada ocasión. 
+            Contáctanos hoy mismo y descubre cómo podemos hacer realidad la celebración de tus sueños.</p>
+    </section>
 
     <div class="container">
         <div class="image-container">
@@ -162,8 +179,5 @@
             <p class="artist">Poogan’s Portrait Artist: Jordan Cave (<a href="http://www.jordancavestudio.com">www.jordancavestudio.com</a>)</p>
         </div>
     </div>
-
-
 </body>
 </html>
-
