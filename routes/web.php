@@ -88,6 +88,13 @@ Route::get('/pantadmin', function(){
     return view('pantadmin');
 }) ->name('pantadmin');
 
+/*Route::middleware(['auth.admin'])->group(function () {
+    Route::get('/pantadmin', function() {
+        return view('pantadmin');
+    })->name('pantadmin');
+});
+
+*/
 
 Route::get('inicio', function() {
     return view('pagianPrinci');
@@ -125,7 +132,12 @@ use App\Http\Controllers\PagoController;
 
 Route::post('/pagar', [PagoController::class, 'store'])->name('pagar.store');
 
+
 use App\Http\Controllers\RegitroClienteController;
+
+
+Route::get('Formularios/registro', [RegitroClienteController::class, 'create']);
+Route::post('Formularios/registro', [RegitroClienteController::class, 'store'])->name('registro.store');
 
 Route::resource('registros', RegitroClienteController::class);
 
@@ -172,12 +184,13 @@ Route::get('admin/login', [AdminAuthController::class, 'showLoginForm'])->name('
 Route::post('admin/login', [AdminAuthController::class, 'login']);
 Route::post('admin/logout', [AdminAuthController::class, 'logout'])->name('admin.logout');
 
-Route::middleware(['auth:admin'])->group(function () {
+/*Route::middleware(['auth:admin'])->group(function () {
     Route::get('admin/pantaadmin', function () {
         return view('admin.pantaadmin');
     })->name('admin.pantaadmin');
 });
 
+*/
 use App\Http\Controllers\MessageController;
 
 Route::post('/contacto', [MessageController::class, 'store'])->name('contacto.store');

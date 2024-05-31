@@ -14,16 +14,16 @@ return new class extends Migration
         Schema::create('pagos', function (Blueprint $table) {
             $table->id();
             $table->string('nombre_completo');
-            $table->text('email');
+            $table->string('email');
             $table->string('tipo_pago');
             $table->text('descripcion_pago');
-            $table->string('monto');
-            $table->string('nombre_tarjeta');
-            $table->string('num_tarjeta');
-            $table->string('mes_expiracion');
-            $table->string('ano_expiracion');
-            $table->string('cvv');
-            $table->string('activo');
+            $table->decimal('monto', 8, 2);
+            $table->string('nombre_tarjeta')->nullable();
+            $table->string('num_tarjeta')->nullable();
+            $table->string('mes_expiracion')->nullable();
+            $table->string('ano_expiracion')->nullable();
+            $table->string('cvv')->nullable();
+            $table->boolean('activo')->default(true);
             $table->timestamps();
         });
     }

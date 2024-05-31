@@ -109,7 +109,7 @@ footer{
         <button class="button"><a href="{{ route('citas.index') }}">Gestionar</a></button>
     </div>
     <div class="image-box">
-        <img src="{{asset('imagenes/img1.jpg')}}" alt="Image 3">
+        <img src="{{asset('image/i.jpg')}}" alt="Image 3">
         <div class="label">Usuarios</div>
         <button class="button"><a href="{{route('usuarios.index')}}">Gestionar</a></button>
     </div>

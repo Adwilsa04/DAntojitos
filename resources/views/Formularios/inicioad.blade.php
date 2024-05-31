@@ -49,34 +49,35 @@
             <div class="formbg-inner padding-horizontal--48">
               <span class="padding-bottom--15">Ingresa los datos</span>
               <form action="{{ route('admin.login') }}" method="POST">
-        @csrf
-        <div class="field padding-bottom--24">
-            <label for="email">Email</label>
-            <input type="email" name="correo" placeholder="Correo predeterminado de Admin" required>
+    @csrf
+    <div class="field padding-bottom--24">
+        <label for="email">Email</label>
+        <input type="email" name="correo" placeholder="Correo predeterminado de Admin" required>
+    </div>
+    <div class="field padding-bottom--24">
+        <div class="grid--50-50">
+            <label for="contrasena">Contraseña</label>
+            <div class="reset-pass"></div>
         </div>
-        <div class="field padding-bottom--24">
-            <div class="grid--50-50">
-                <label for="contrasena">Contraseña</label>
-                <div class="reset-pass"></div>
-            </div>
-            <input type="password" name="contrasena" placeholder="Tu contraseña" required>
-        </div>
-        <div class="field padding-bottom--24">
-            <input type="submit" name="submit" value="Continue">
-        </div>
+        <input type="password" name="contrasena" placeholder="Tu contraseña" required>
+    </div>
+    <div class="field padding-bottom--24">
+        <button type="submit" name="submit">Continuar</button>     
+    </div>
 
-        @if (session('success'))
-            <div class="alert alert-success">
-                {{ session('success') }}
-            </div>
-        @endif
+    @if (session('success'))
+        <div class="alert alert-success">
+            {{ session('success') }}
+        </div>
+    @endif
 
-        @if (session('error'))
-            <div class="alert alert-danger">
-                {{ session('error') }}
-            </div>
-        @endif
-    </form>
+    @if (session('error'))
+        <div class="alert alert-danger">
+            {{ session('error') }}
+        </div>
+    @endif
+</form>
+
             </div>
           </div>
           <div class="footer-link padding-top--24">
@@ -169,7 +170,7 @@
   .box-background--blue800 {
       background-color: #cb353f;
   }
-  .box-background--gray100 {8
+  .box-background--gray100 {
       background-color: #e3e8ee;
   }
   .box-background--cyan200 {
@@ -251,19 +252,31 @@
                   rgba(0, 0, 0, 0) 0px 0px 0px 0px;
   }
   
-  input[type="submit"] {
-      background-color: rgba(0, 0, 0, 0.5);
-      box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
-                  rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
-                  rgba(0, 0, 0, 0.12) 0px 1px 1px 0px, 
-                  rgba(152, 99, 59, 0.5) 0px 0px 0px 1px, 
-                  rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
-                  rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
-                  rgba(60, 66, 87, 0.08) 0px 2px 5px 0px;
-      color: #fff;
-      font-weight: 600;
-      cursor: pointer;
-  }
+  button {
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+                rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+                rgba(0, 0, 0, 0.12) 0px 1px 1px 0px, 
+                rgba(152, 99, 59, 0.5) 0px 0px 0px 1px, 
+                rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+                rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+                rgba(60, 66, 87, 0.08) 0px 2px 5px 0px;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 10px 20px;
+    font-size: 16px;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    margin-top: 20px;
+}
+
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.7); 
+    transition: 0.5s;
+}
   .field-checkbox input {
       width: 20px;
       height: 15px;
