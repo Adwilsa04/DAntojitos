@@ -147,6 +147,11 @@ Route::middleware(['auth'])->group(function () {
     })->name('dashboard');
 });
 
+Route::get('Confirmación', function(){
+    return view('Confirmación');
+})->name('Confirmación');
+
+
 use App\Http\Controllers\CitaController;
 
 Route::get('Manejo Cita', function(){

@@ -175,7 +175,7 @@
                     </div>
                 </div>
             </div>
-            <input type="submit" value="Haz tu pago" class="submit-btn">
+            <input type="submit" value="Haz tu pago" class="submit-btn" href="{{ route('Confirmación') }}">
         </form>
     </div>
 

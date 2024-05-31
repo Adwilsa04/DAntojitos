@@ -158,20 +158,10 @@
     </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Menus</a></li>
-                <li><a href="#">Gift Cards</a></li>
-                <li><a href="#">Reservations</a></li>
-                <li><a href="#">Contact & FAQs</a></li>
-            </ul>
-        </nav>
-    </header>
+<x-index></x-index>
     <main>
         <section class="hero">
-            <img src="imagenes/deco1.jpg" alt="Imagen descriptiva"> <!-- Replace with your image URL -->
+            <img src="imagenes/img9.jpg" alt="Imagen descriptiva"> <!-- Replace with your image URL -->
         </section>
         <section class="faqs">
             <h2>Contactanos</h2>

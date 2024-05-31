@@ -1,21 +1,12 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="{{asset('imagenes/Logo.ico')}}">
     <title>D'antojitos Gourmet Decora</title>
 </head>
-<head>
-
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>D' antojitos Gourmet Decora</title>
-        <link rel="icon" type="image/x-icon" href="{{asset('imagenes/Logo.ico')}}">
-    </head>
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
@@ -198,7 +189,7 @@ p {
 }
 
 .book-now {
-    background-color: #5a6e5d;
+    background-color: #103349;
     color: white;
     border: none;
     padding: 15px 30px;
@@ -208,7 +199,7 @@ p {
 }
 
 .book-now:hover {
-    background-color: #4d5d4f;
+    background-color: #292b4b;
 }
 
 a{
@@ -218,8 +209,11 @@ a{
 
     </style>
 <x-index></x-index>
-
-
+<br>
+<br>
+<br>
+<br>
+<br>
     <body>
         
         <div class="banner">
@@ -243,8 +237,6 @@ a{
         </div>
 <br>
 <br>
-<br>
-<br>
 
        <center> <h1>WELCOME TO D' antojitos</h1><br>
      <p> Nos enorgullece ofrecer una experiencia gastronómica y decorativa inigualable para sus eventos más especiales. 
@@ -264,14 +256,14 @@ a{
                <a href="{{route('contacto')}}">Contactos</a>
             </div>
         </div>
-        <div class="gallery-item image-item"><img src="imagenes/deco1.jpg" alt="Image 2"></div>
+        <div class="gallery-item image-item"><img src="imagenes/img4.jpg" alt="Image 2"></div>
         <div class="gallery-item text-item">
             <div class="text-content">
                 <img src="imagenes/icono4.png" alt="Icon 2">
                 <a href="{{route('nosotros')}}">Nosotros</a>
             </div>
         </div>
-        <div class="gallery-item image-item"><img src="imagenes/deco2.jpg" alt="Image 3"></div>
+        <div class="gallery-item image-item"><img src="imagenes/img2.jpg" alt="Image 3"></div>
         <div class="gallery-item text-item">
             <div class="text-content">
                 <img src="imagenes/icono2.png" alt="Icon 3">
