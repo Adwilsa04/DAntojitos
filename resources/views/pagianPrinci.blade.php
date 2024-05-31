@@ -274,7 +274,7 @@ a{
 <br>
 <br>
 
-       <center> <h1>WELCOME TO D' antojitos</h1><br>
+       <center> <h1>Bienvenidos D' antojitos</h1><br>
      <p> Nos enorgullece ofrecer una experiencia gastronómica y decorativa inigualable para sus eventos más especiales. 
        Con un compromiso inquebrantable con la excelencia, nuestro equipo de expertos culinarios y diseñadores de eventos 
        trabaja meticulosamente para crear ambientes elegantes y menús exquisitos que deleitan los sentidos. Ya sea un íntimo encuentro familiar, 

@@ -12,7 +12,7 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: ;
+            background-color: #f5f5f5;
         }
 
         header {
@@ -40,18 +40,18 @@
 
         .hero {
             width: 100%;
-            height: 400px; /* Establecer la altura fija del contenedor */
-            overflow: hidden; /* Asegura que cualquier parte de la imagen que se salga del cuadro sea recortada */
+            height: 400px;
+            overflow: hidden;
             position: relative;
-            text-align: center; /* Centrar el contenido */
+            text-align: center;
             color: white;
         }
 
         .hero img {
             width: 100%;
             height: 100%;
-            object-fit: cover; /* Esto asegura que la imagen cubra todo el contenedor */
-            object-position: center; /* Centra la imagen dentro del contenedor */
+            object-fit: cover;
+            object-position: center;
         }
 
         .hero h1 {
@@ -60,173 +60,120 @@
             left: 50%;
             transform: translate(-50%, -50%);
             font-size: 2em;
-            /* background: rgba(0, 0, 0, 0.5); Fondo semitransparente removido */
             padding: 20px;
             border-radius: 10px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Añadir sombra al texto para mejorar la legibilidad */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
         }
 
-        body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f5f5f5;
-}
-
-.container {
-    display: flex;
-    max-width: 3800px;
-    height: 450px;
-    margin: 0 auto;
-    background-color: #333;
-    color: #fff;
-}
-
-.image-container {
-    flex: 1;
-    height: 450px;
-    padding: 1px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.image-container img {
-    max-width: 200%;
-    height: 450px;
-    border:  5px solid #f5f5f5;
-}
-
-.text-container {
-    flex: 2;
-    padding: 20px;
-    border-left: 1px solid #444;
-}
-
-.text-container h1 {
-    font-size: 24px;
-    margin-bottom: 20px;
-}
-
-.text-container p {
-    font-size: 16px;
-    line-height: 1.5;
-    margin-bottom: 20px;
-}
-
-.text-container .artist {
-    font-size: 14px;
-    margin-top: 20px;
-}
-
-.text-container a {
-    color: #ffa500;
-    text-decoration: none;
-}
-
-.text-container a:hover {
-    text-decoration: underline;
-}
-
-/*otro codigo */
-  .title {
-            color: #ffcba9; /* Brown title text */
-            font-size: 2em; /* Adjust as needed */
+        .container {
+            display: flex;
+            width: 100vw; /* Ocupar todo el ancho del viewport */
+            height: 400px; /* Ajustar la altura según sea necesario */
+            margin: 0; /* Eliminar márgenes */
+            background-color: #333;
+            color: #fff;
+            border-radius: 15px;
+            overflow: hidden;
         }
-    
-/*Codigo de la carta */
 
-/* styles.css */
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
-}
+        .image-container, .text-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%; /* Ajustar la altura según sea necesario */
+        }
 
-.container {
-    display: flex;
-    flex-direction: row;
-    height: 50vh;
-    align-items: center;
-    justify-content: center;
-    
-}
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border: 5px solid #f5f5f5;
+        }
 
-.image-section {
-    flex: 1;
-    background-color: #333333;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-}
+        .text-container {
+            padding: 20px;
+            background-color: #d3d3d3; /* Cambia a un gris suave */
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: left;
+        }
 
-.image-section img {
-    width: 97%;
-    height: auto;
-    border: 5px solid #333333;
-}
+        .text-container h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
 
-.image-section::after {
-    content: '';
-    display: block;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 10px;
-    background: repeating-linear-gradient(
-        90deg,
-        #d4af37,
-        #d4af37 10px,
-        #333333 10px,
-        #333333 20px
-    );
-}
+        .text-container p {
+            font-size: 16px;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
 
-.text-section {
-    flex: 1;
-    padding: 40px;
-    background-color: #333333;
-    color: #ffffff;
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
+        .text-container .artist {
+            font-size: 14px;
+            margin-top: 20px;
+        }
 
-h1 {
-    font-size: 24px;
-    color: #d4af37;
-    margin-bottom: 20px;
-}
+        .text-container a {
+            color: #ffa500;
+            text-decoration: none;
+        }
 
-p {
-    font-size: 16px;
-    line-height: 1.5;
-    margin-bottom: 20px;
-}
+        .text-container a:hover {
+            text-decoration: underline;
+        }
 
-.artist {
-    font-style: italic;
-    font-size: 14px;
-}
+        .title {
+            color: #ffcba9;
+            font-size: 2em;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                height: auto;
+            }
+
+            .image-container, .text-container {
+                width: 100%;
+                height: auto;
+            }
+
+            .image-container img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
     </style>
 </head>
-
 <body>
 <x-index></x-index>
     <main>
         <section class="hero">
-            <img src="imagenes/img12.jpg" alt="Imagen descriptiva"> <!-- Reemplaza con la URL de tu imagen -->
+            <img src="imagenes/img12.jpg" alt="Imagen descriptiva">
             <h1>OUR STORY</h1>
         </section>
     </main>
-<br><br>
+    <br><br>
+
+    <center> <h1>Nuestra Historia</h1><br>
+     <p> Nos enorgullece ofrecer una experiencia gastronómica y decorativa inigualable para sus eventos más especiales. Con un </p>
+       <p>compromiso inquebrantable con la excelencia, nuestro equipo de expertos culinarios y diseñadores de eventos trabaja </p>
+       <p>meticulosamente para crear ambientes elegantes y menús exquisitos que deleitan los sentidos. Ya sea un íntimo encuentro </p>
+       <p>familiar, una celebración corporativa o una majestuosa boda. </p>
+       </p><br>
+  </center><br><br><br><br>
+
     <div class="container">
-        <div class="image-section">
-            <img src="imagenes/img12.jpg" alt="Portrait of Poogan">
+        <div class="image-container">
+            <img src="imagenes/deco7.jpg" alt="Portrait of Poogan">
         </div>
-        <div class="text-section">
+        <div class="text-container">
             <h1>HOW WE GOT OUR NAME</h1>
             <p>From the moment you step into the parlor of Poogan’s Porch, there is a pervasive sense of history: the knotted heart-of-pine floors.</p>
             <p>Poogan’s Porch was originally a spacious, commodious home, erected in 1891. By 1976, the character of the neighborhood had changed suitably to allow for the conversion of t</p>
@@ -234,6 +181,12 @@ p {
         </div>
     </div>
 
+    <br><br><center> <h1>Nuestra Historia</h1><br>
+     <p> Nos enorgullece ofrecer una experiencia gastronómica y decorativa inigualable para sus eventos más especiales. Con un </p>
+       <p>compromiso inquebrantable con la excelencia, nuestro equipo de expertos culinarios y diseñadores de eventos trabaja </p>
+       <p>meticulosamente para crear ambientes elegantes y menús exquisitos que deleitan los sentidos. Ya sea un íntimo encuentro </p>
+       <p>familiar, una celebración corporativa o una majestuosa boda. </p>
+       </p><br>
+  </center><br><br><br><br>
 </body>
 </html>
-
