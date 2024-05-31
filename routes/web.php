@@ -84,7 +84,7 @@ Route::get('/pedidos/picadera', function () {
 
 
 
-Route::get('pantadmin', function(){
+Route::get('/pantadmin', function(){
     return view('pantadmin');
 }) ->name('pantadmin');
 
@@ -147,6 +147,11 @@ Route::middleware(['auth'])->group(function () {
     })->name('dashboard');
 });
 
+Route::get('Confirmación', function(){
+    return view('Confirmación');
+})->name('Confirmación');
+
+
 use App\Http\Controllers\CitaController;
 
 Route::get('Manejo Cita', function(){
@@ -172,6 +177,10 @@ Route::middleware(['auth:admin'])->group(function () {
         return view('admin.pantaadmin');
     })->name('admin.pantaadmin');
 });
+
+use App\Http\Controllers\MessageController;
+
+Route::post('/contacto', [MessageController::class, 'store'])->name('contacto.store');
 
 
 require __DIR__.'/auth.php';
