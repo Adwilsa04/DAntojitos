@@ -170,7 +170,7 @@ h1 {
         }
 
         .btn-reserva:hover {
-            background-color: red;
+            background-color: #8B0000;
         }
 </style>
 <x-index></x-index>
