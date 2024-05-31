@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario de Pago</title>
-    <link rel="icon" type="image/png" href="imagenes/Logo.icon">
+    <link rel="icon" type="image/x-icon" href="{{asset('imagenes/Logo.ico')}}">
 </head>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
