@@ -53,7 +53,7 @@ button {
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 10px;
     font-family: 'Poppins';
 }
 
@@ -107,6 +107,10 @@ table {
         background-color: #f5f5f5;
     }
 
+    p{
+        font-family: 'Poppins';
+    }
+
 </style>
 
 <body>
@@ -114,33 +118,45 @@ table {
 <br><br><br><br><br>
 <h1>Gestión de los pagos</h1>
 <br>
-<table border="0">
+<center>
+    @if(isset($pagos))
+        <p>{{ $pagos->count() }} registros de los pagos realizados existentes.</p>
+    @else
+        <p>Variable $pagos no está definida.</p>
+    @endif
+    </center>
+    <br>
+<table border="1">
     <tr>
-        <th>Id Del Pago</th>
-        <th>Id Del Cliente</th>
-        <th>Id Del Pedido</th>
-        <th>Tipo del Pago</th>
+        <th>Id del pago</th>
+        <th>Nombre Completo</th>
+        <th>Email</th>
+        <th>Tipo del pago</th>
         <th>Descripción</th>
         <th>Monto</th>
-        <th>Tipo de Moneda</th>
-        <th>Activo</th>
+        <th>Estado</th>
+        <th>Acciones</th>
     </tr>
-<?php
-include_once 'conex.blade.php';
-
-$query = "SELECT id_pago, id_cliente, id_pedido, tipo_pago, descripcion_pago, monto, tipo_moneda, activo FROM pagos";
-$data = mysqli_query($mysqli, $query);
-$total = mysqli_num_rows($data); 
-
-
-if($total!=0){
-    while($row=mysqli_fetch_assoc($data)){
-        echo "<tr> <td>" . $row['id_pago'] . "</td> <td>" . $row['id_cliente'] . "</td> <td>" . $row['id_pedido'] . "</td> <td>" . $row['tipo_pago'] . "</td> <td>" . $row['descripcion_pago'] . "</td> <td>" . $row['monto'] . "</td> <td>" . $row['tipo_moneda'] . "</td> <td>" . $row['activo'] . "</td> <td> <button href='editarusu.php?rn=$row[id_pago]'>Editar</button></td> </tr>";
-    }
-}
-
-?>
+    @foreach ($pagos as $pago)
+    <tr>
+        <td>{{ $pago->id }}</td>
+        <td>{{ $pago->nombre_completo }}</td>
+        <td>{{ $pago->email }}</td>
+        <td>{{ $pago->tipo_pago }}</td>
+        <td>{{ $pago->descripcion_pago }}</td>
+        <td>{{ $pago->monto }}</td>
+        <td>{{ $pago->activo ? 'Activo' : 'Inactivo' }}</td>
+        <td>
+            <form action="{{ route('pagos.toggle', $pago->id) }}" method="POST" onsubmit="return confirm('¿Está seguro de que desea cambiar el estado de este pago?');">
+                @csrf
+                @method('PUT')
+                <button type="submit">{{ $pago->activo ? 'Marcar como Inactivo' : 'Marcar como Activo' }}</button>
+            </form>
+        </td>
+    </tr>
+    @endforeach
 </table>
+
 </body>
 <x-footer></x-footer>
 </html>
