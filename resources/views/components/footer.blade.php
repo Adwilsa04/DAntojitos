@@ -12,7 +12,7 @@
     box-sizing: border-box;
 }
 footer{
-    background-color: white;
+    background-color: black;
 }
 .footerContainer{
     width: 100%;
@@ -25,7 +25,7 @@ footer{
 .socialIcons a{
     text-decoration: none;
     padding:  10px;
-    background-color: white;
+    background-color: #fffaf2;
     margin: 10px;
     border-radius: 50%;
 }
@@ -40,7 +40,7 @@ footer{
     transition: 0.5s;
 }
 .socialIcons a:hover i{
-    color: white;
+    color: #8B0000;
     transition: 0.5s;
 }
 .footerNav{
@@ -52,7 +52,7 @@ footer{
     list-style-type: none;
 }
 .footerNav ul li a{
-    color:black;
+    color: white;
     margin: 20px;
     text-decoration: none;
     font-size: 1.3em;
@@ -119,8 +119,8 @@ footer{
         <div class="footerNav">
             <ul><li><a href="{{route('inicio')}}">Inicio</a></li>
                 <li><a href="{{route('pantadmin')}}">Administrador</a></li>
-                <li><a href="">Sobre nosotros</a></li>
-                <li><a href="">Contacto</a></li>
+                <li><a href="{{route('nosotros')}}">Sobre nosotros</a></li>
+                <li><a href="{{route('contacto')}}">Contacto</a></li>
                 <li><a href="{{route('registrate')}}">Registro</a></li>
                 <li><a href="{{route('cita')}}">Reserva tu cita</a></li>
             </ul>
@@ -128,7 +128,7 @@ footer{
         
     </div>
     <div class="footerBottom">
-        <p>Copyright &copy;2023  <span class="designer">D' Antojitos Gourmet Decora</span></p>
+        <p>Copyright &copy;2024  <span class="designer">D' Antojitos Gourmet Decora</span></p>
     </div>
 </footer>
 </body>

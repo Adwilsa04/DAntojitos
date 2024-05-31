@@ -35,18 +35,18 @@
 
     <script>
         const product = [
-            { id: 0, image: '{{ asset('image/a1.jpg') }}', title: 'Menú 1', price: 50 },
-            { id: 1, image: '{{ asset('image/a2.jpg') }}', title: 'Menú 2', price: 60 },
-            { id: 2, image: '{{ asset('image/a3.jpg') }}', title: 'Menú 3', price: 70 },
-            { id: 3, image: '{{ asset('image/4.jpg') }}', title: 'Menú 4', price: 80 },
-            { id: 4, image: '{{ asset('image/a5.jpg') }}', title: 'Menú 5', price: 90 },
-            { id: 5, image: '{{ asset('image/a6.jpg') }}', title: 'Menú 6', price: 100 },
-            { id: 6, image: '{{ asset('image/7.jpg') }}', title: 'Menú 7', price: 110 },
-            { id: 7, image: '{{ asset('image/8.jpg') }}', title: 'Menú 8', price: 120 },
-            { id: 8, image: '{{ asset('image/9.jpg') }}', title: 'Menú 9', price: 130 },
-            { id: 9, image: '{{ asset('image/10.jpg') }}', title: 'Menú 10', price: 140 },
-            { id: 10, image: '{{ asset('image/11.jpg') }}', title: 'Menú 11', price: 150 },
-            { id: 11, image: '{{ asset('image/12.jpg') }}', title: 'Menú 12', price: 160 }
+            { id: 12, image: '{{ asset('image/a1.jpg') }}', title: 'Menú 1', price: 550 },
+            { id: 13, image: '{{ asset('image/a2.jpg') }}', title: 'Menú 2', price: 500 },
+            { id: 14, image: '{{ asset('image/a3.jpg') }}', title: 'Menú 3', price: 575 },
+            { id: 15, image: '{{ asset('image/4.jpg') }}', title: 'Menú 4', price: 500 },
+            { id: 16, image: '{{ asset('image/a5.jpg') }}', title: 'Menú 5', price: 600 },
+            { id: 17, image: '{{ asset('image/a6.jpg') }}', title: 'Menú 6', price: 590 },
+            { id: 18, image: '{{ asset('image/7.jpg') }}', title: 'Menú 7', price: 550 },
+            { id: 19, image: '{{ asset('image/8.jpg') }}', title: 'Menú 8', price: 530 },
+            { id: 20, image: '{{ asset('image/9.jpg') }}', title: 'Menú 9', price: 500 },
+            { id: 21, image: '{{ asset('image/10.jpg') }}', title: 'Menú 10', price: 500 },
+            { id: 22, image: '{{ asset('image/11.jpg') }}', title: 'Menú 11', price: 520 },
+            { id: 23, image: '{{ asset('image/12.jpg') }}', title: 'Menú 12', price: 510 }
         ];
 
         const categories = [...new Set(product.map((item) => item))];

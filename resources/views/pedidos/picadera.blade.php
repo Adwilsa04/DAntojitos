@@ -33,18 +33,18 @@
 
 <script>
     const product = [
-        { id: 0, image: '{{ asset('image/a.jpg') }}', title: 'Bolovan', price: 50 },
-        { id: 1, image: '{{ asset('image/b.jpg') }}', title: 'Pastelistos', price: 60 },
-        { id: 2, image: '{{ asset('image/c.jpg') }}', title: 'Quipes', price: 70 },
-        { id: 3, image: '{{ asset('image/d.jpg') }}', title: 'Wraps', price: 80 },
-        { id: 4, image: '{{ asset('image/e.jpg') }}', title: 'Sándwich', price: 90 },
-        { id: 5, image: '{{ asset('image/f.jpg') }}', title: 'Producto 6', price: 100 },
-        { id: 6, image: '{{ asset('image/g.jpg') }}', title: 'Croisant rellenos', price: 110 },
-        { id: 7, image: '{{ asset('image/h.jpg') }}', title: 'Croquetas', price: 120 },
-        { id: 8, image: '{{ asset('image/i.jpg') }}', title: 'Tabla de quesos y embutidos', price: 130 },
-        { id: 9, image: '{{ asset('image/j.jpg') }}', title: 'Pinchos caprese', price: 140 },
-        { id: 10, image: '{{ asset('image/k.jpg') }}', title: 'Bizcocho de maiz', price: 150 },
-        { id: 11, image: '{{ asset('image/l.jpg') }}', title: 'P con salsa', price: 160 }
+        { id: 0, image: '{{ asset('image/a.jpg') }}', title: 'Bolovan', price: 80 },
+        { id: 1, image: '{{ asset('image/b.jpg') }}', title: 'Pastelistos', price: 45 },
+        { id: 2, image: '{{ asset('image/c.jpg') }}', title: 'Quipes', price: 35 },
+        { id: 3, image: '{{ asset('image/d.jpg') }}', title: 'Wraps', price: 110 },
+        { id: 4, image: '{{ asset('image/e.jpg') }}', title: 'Sándwich', price: 65 },
+        { id: 5, image: '{{ asset('image/f.jpg') }}', title: 'Canapé', price: 130 },
+        { id: 6, image: '{{ asset('image/g.jpg') }}', title: 'Mini croisant rellenos', price: 95 },
+        { id: 7, image: '{{ asset('image/h.jpg') }}', title: 'Croquetas', price: 55 },
+        { id: 8, image: '{{ asset('image/i.jpg') }}', title: 'Tabla de quesos y embutidos', price: 750 },
+        { id: 9, image: '{{ asset('image/j.jpg') }}', title: 'Pinchos caprese', price: 120 },
+        { id: 10, image: '{{ asset('image/k.jpg') }}', title: 'Bizcocho de maiz', price: 50 },
+        { id: 11, image: '{{ asset('image/l.jpg') }}', title: 'Mini pay', price: 30 }
     ];
 
     const categories = [...new Set(product.map((item) => item))];
