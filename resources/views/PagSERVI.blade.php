@@ -103,6 +103,8 @@ img{
 	background:#0d0f0f;
 }
 </style>
+<x-index></x-index>
+
 <br>
 <body>
 
