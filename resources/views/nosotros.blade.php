@@ -153,14 +153,23 @@
     <x-index></x-index>
     <main>
         <section class="hero">
-            <img src="imagenes/deco7.jpg" alt="Imagen descriptiva">
+            <img src="imagenes/img12.jpg" alt="Imagen descriptiva">
             <h1>OUR STORY</h1>
         </section>
     </main>
     <br><br>
+
+    <center> <h1>Nuestra Historia</h1><br>
+     <p> Nos enorgullece ofrecer una experiencia gastronómica y decorativa inigualable para sus eventos más especiales. Con un </p>
+       <p>compromiso inquebrantable con la excelencia, nuestro equipo de expertos culinarios y diseñadores de eventos trabaja </p>
+       <p>meticulosamente para crear ambientes elegantes y menús exquisitos que deleitan los sentidos. Ya sea un íntimo encuentro </p>
+       <p>familiar, una celebración corporativa o una majestuosa boda. </p>
+       </p><br>
+  </center><br><br><br><br>
+
     <div class="container">
         <div class="image-container">
-            <img src="imagenes/img12.jpg" alt="Portrait of Poogan">
+            <img src="imagenes/deco7.jpg" alt="Portrait of Poogan">
         </div>
         <div class="text-container">
             <h1>HOW WE GOT OUR NAME</h1>
@@ -169,6 +178,14 @@
             <p class="artist">Poogan's Portrait Artist: Jordan Cave (www.jordancavestudio.com)</p>
         </div>
     </div>
+
+    <br><br><center> <h1>Nuestra Historia</h1><br>
+     <p> Nos enorgullece ofrecer una experiencia gastronómica y decorativa inigualable para sus eventos más especiales. Con un </p>
+       <p>compromiso inquebrantable con la excelencia, nuestro equipo de expertos culinarios y diseñadores de eventos trabaja </p>
+       <p>meticulosamente para crear ambientes elegantes y menús exquisitos que deleitan los sentidos. Ya sea un íntimo encuentro </p>
+       <p>familiar, una celebración corporativa o una majestuosa boda. </p>
+       </p><br>
+  </center><br><br><br><br>
 </body>
 </html>
 
