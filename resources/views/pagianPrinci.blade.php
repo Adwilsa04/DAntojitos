@@ -33,6 +33,7 @@
     height: 100%;
     object-fit: cover;
     z-index: -1;
+    
 }
 
 .banner::before {
@@ -233,7 +234,16 @@ a{
     font-size: arial;
     color:white;
 }
-
+@media screen and (max-width: 768px) {
+    /* Estilos específicos para pantallas pequeñas */
+    .content h1 {
+        font-size: 10vw; /* Tamaño de fuente para pantallas pequeñas */
+    }
+    button {
+        font-size: 5vw; /* Tamaño de fuente del botón para pantallas pequeñas */
+        padding: 2vw 4vw; /* Padding del botón para pantallas pequeñas */
+    }
+}
     </style>
 <x-index></x-index>
 <br>
