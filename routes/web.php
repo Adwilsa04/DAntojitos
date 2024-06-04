@@ -93,13 +93,6 @@ Route::get('inicio', function() {
     return view('pagianPrinci');
 }) ->name('volver');
 
-Route::get('registro', function() {
-    return view('Formularios/registro');
-}) ->name('registrate');
-
-Route::get('sesion', function() {
-    return view('Formularios/inicio');
-}) ->name('sesion');
 
 Route::get('usuarios', function(){
     return view('manejoadmin/usuarios');
@@ -154,6 +147,13 @@ Route::middleware(['auth'])->group(function () {
 
     Route::resource('registros', RegitroClienteController::class);
 
+    Route::get('registro', function() {
+        return view('Formularios/registro');
+    }) ->name('registrate');
+    
+    Route::get('sesion', function() {
+        return view('Formularios/inicio');
+    }) ->name('sesion');
 });
 
 Route::get('Confirmación', function(){

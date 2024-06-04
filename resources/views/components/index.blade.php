@@ -1,110 +1,80 @@
 <!DOCTYPE html>
-   <html lang="en">
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Fijo Minimalista</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+body {
+    font-family: 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+}
 
-      <!--=============== REMIXICONS ===============-->
-      <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+.fixed-navbar {
+    background-color: #000;
+    border-bottom: 1px solid #ddd;
+    padding: 20px 0;  /* Aumentado el padding para hacer el menú más ancho */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
 
+.fixed-navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;  /* Aumentado el padding lateral */
+}
 
-       <!--=============== CSS ===============-->
-      <link rel="stylesheet" href="{{asset('css/styles.css')}}">
+.fixed-navbar ul .brand {
+    margin-right: auto;
+    color: #fff;
+    font-size: 20px;  /* Aumentado el tamaño de fuente para hacerla más prominente */
+    padding: 0 15px;
+}
 
-      <title></title>
-   </head>
-   <body>
-      <!--=============== HEADER ===============-->
-      <header class="header">
-         <nav class="nav container">
-            <div class="nav__data">
-               <a href="" class="nav__logo">
-                  <link rel="icon" href="imagenes/Logo.ico">
-                  <i class="ri-planet-line">D'antojitos Gourmet Decora</i>
-               </a>
-               
-               <div class="nav__toggle" id="nav-toggle">
-                  <i class="ri-menu-line nav__burger"></i>
-                  <i class="ri-close-line nav__close"></i>
-               </div>
-            </div>
+.fixed-navbar ul li {
+    margin: 0 20px;  /* Aumentado el margen para separar más los elementos */
+}
 
-            <!--=============== NAV MENU ===============-->
-            <div class="nav__menu" id="nav-menu">
-               <ul class="nav__list">
-                  <li><a href="{{route('inicio')}}" style="text-decoration:none; color:white;" class="nav__link">Home</a></li>
-                 
+.fixed-navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    transition: color 0.3s;
+}
 
-                 
+.fixed-navbar ul li a:hover {
+    color: #007BFF;
+}
 
-                  <li><a href="{{route('nosotros')}}" class="nav__link">Sobre Nosotros</a></li>
+.content {
+    margin-top: 80px;  /* Ajustado para acomodar el mayor padding del menú */
+    padding: 20px;
+}
 
-                  <!--=============== DROPDOWN 1 ===============-->
-                  <li class="dropdown__item">
-                     <div class="nav__link">
-                        Servicios <i class="ri-arrow-down-s-line dropdown__arrow"></i>
-                     </div>
-
-                     <ul class="dropdown__menu">
-                        <li>
-                           <a href="{{ route('buffet') }}" class="dropdown__link">
-                              <i class="ri-pie-chart-line"></i> Buffet
-                           </a>                          
-                        </li>
-
-                        <li>
-                           <a href="{{ route('picadera') }}" class="dropdown__link">
-                              <i class="ri-arrow-up-down-line"></i> Picaderas
-                           </a>
-                        </li>
-
-                        <!--=============== DROPDOWN SUBMENU ===============-->
-                        <li>
-                           <a href="{{ route('decoracion') }}" class="dropdown__link">
-                              <i class="ri-arrow-up-down-line"></i> Decoracion
-                           </a>
-                        </li>
-                     </ul>
-                  
+</style>
 
 
-               
-                  <!--=============== DROPDOWN 2 ===============-->
-                  <li class="dropdown__item">
-                     <div class="nav__link">
-                        Usuario <i class="ri-arrow-down-s-line dropdown__arrow"></i>
-                     </div>
+<body>
+    <nav class="fixed-navbar">
+        <ul>
+            <li class="brand">Santrips</li>
+            <li><a href="#home">Inicio</a></li>
+            <li><a href="#about">Acerca de</a></li>
+            <li><a href="#services">Servicios</a></li>
+            <li><a href="#contact">Contacto</a></li>
+        </ul>
+    </nav>
+   
+</body>
 
-                     <ul class="dropdown__menu">
-                        <li>
-                           <a href="#" class="dropdown__link">
-                              <i class="ri-user-line"></i> Perfil
-                           </a>                          
-                        </li>
 
-                        <li>
-                           <a href="{{route('sesion')}}" class="dropdown__link">
-                              <i  class="ri-lock-line"></i> Inicio sesion
-                           </a>
-
-                        </li>
-
-                        <li>
-                           <a href="{{route('registrate')}}" class="dropdown__link">
-                              <i class="ri-message-3-line"></i> Registro Cliente
-                           </a>
-                      </li>
-                        
-                     </ul>
-                  </li>
-
-                  <li><a href="{{route('contacto')}}" class="nav__link">Contacto</a></li>
-               </ul>
-            </div>
-         </nav>
-      </header>
-
-      <!--=============== MAIN JS ===============-->
-      <script src="assets/js/main.js"></script>
-   </body>
 </html>
