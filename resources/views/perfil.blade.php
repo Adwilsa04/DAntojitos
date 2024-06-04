@@ -129,42 +129,32 @@
             <div class="tab" onclick="openTab(event, 'settings')">Configuración</div>
         </div>
         <div id="details" class="tab-content active">
-            <div class="profile-details">
-                <h2>Juan Pérez</h2>
-            </div>
+    <div class="profile-details">
+    <h2>{{ $registros->nombre_cliente }} {{ $registros->apellido_cliente }}</h2>
+        <div class="form-group">
+            <label for="nombre_cliente">Nombre</label>
+            <input type="text" id="nombre_cliente" value="{{ $registro->nombre_cliente }}">
         </div>
-        <div id="edit" class="tab-content">
-            <form>
-                <div class="form-group">
-                    <label for="nombre_cliente">Nombre</label>
-                    <input type="text" id="nombre_cliente" value="Juan">
-                </div>
-                <div class="form-group">
-                    <label for="apellido_cliente">Apellido</label>
-                    <input type="text" id="apellido_cliente" value="Pérez">
-                </div>
-                <div class="form-group">
-                    <label for="telefono_cliente">Teléfono</label>
-                    <input type="text" id="telefono_cliente" value="123-456-7890">
-                </div>
-                <button type="button" class="save-button">Guardar Cambios</button>
-            </form>
+        <div class="form-group">
+            <label for="apellido_cliente">Apellido</label>
+            <input type="text" id="apellido_cliente" value="{{ $registro->apellido_cliente }}">
         </div>
-        <div id="settings" class="tab-content">
-            <form>
-                <div class="form-group">
-                    <label for="correo">Correo Electrónico</label>
-                    <input type="email" id="correo" value="juan.perez@example.com">
-                </div>
-                <div class="form-group password-container">
-                    <label for="contrasena">Contraseña</label>
-                    <input type="password" id="contrasena" value="password123">
-                    <button type="button" class="toggle-password" onclick="togglePasswordVisibility()">Mostrar</button>
-                </div>
-                <button type="button" class="save-button">Guardar Cambios</button>
-            </form>
+        <div class="form-group">
+            <label for="telefono_cliente">Teléfono</label>
+            <input type="text" id="telefono_cliente" value="{{ $registro->telefono_cliente }}">
         </div>
+        <div class="form-group">
+            <label for="correo">Correo Electrónico</label>
+            <input type="email" id="correo" value="{{ $registro->correo }}">
+        </div>
+        <div class="form-group password-container">
+            <label for="contrasena">Contraseña</label>
+            <input type="password" id="contrasena" value="********">
+            <button type="button" class="toggle-password" onclick="togglePasswordVisibility()">Mostrar</button>
+        </div>
+        <button type="button" class="save-button">Guardar Cambios</button>
     </div>
+</div>
 
     <script>
         function openTab(evt, tabName) {
