@@ -299,7 +299,6 @@
             border-radius: 5px;
             padding: 10px 15px;
             cursor: pointer;
-            text-decoration: none;
             display: inline-block;
             border-bottom: none;
         }
