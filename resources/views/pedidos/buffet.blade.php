@@ -26,6 +26,8 @@
             <div class="head"><p>Mi Carrito</p></div>
             <div id="cartItem">Tu carrito está vacío</div>
             <div class="foot">
+                <h3>Fecha y Hora del Pedido</h3>
+                <input type="datetime-local" id="order-datetime">
                 <h3>Total</h3>
                 <h2 id="total">$ 0.00</h2>
                 <button id="pay-button"><a href="{{ route('pago') }}">Pagar</a></button>
@@ -105,7 +107,8 @@
             } else {
                 document.getElementById("cartItem").innerHTML = cart.map((items, index) => {
                     const { image, title, price, quantity } = items;
-                    total += price * quantity;
+                    const subtotal = price * quantity;
+                    total += subtotal;
                     document.getElementById("total").innerHTML = `$ ${total}.00`;
                     return `
                         <div class='cart-item'>
@@ -115,6 +118,7 @@
                             <p style='font-size:12px;'>${title}</p>
                             <input type='number' min='1' value='${quantity}' onchange='updateQuantity(${index}, this.value)'>
                             <p style='font-size:12px;'>$ ${price}.00</p>
+                            <p style='font-size:12px;'>Subtotal: $ ${subtotal}.00</p>
                             <i class="fas fa-trash" onclick='delElement(${j++})'></i>
                         </div>
                     `;
@@ -279,6 +283,15 @@
             margin: 5px 0;
         }
 
+        .foot input[type="datetime-local"] {
+            margin: 10px 0;
+            padding: 10px;
+            width: 80%;
+            font-size: 18px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
         .foot button {
             background-color: #8B0000;
             color: white;
@@ -438,31 +451,26 @@
         }
 
         /* Estilos para pantallas de hasta 768px de ancho */
-@media screen and (max-width: 768px) {
-    .container {
-        width: 90%; /* Reducir el ancho del contenedor principal */
-    }
+        @media screen and (max-width: 768px) {
+            .container {
+                width: 90%; /* Reducir el ancho del contenedor principal */
+            }
 
-    #root {
-        grid-template-columns: repeat(2, 1fr); /* Cambiar a 2 columnas en lugar de 3 */
-    }
+            #root {
+                grid-template-columns: repeat(2, 1fr); /* Cambiar a 2 columnas en lugar de 3 */
+            }
 
-    .sidebar {
-        width: 100%; /* Ocupar todo el ancho en pantallas pequeñas */
-    }
+            .sidebar {
+                width: 100%; /* Ocupar todo el ancho en pantallas pequeñas */
+            }
+        }
 
-
-}
-
-/* Estilos para pantallas de hasta 480px de ancho */
-@media screen and (max-width: 480px) {
-    #root {
-        grid-template-columns: repeat(1, 1fr); /* Cambiar a una sola columna */
-    }
-
-
-}
-
+        /* Estilos para pantallas de hasta 480px de ancho */
+        @media screen and (max-width: 480px) {
+            #root {
+                grid-template-columns: repeat(1, 1fr); /* Cambiar a una sola columna */
+            }
+        }
     </style>
 </body>
 </html>

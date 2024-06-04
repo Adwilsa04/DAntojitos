@@ -109,6 +109,11 @@ table {
         font-family: 'Poppins';
     }
 
+    a{
+        color:#ffff;
+        font-size: 20px;
+    }
+
 </style>
 
 <body>
@@ -124,6 +129,7 @@ table {
     @endif
     </center>
     <br>
+    <center><button><a href="{{ route('pantadmin') }}">Regresar</a></button></center>
     <br>
     <table border="0">
         <tr>
