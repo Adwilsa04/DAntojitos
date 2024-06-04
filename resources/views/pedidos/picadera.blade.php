@@ -26,6 +26,10 @@
             <div class="foot">
                 <h3>Total</h3>
                 <h2 id="total">$ 0.00</h2>
+                <h3>Subtotal</h3>
+                <h2 id="subtotal">$ 0.00</h2>
+                <label for="deliveryDate">Fecha y Hora de Entrega:</label>
+                <input type="datetime-local" id="deliveryDate" name="deliveryDate">
                 <button id="pay-button"><a href="{{ route('pago') }}">Pagar</a></button>
             </div>
         </div>
@@ -96,15 +100,19 @@
     function displaycart() {
         let j = 0;
         let total = 0;
+        let subtotal = 0;
         document.getElementById("count").innerHTML = cart.length;
         if (cart.length == 0) {
             document.getElementById('cartItem').innerHTML = "Tu carrito está vacío";
             document.getElementById("total").innerHTML = "$ 0.00";
+            document.getElementById("subtotal").innerHTML = "$ 0.00";
         } else {
             document.getElementById("cartItem").innerHTML = cart.map((items, index) => {
                 const { image, title, price, quantity } = items;
                 total += price * quantity;
+                subtotal += price;
                 document.getElementById("total").innerHTML = `$ ${total}.00`;
+                document.getElementById("subtotal").innerHTML = `$ ${subtotal}.00`;
                 return `
                     <div class='cart-item'>
                         <div class='row-img'>
@@ -156,7 +164,6 @@
     font-size: 18px;
 }
 
-
 body {
     display: flex;
     align-items: center;
@@ -166,7 +173,6 @@ body {
 a {
     color: white;
     text-decoration: none; /* Quitar la subrayado */
-
 }
 
 button a {
@@ -242,7 +248,6 @@ button#button {
     grid-gap: 20px;
 }
 
-
 .sidebar {
     width: 80%; /* Aumentar el tamaño del marco del carrito */
     border-radius: 5px;
@@ -274,13 +279,11 @@ button#button {
     border-top: 1px solid #333;
     flex-direction: column;
     align-items: center;
-    
 }
 
 .foot h3, .foot h2 {
     margin: 5px 0;
 }
-
 
 .foot button {
     background-color: #8B0000;
@@ -299,11 +302,9 @@ button#button {
     text-decoration: none; /* Quitar la subrayado en el hover */
 }
 
-
 .cart-item input {
     width: 40px; /* Reducir el ancho del cuadro de cantidad */
 }
-
 
 .box {
     display: flex;
@@ -368,7 +369,6 @@ button#button {
     transform: translate(-50%, -50%); /* Centrar exactamente en el medio */
 }
 
-
 .button-container button:hover {
     background-color: #333;
 }
@@ -426,7 +426,6 @@ button i {
     margin: 0 10px; /* Margen horizontal de 10px */
 }
 
-
 .cart-item p {
     flex: 1;
     text-align: left;
@@ -442,13 +441,13 @@ button i {
 .cart-item .fas:hover {
     color: darkred;
 }
+
 /* Estilos para pantallas de hasta 480px de ancho */
 @media screen and (max-width: 480px) {
     #root {
         grid-template-columns: repeat(1, 1fr); /* Cambiar a una sola columna */
     }
-
-
+}
 
 @media screen and (max-width: 768px) {
     .sidebar {
@@ -456,6 +455,7 @@ button i {
         margin-left: 0; /* Eliminar el margen izquierdo */
         padding: 10px; /* Reducir el padding */
     }
+}
 </style>
 </body>
 </html>
