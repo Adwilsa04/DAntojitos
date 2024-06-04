@@ -9,19 +9,19 @@
         body {
             margin: 0;
             font-family: 'Poppins', sans-serif;
-            background-color: #121212;
+            background-color: #f1f1f1;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
         }
         .profile-container {
-            background-color: #1e1e1e;
+            background-color: #ffffff;
             border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             overflow: hidden;
             width: 450px;
-            color: #ffffff;
+            color: #333333;
         }
         .profile-header {
             background-color: #f12f1f;
@@ -34,7 +34,7 @@
         .tab-container {
             display: flex;
             justify-content: space-around;
-            background-color: #2c2c2c;
+            background-color: #eeeeee;
             cursor: pointer;
         }
         .tab {
@@ -43,10 +43,10 @@
             text-align: center;
             border-bottom: 3px solid transparent;
             transition: background-color 0.3s, border-bottom 0.3s;
-            color: #ffffff;
+            color: #333333;
         }
         .tab:hover {
-            background-color: #3a3a3a;
+            background-color: #dddddd;
         }
         .tab.active {
             border-bottom: 3px solid #f12f1f;
@@ -76,8 +76,8 @@
             padding: 6px;
             border: 1px solid #ccc;
             border-radius: 5px;
-            background-color: #2c2c2c;
-            color: #ffffff;
+            background-color: #f9f9f9;
+            color: #333333;
         }
         .form-group input:focus, .form-group select:focus {
             outline: none;
@@ -115,8 +115,10 @@
             position: relative;
         }
     </style>
+<x-index></x-index>
 </head>
 <body>
+    <br><br>
     <div class="profile-container">
         <div class="profile-header">
             Perfil
