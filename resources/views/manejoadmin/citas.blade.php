@@ -123,6 +123,38 @@ table {
         font-size: 25px;
     }
 
+    
+    .search-forms {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        .search-forms form {
+            display: flex;
+            align-items: center;
+        }
+        .search-forms input[type="text"] {
+            padding: 5px;
+            margin-right: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-family: arial;
+        }
+        .search-forms button {
+            padding: 10px 20px;
+            background-color: #f12f1f;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 15px;
+            font-family: 'Poppins';
+        }
+        .search-forms button:hover {
+            background-color: #000;
+        }
+
 </style>
 
 <body>
@@ -135,6 +167,18 @@ table {
             {{ session('success') }}
         </div>
     @endif
+
+    <div class="search-forms">
+    <form action="{{ route('citas.buscarid') }}" method="GET">
+            <input type="text" name="id" placeholder="Buscar por ID" value="{{ request()->input('id') }}">
+            <button type="submit">Buscar por ID</button>
+        </form>
+        <form action="{{ route('citas.buscar') }}" method="GET">
+            <input type="text" name="query" placeholder="Buscar en todos los campos" value="{{ request()->input('query') }}">
+            <button type="submit">Buscar</button>
+        </form>
+    </div>
+<br>
     <center>
     @if(isset($citas))
         <p>{{ $citas->count() }} registros de citas existentes.</p>
@@ -173,6 +217,7 @@ table {
             </tr>
         @endforeach
     </table>
+    <br><br>
 </body>
 <x-footer></x-footer>
 </html>

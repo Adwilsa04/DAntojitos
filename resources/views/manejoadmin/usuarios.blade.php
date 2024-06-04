@@ -53,7 +53,7 @@ button {
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 10px;
     font-family: 'Poppins';
 }
 
@@ -114,6 +114,37 @@ table {
         font-size: 20px;
     }
 
+    .search-forms {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        .search-forms form {
+            display: flex;
+            align-items: center;
+        }
+        .search-forms input[type="text"] {
+            padding: 5px;
+            margin-right: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-family: arial;
+        }
+        .search-forms button {
+            padding: 5px 10px;
+            border: none;
+            background-color: #f12f1f;
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 15px;
+        }
+        .search-forms button:hover {
+            background-color: #000;
+        }
+
+
 </style>
 
 <body>
@@ -127,37 +158,55 @@ table {
     @else
         <p>Variable $registros no está definida.</p>
     @endif
+    <br>
+    <div class="search-forms">
+        <form action="{{ route('registro.buscarid') }}" method="GET">
+            <input type="text" name="id" placeholder="Buscar por ID" value="{{ request()->input('id') }}">
+            <button type="submit">Buscar por ID</button>
+        </form>
+
+        <form action="{{ route('registro.buscar') }}" method="GET">
+            <input type="text" name="query" placeholder="Buscar en todos los campos" value="{{ request()->input('query') }}">
+            <button type="submit">Buscar</button>
+        </form>
+        <br>
+    </div>
     </center>
     <br>
     <center><button><a href="{{ route('pantadmin') }}">Regresar</a></button></center>
     <br>
     <table border="0">
+    <tr>
+        <th>Id Del Registro</th>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Teléfono</th>
+        <th>Email</th>
+        <th>Estado</th>
+        <th>Acciones</th>
+    </tr>
+    @foreach ($registros as $registro)
         <tr>
-            <th>Id Del Registro</th>
-            <th>Nombre</th>
-            <th>Apellido</th>
-            <th>Teléfono</th>
-            <th>Email</th>
-            <!-- <th>Acciones</th> -->
+            <td>{{ $registro->id }}</td>
+            <td>{{ $registro->nombre_cliente }}</td>
+            <td>{{ $registro->apellido_cliente }}</td>
+            <td>{{ $registro->telefono_cliente }}</td>
+            <td>{{ $registro->correo }}</td>
+            <td>{{ $registro->estado ? 'Activo' : 'Inactivo' }}</td>
+            <td>
+                <form action="{{ route('registro.cambiarEstado', $registro->id) }}" method="POST" onsubmit="return confirm('¿Estás seguro de que deseas cambiar el estado de este registro?');">
+                    @csrf
+                    @method('PATCH')
+                    <button type="submit">{{ $registro->estado ? 'Marcar como Inactivo' : 'Marcar como Activo' }}</button>
+                </form>
+            </td>
         </tr>
-        @foreach ($registros as $registro)
-            <tr>
-                <td>{{ $registro->id }}</td>
-                <td>{{ $registro->nombre_cliente }}</td>
-                <td>{{ $registro->apellido_cliente }}</td>
-                <td>{{ $registro->telefono_cliente }}</td>
-                <td>{{ $registro->correo }}</td>
-               <!---<td>
-                    <form action="{{ route('registros.destroy', $registro->id) }}" method="POST" style="display:inline;">
-                        @csrf
-                        @method('DELETE')
-                        <button type="submit">Eliminar</button>
-                    </form>
-                </td>-->
-            </tr>
-        @endforeach
-    </table>    
-    <x-footer></x-footer>
+    @endforeach
+</table>
+  
+    <br>
+    <br>
+    <br>
 </body>
 <x-footer></x-footer>
 </html>

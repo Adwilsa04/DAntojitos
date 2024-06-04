@@ -9,7 +9,7 @@ class Registro_cliente extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['nombre_cliente', 'apellido_cliente', 'telefono_cliente', 'correo', 'contrasena'];
+    protected $fillable = ['nombre_cliente', 'apellido_cliente', 'telefono_cliente', 'correo', 'contrasena', 'estado'];
 
     // Contraseña cifrada
     public function setContrasenaAttribute($value)

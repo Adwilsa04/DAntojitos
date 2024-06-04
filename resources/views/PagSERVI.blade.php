@@ -120,7 +120,7 @@ h1 {
         </div>
 
         <div class="ui-card">
-            <img src="{{asset('imagenes/deco7.jpg')}}" type="imagenes/jpg">
+            <img src="{{asset('imagenes/deco7.jpg')}}" type="imagenes/img12.jpg">
             <div class="description">
                 <h3>Decoracion</h3><br>
                 <a href="{{route('decoracion')}}">VER</a>
