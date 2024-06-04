@@ -51,7 +51,6 @@ function delElement(a) {
 function displaycart() {
     let j = 0;
     let total = 0;
-    let subtotal = 0;
     document.getElementById("count").innerHTML = cart.length;
     if (cart.length == 0) {
         document.getElementById('cartItem').innerHTML = "Tu carrito está vacío";
@@ -59,11 +58,10 @@ function displaycart() {
         document.getElementById("subtotal").innerHTML = "$ 0.00";
     } else {
         document.getElementById("cartItem").innerHTML = cart.map((items, index) => {
-            const { image, title, price, quantity } = items;
-            total += price * quantity;
-            subtotal += price; // Suma el precio al subtotal
+            const { id, image, title, price, quantity } = items;
+            const subtotal = price * quantity; // Calcular el subtotal de este producto
+            total += subtotal; // Sumar al total
             document.getElementById("total").innerHTML = `$ ${total}.00`;
-            document.getElementById("subtotal").innerHTML = `$ ${subtotal}.00`; // Actualiza el subtotal
             return `
                 <div class='cart-item'>
                     <div class='row-img'>
@@ -72,12 +70,13 @@ function displaycart() {
                     <p style='font-size:12px;'>${title}</p>
                     <input type='number' min='1' value='${quantity}' onchange='updateQuantity(${index}, this.value)'>
                     <p style='font-size:12px;'>$ ${price}.00</p>
+                    <p style='font-size:12px;'>$ ${subtotal}.00</p> <!-- Mostrar el subtotal -->
                     <i class="fas fa-trash" onclick='delElement(${j++})'></i>
                 </div>
             `;
         }).join('');
     }
-    // Guarda el total en el localStorage
+    // Guardar el total en el localStorage
     localStorage.setItem("cartTotal", total);
 }
 
