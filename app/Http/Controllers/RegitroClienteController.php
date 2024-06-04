@@ -47,10 +47,11 @@ class RegitroClienteController extends Controller
         $validatedData['estado'] = $validatedData['estado'] ?? 1;
 
         // Guardar los datos en la base de datos
-        Registro_cliente::create($validatedData);
+        $registros = Registro_cliente::create($validatedData);
 
-        // Redirigir o devolver una respuesta
-        return redirect()->back()->with('success', 'Registro exitoso.');
+// Rediriges al perfil del usuario recién creado y pasas el registro
+return redirect()->route('perfil', ['registro' => $registros])->with('success', 'Registro exitoso.');
+
     }
 
     /**
