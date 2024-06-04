@@ -30,7 +30,7 @@
                 <input type="datetime-local" id="order-datetime">
                 <h3>Total</h3>
                 <h2 id="total">$ 0.00</h2>
-                <button id="pay-button"><a href="{{ route('pago') }}">Pagar</a></button>
+                <button id="pay-button"><a href="{{ route('pago') }}">ver detalles</a></button>
             </div>
         </div>
     </div>
@@ -61,7 +61,7 @@
                     <div class='img-box' onmouseover="showButton(this)" onmouseout="hideButton(this)">
                         <img class='images' src=${image}></img>
                         <div class='button-container' style="display: none;">
-                            <button onclick='addtocart(${i++})'>ADD</button>
+                            <button onclick='addtocart(${i++})'>Añadir</button>
                         </div>
                     </div>
                     <div class='bottom'>
@@ -293,16 +293,16 @@
         }
 
         .foot button {
-            background-color: #8B0000;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            padding: 10px 15px;
-            cursor: pointer;
-            display: inline-block;
-            border-bottom: none;
-        }
-
+    background-color: #8B0000;
+    color: white; /* Cambiar el color del texto a blanco */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px; /* Reducir el padding horizontal */
+    cursor: pointer;
+    text-decoration: none; /* Quitar la subrayado */
+    display: inline-block; /* Ajustar el botón como un bloque en línea */
+    border-bottom: none; /* Quitar la línea debajo */
+}
         .foot button:hover {
             background-color: #333;
         }
@@ -357,8 +357,8 @@
         }
 
         .button-container button {
-            width: 70px;
-            height: 40px;
+            width: 90px;
+            height: 50px;
             border: none;
             border-radius: 5px;
             background-color: #8B0000;
