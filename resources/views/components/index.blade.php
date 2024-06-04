@@ -77,7 +77,7 @@
 
                      <ul class="dropdown__menu">
                         <li>
-                           <a href="#" class="dropdown__link">
+                           <a href="{{ route('perfil') }}" class="dropdown__link">
                               <i class="ri-user-line"></i> Perfil
                            </a>                          
                         </li>

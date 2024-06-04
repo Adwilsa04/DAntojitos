@@ -35,14 +35,16 @@ class RegitroClienteController extends Controller
      */
     public function store(Request $request)
     {
-        // Validación de los datos del formulario
         $validatedData = $request->validate([
             'nombre_cliente' => 'required|string|max:40',
             'apellido_cliente' => 'required|string|max:40',
             'telefono_cliente' => 'required|string|regex:/\d{3}-\d{3}-\d{4}/',
             'correo' => 'required|email|max:100',
             'contrasena' => 'required|string|min:8|max:20',
+            'estado' => 'nullable|integer|between:0,1'
         ]);
+        
+        $validatedData['estado'] = $validatedData['estado'] ?? 1;
 
         // Guardar los datos en la base de datos
         Registro_cliente::create($validatedData);
@@ -82,5 +84,49 @@ class RegitroClienteController extends Controller
     {
         //
     }
+
+    public function cambiarEstado($id)
+    {
+        $registro = Registro_cliente::findOrFail($id);
+        $registro->estado = !$registro->estado;
+        $registro->save();
+
+        return redirect()->back()->with('success', 'Estado del registro actualizado correctamente.');
+    }
+
+    public function buscar(Request $request)
+    {
+        $query = $request->input('query');
+    
+        if ($query) {
+            $registros = Registro_cliente::where(function ($q) use ($query) {
+                $q->where('id', 'LIKE', "%$query%")
+                  ->orWhere('nombre_cliente', 'LIKE', "%$query%")
+                  ->orWhere('apellido_cliente', 'LIKE', "%$query%")
+                  ->orWhere('telefono_cliente', 'LIKE', "%$query%")
+                  ->orWhere('correo', 'LIKE', "%$query%")
+                  ->orWhere('estado', 'LIKE', "%$query%");
+            })->get();
+        } else {
+            $registros = Registro_cliente::all();
+        }
+    
+        return view('manejoadmin.usuarios', compact('registros'));
+    }
+
+    public function buscarid(Request $request)
+{
+    $id = $request->input('id');
+
+    if ($id) {
+        $registros = Registro_cliente::where('id', $id)->get();
+    } else {
+        $registros = Registro_cliente::all();
+    }
+
+    return view('manejoadmin.usuarios', compact('registros'));
 }
+
+}
+
 ?>

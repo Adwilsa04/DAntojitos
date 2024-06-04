@@ -132,6 +132,12 @@ use App\Http\Controllers\RegitroClienteController;
 
 Route::get('Formularios/registro', [RegitroClienteController::class, 'create']);
 Route::post('Formularios/registro', [RegitroClienteController::class, 'store'])->name('registro.store');
+Route::patch('/registros/{id}/cambiarEstado', [RegitroClienteController::class, 'cambiarEstado'])->name('registro.cambiarEstado');
+Route::get('/registros/buscar', [RegitroClienteController::class, 'buscar'])->name('registro.buscar');
+Route::get('/registros/buscarid', [RegitroClienteController::class, 'buscarid'])->name('registro.buscarid');
+
+
+
 
 Route::resource('registros', RegitroClienteController::class);
 
@@ -157,6 +163,9 @@ Route::get('Confirmación', function(){
     return view('Confirmación');
 })->name('Confirmación');
 
+Route::get('perfil', function(){
+    return view('perfil');
+})->name('perfil');
 
 use App\Http\Controllers\CitaController;
 
@@ -170,6 +179,9 @@ Route::resource('citas', CitaController::class);
 Route::get('/citas', [App\Http\Controllers\CitaController::class, 'index'])->name('citas.index');
 Route::post('/citas', [App\Http\Controllers\CitaController::class, 'store'])->name('citas.store');
 Route::delete('/citas/{id}', [App\Http\Controllers\CitaController::class, 'destroy'])->name('citas.destroy');
+Route::get('/citas/buscar', [CitaController::class, 'buscarcita'])->name('citas.buscar');
+Route::get('/citas/buscarid', [CitaController::class, 'buscaridcita'])->name('citas.buscarid');
+
 
 
 use App\Http\Controllers\AdminAuthController;

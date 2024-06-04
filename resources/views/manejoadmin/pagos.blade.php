@@ -133,7 +133,7 @@ table {
     <br>
     <center><button><a href="{{ route('pantadmin') }}">Regresar</a></button></center>
     <br>
-<table border="1">
+<table border="0">
     <tr>
         <th>Id del pago</th>
         <th>Nombre Completo</th>
