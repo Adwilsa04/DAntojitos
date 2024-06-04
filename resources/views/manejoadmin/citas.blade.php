@@ -68,7 +68,7 @@ button {
 
 button:hover{
     color: #fff;
-    background-color: #619E48;
+    background-color: #000;
     transition: 0.5s;
 }
 
@@ -118,6 +118,11 @@ table {
         font-family: 'Poppins';
     }
 
+    a{
+        color:#ffff;
+        font-size: 25px;
+    }
+
 </style>
 
 <body>
@@ -138,6 +143,7 @@ table {
     @endif
     </center>
     <br>
+    <center><button><a href="{{ route('pantadmin') }}">Regresar</a></button></center>
     <br>
     <table border="0">
         <tr>
@@ -161,7 +167,7 @@ table {
                     <form action="{{ route('citas.destroy', $cita->id) }}" method="POST" style="display:inline;">
                         @csrf
                         @method('DELETE')
-                        <button type="submit" onclick="confirmDeletion(event)">Eliminar</button>
+                        <button type="submit" onclick="confirmDeletion(event)">Cancelar</button>
                     </form>
                 </td>
             </tr>

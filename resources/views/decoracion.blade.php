@@ -171,6 +171,10 @@ h1 {
             transition: background-color 0.3s ease;
         }
 
+        a{
+          color: white;
+        }
+
         .btn-reserva:hover {
             background-color: #8B0000;
         }
@@ -187,7 +191,7 @@ h1 {
   <br><br>
     <div class="info-card">
         <p>Si deseas realizar este pedido, comunícate con nosotros vía WhatsApp y reserva tu cita para conocer más detalles de tus gustos y estilos preferidos.</p>
-        <br><button class="btn-reserva" href="{{route('registro')}}" >Reserva tu cita aquí</button>
+        <br><button class="btn-reserva"><a href= "{{route('cita')}}">Reserva tu cita aquí</a></button>
     </div><br><br>
   <div class="grid">
     <div class="item">

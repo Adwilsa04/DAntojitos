@@ -111,6 +111,11 @@ table {
         font-family: 'Poppins';
     }
 
+    a{
+        color:#ffff;
+        font-size: 20px;
+    }
+
 </style>
 
 <body>
@@ -125,6 +130,8 @@ table {
         <p>Variable $pagos no está definida.</p>
     @endif
     </center>
+    <br>
+    <center><button><a href="{{ route('pantadmin') }}">Regresar</a></button></center>
     <br>
 <table border="1">
     <tr>

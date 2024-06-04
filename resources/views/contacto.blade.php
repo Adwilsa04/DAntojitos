@@ -205,6 +205,8 @@
             </div>
         </section>
     </main>
+    <br><br>
+    <x-footer></x-footer>
 </body>
 </html>
 
