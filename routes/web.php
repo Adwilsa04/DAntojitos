@@ -133,7 +133,7 @@ use App\Http\Controllers\RegitroClienteController;
 Route::get('Formularios/registro', [RegitroClienteController::class, 'create']);
 Route::post('Formularios/registro', [RegitroClienteController::class, 'store'])->name('registro.store');
 
-Route::resource('registros', RegitroClienteController::class);
+// Route::resource('registros', RegitroClienteController::class);
 
 Route::get('/usuarios', [RegitroClienteController::class, 'index'])->name('usuarios.index');
 
@@ -151,6 +151,9 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
+
+    Route::resource('registros', RegitroClienteController::class);
+
 });
 
 Route::get('Confirmación', function(){
