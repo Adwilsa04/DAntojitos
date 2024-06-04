@@ -25,7 +25,7 @@ class AdminAuthController extends Controller
 
         if ($admin && Hash::check($request->contrasena, $admin->contrasena)) {
             Auth::guard('admin')->login($admin);
-            return redirect()->intended('/pantadmin')->with('success', 'Inicio de sesión exitoso.');
+            return redirect()->route('pantadmin')->with('success', 'Inicio de sesión exitoso.');
         } else {
             return redirect()->back()->with('error', 'Las credenciales no son correctas.');
         }
