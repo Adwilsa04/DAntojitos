@@ -10,7 +10,7 @@
 
 </head>
 <style>
-  @import url("https://fonts.googleapis.com/css?family=Arvo");
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
 body,
 html {
   display: flex;
@@ -21,7 +21,7 @@ html {
   height: 100%;
   background: #f5f4f4;
   font-size: 13px;
-  font-family: "Arvo", monospace;
+  font-family: 'Cinzel' ;
 }
 @supports (display: grid) {
   body,
