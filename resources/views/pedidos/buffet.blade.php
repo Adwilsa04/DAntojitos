@@ -14,7 +14,6 @@
         <button id="button"> 
             <a href="{{ route('pagservi') }}" style="text-decoration:none; color:white;"> Volver</a>
         </button> 
-        <p class="logo">Mi Tienda</p>
         <div class="cart-container" onclick="toggleCart()">
             <div class="cart">
                 <i class="fa-solid fa-cart-shopping"></i>
