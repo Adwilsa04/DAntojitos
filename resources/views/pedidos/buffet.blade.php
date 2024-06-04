@@ -8,6 +8,8 @@
     <script src="https://kit.fontawesome.com/92d70a2fd8.js" crossorigin="anonymous"></script>
 </head>
 <body>
+
+
     <div class="header">
         <button id="button"> 
             <a href="{{ route('pagservi') }}" style="text-decoration:none; color:white;"> Volver</a>
@@ -469,6 +471,95 @@
                 grid-template-columns: repeat(1, 1fr); /* Cambiar a una sola columna */
             }
         }
+
+        /*codigos de alerta registar */
+
+        body {
+    font-family: Arial, sans-serif;
+}
+
+.alert-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.alert-content {
+    background-color: #2a4a46;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.alert-content h2 {
+    margin-top: 0;
+}
+
+.alert-content p {
+    margin: 10px 0;
+}
+
+.alert-content input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: none;
+}
+
+.alert-content button {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: none;
+    background-color: #56b68b;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.alert-content .social-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 0;
+}
+
+.social-btn {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.social-btn.facebook {
+    background-color: #3b5998;
+}
+
+.social-btn.google {
+    background-color: #db4437;
+}
+
     </style>
 </body>
 </html>

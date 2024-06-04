@@ -312,6 +312,7 @@ body {
 <br>
 
     <body>
+        
         <div class="banner">
             <video autoplay loop muted plays-inline>
                 <source src="{{asset('video/Video.mp4')}}" type="video/mp4">
