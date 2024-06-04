@@ -1,6 +1,6 @@
-paypal.php (va en la carpeta de config)
 
-<?php
+
+<?php 
 
 return [
     'base_url' => env('PAYPAL_MODE', 'sandbox') == 'live' ? 'https://api-m.paypal.com' : 'https://api-m.sandbox.paypal.com',
@@ -29,28 +29,15 @@ return [
     'validate_ssl'   => env('PAYPAL_VALIDATE_SSL', false),
 ];
 
-paypalController.php
-
-
-<?php
 
 
 
 
-esto va en el .env (las que estan vacias te las da paypal en https://developer.paypal.com/)
 
 
-PAYPAL_MODE=sandbox
-PAYPAL_CLIENT_ID= 
-PAYPAL_CLIENT_SECRET= 
-PAYPAL_SANDBOX_CLIENT_ID= 
-PAYPAL_SANDBOX_CLIENT_SECRET= 
- 
----------
+//aqui es donde implemento el pago (con un boton en un form)
 
-aqui es donde implemento el pago (con un boton en un form)
-
-<div class="table-container">
+/*<div class="table-container">
             
                 <table class="table table-responsive" style="overflow: auto; position: sticky;">
 
@@ -113,4 +100,4 @@ aqui es donde implemento el pago (con un boton en un form)
                     <!-- Agregar más filas según sea necesario -->
                 </tbody>
             </table>
-PAYPAL_CURRENCY=USD
+*/
