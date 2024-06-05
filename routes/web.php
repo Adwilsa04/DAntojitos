@@ -153,14 +153,15 @@ Route::middleware(['auth'])->group(function () {
 
     Route::resource('registros', RegitroClienteController::class);
 
-    Route::get('registro', function() {
-        return view('Formularios/registro');
-    }) ->name('registrate');
     
     Route::get('sesion', function() {
         return view('Formularios/inicio');
     }) ->name('sesion');
 });
+
+Route::get('registro', function() {
+    return view('Formularios/registro');
+}) ->name('registrate');
 
 Route::get('Confirmación', function(){
     return view('Confirmación');
