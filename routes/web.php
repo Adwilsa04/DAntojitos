@@ -193,12 +193,6 @@ Route::get('admin/login', [AdminAuthController::class, 'showLoginForm'])->name('
 Route::post('admin/login', [AdminAuthController::class, 'login']);
 Route::post('admin/logout', [AdminAuthController::class, 'logout'])->name('admin.logout');
 
-Route::middleware(['auth:admin'])->group(function () {
-    Route::get('admin/pantaadmin', function () {
-        return view('admin.pantaadmin');
-    })->name('admin.pantaadmin');
-});
-
 use App\Http\Controllers\MessageController;
 
 Route::post('/contacto', [MessageController::class, 'store'])->name('contacto.store');
