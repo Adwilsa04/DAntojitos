@@ -168,16 +168,6 @@ table {
         </div>
     @endif
 
-    <div class="search-forms">
-    <form action="{{ route('citas.buscarid') }}" method="GET">
-            <input type="text" name="id" placeholder="Buscar por ID" value="{{ request()->input('id') }}">
-            <button type="submit">Buscar por ID</button>
-        </form>
-        <form action="{{ route('citas.buscar') }}" method="GET">
-            <input type="text" name="query" placeholder="Buscar en todos los campos" value="{{ request()->input('query') }}">
-            <button type="submit">Buscar</button>
-        </form>
-    </div>
 <br>
     <center>
     @if(isset($citas))
@@ -189,34 +179,44 @@ table {
     <br>
     <center><button><a href="{{ route('pantadmin') }}">Regresar</a></button></center>
     <br>
-    <table border="0">
+    <div class="search-forms">
+    <form action="{{ route('citas.index') }}" method="GET">
+        <input type="text" name="id" placeholder="Buscar por ID" value="{{ request()->input('id') }}">
+        <button type="submit">Buscar por ID</button>
+    </form>
+    <form action="{{ route('citas.index') }}" method="GET">
+        <input type="text" name="query" placeholder="Buscar en todos los campos" value="{{ request()->input('query') }}">
+        <button type="submit">Buscar</button>
+    </form>
+</div>
+<table border="0">
+    <tr>
+        <th>Id De Cita</th>
+        <th>Nombre</th>
+        <th>Email</th>
+        <th>Dirección</th>
+        <th>Fecha</th>
+        <th>Hora</th>
+        <th>Acciones</th>
+    </tr>
+    @foreach($citas as $cita)
         <tr>
-            <th>Id De Cita</th>
-            <th>Nombre</th>
-            <th>Email</th>
-            <th>Dirección</th>
-            <th>Fecha</th>
-            <th>Hora</th>
-            <th>Acciones</th>
+            <td>{{ $cita->id }}</td>
+            <td>{{ $cita->nombre_cliente }}</td>
+            <td>{{ $cita->email }}</td>
+            <td>{{ $cita->direccion }}</td>
+            <td>{{ $cita->fecha }}</td>
+            <td>{{ $cita->hora }}</td>
+            <td>
+                <form action="{{ route('citas.destroy', $cita->id) }}" method="POST" style="display:inline;">
+                    @csrf
+                    @method('DELETE')
+                    <button type="submit" onclick="confirmDeletion(event)">Cancelar</button>
+                </form>
+            </td>
         </tr>
-        @foreach($citas as $cita)
-            <tr>
-                <td>{{ $cita->id }}</td>
-                <td>{{ $cita->nombre_cliente }}</td>
-                <td>{{ $cita->email }}</td>
-                <td>{{ $cita->direccion }}</td>
-                <td>{{ $cita->fecha }}</td>
-                <td>{{ $cita->hora }}</td>
-                <td>
-                    <form action="{{ route('citas.destroy', $cita->id) }}" method="POST" style="display:inline;">
-                        @csrf
-                        @method('DELETE')
-                        <button type="submit" onclick="confirmDeletion(event)">Cancelar</button>
-                    </form>
-                </td>
-            </tr>
-        @endforeach
-    </table>
+    @endforeach
+</table>
     <br><br>
 </body>
 <x-footer></x-footer>

@@ -115,6 +115,8 @@ Route::get('Inicio de admin', function(){
 }) ->name('inicioad');
 
 use App\Http\Controllers\PagoController;
+Route::get('/pagos', [PagoController::class, 'index'])->name('pagos.buscar');
+Route::get('pagos/id', [PagoController::class, 'index'])->name('pagos.buscarid');
 Route::post('/pagar', [PagoController::class, 'store'])->name('pagar.store');
 Route::get('/pagos', [PagoController::class, 'index'])->name('pagos.index');
 Route::put('/pagos/{id}/toggle', [PagoController::class, 'toggle'])->name('pagos.toggle');
@@ -188,9 +190,8 @@ Route::resource('citas', CitaController::class);
 Route::get('/citas', [App\Http\Controllers\CitaController::class, 'index'])->name('citas.index');
 Route::post('/citas', [App\Http\Controllers\CitaController::class, 'store'])->name('citas.store');
 Route::delete('/citas/{id}', [App\Http\Controllers\CitaController::class, 'destroy'])->name('citas.destroy');
-Route::get('/citas/buscar', [CitaController::class, 'buscarcita'])->name('citas.buscar');
-Route::get('/citas/buscarid', [CitaController::class, 'buscaridcita'])->name('citas.buscarid');
-
+Route::get('/manejoadmin/citas/buscarid', [CitaController::class, 'index'])->name('citas.buscarid');
+Route::get('/manejoadmin/citas/buscar', [CitaController::class, 'index'])->name('citas.buscar');
 
 
 use App\Http\Controllers\AdminAuthController;
