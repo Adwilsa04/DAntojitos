@@ -31,12 +31,12 @@
                 <input type="datetime-local" id="order-datetime">
                 <h3>Total</h3>
                 <h2 id="total">$ 0.00</h2>
-                <button id="pay-button"><a href="{{ route('pago') }}">ver detalles</a></button>
+                <button id="pay-button"><a href="{{ route('pago') }}">PAGAR</a></button>
             </div>
         </div>
     </div>
 
-    <script>
+    <script >
         const product = [
             { id: 12, image: '{{ asset('image/a1.jpg') }}', title: 'Menú 1', price: 550 },
             { id: 13, image: '{{ asset('image/a2.jpg') }}', title: 'Menú 2', price: 500 },
@@ -150,6 +150,8 @@
         document.addEventListener('DOMContentLoaded', () => {
             displaycart();
         });
+
+
     </script>
 
     <style>
