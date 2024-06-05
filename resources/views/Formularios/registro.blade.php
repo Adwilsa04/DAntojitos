@@ -2,7 +2,6 @@
 <head>
   <meta charset="utf-8">
   <title>Regístrate</title>
-  <link rel="stylesheet" type="text/css" href="regristro.css">
   <link rel="icon" type="image/x-icon" href="{{asset('imagenes/Logo.ico')}}">
 
 </head>
@@ -97,13 +96,14 @@
 </body>
 
 <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
   * {
     padding: 0;
     margin: 0;
     color: #1a1f36;
     box-sizing: border-box;
     word-wrap: break-word;
-    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Ubuntu,sans-serif;
+    font-family:'Cinzel';
   }
   body {
       min-height: 100%;
@@ -174,7 +174,7 @@
   .box-background--blue800 {
       background-color: #cb353f;
   }
-  .box-background--gray100 {8
+  .box-background--gray100 {
       background-color: #e3e8ee;
   }
   .box-background--cyan200 {

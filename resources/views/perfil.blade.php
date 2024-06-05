@@ -1,3 +1,6 @@
+@extends('layouts.app')
+
+@section('content')
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -5,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pantalla de Perfil</title>
     <style>
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
         body {
             margin: 0;
             font-family: 'Cinzel';
@@ -115,10 +118,8 @@
             position: relative;
         }
     </style>
-<x-index></x-index>
 </head>
 <body>
-    <br><br>
     <div class="profile-container">
         <div class="profile-header">
             Perfil
@@ -129,33 +130,61 @@
             <div class="tab" onclick="openTab(event, 'settings')">Configuración</div>
         </div>
         <div id="details" class="tab-content active">
-    <div class="profile-details">
-    <h2>{{ $registros->nombre_cliente }} {{ $registros->apellido_cliente }}</h2>
-        <div class="form-group">
-            <label for="nombre_cliente">Nombre</label>
-            <input type="text" id="nombre_cliente" value="{{ $registro->nombre_cliente }}">
+            <div class="profile-details">
+                @if(isset($ultimoRegistro))
+                    <h2>{{ $ultimoRegistro->nombre_cliente }} {{ $ultimoRegistro->apellido_cliente }}</h2>
+                    <div class="form-group">
+                        <label for="nombre_cliente">Nombre</label>
+                        <input type="text" id="nombre_cliente" value="{{ $ultimoRegistro->nombre_cliente }}">
+                    </div>
+                    <div class="form-group">
+                        <label for="apellido_cliente">Apellido</label>
+                        <input type="text" id="apellido_cliente" value="{{ $ultimoRegistro->apellido_cliente }}">
+                    </div>
+                    <div class="form-group">
+                        <label for="telefono_cliente">Teléfono</label>
+                        <input type="text" id="telefono_cliente" value="{{ $ultimoRegistro->telefono_cliente }}">
+                    </div>
+                    <div class="form-group">
+                        <label for="correo">Correo Electrónico</label>
+                        <input type="email" id="correo" value="{{ $ultimoRegistro->correo }}">
+                    </div>
+                    <div class="form-group password-container">
+                        <label for="contrasena">Contraseña</label>
+                        <input type="password" id="contrasena" value="********">
+                        <button type="button" class="toggle-password" onclick="togglePasswordVisibility()">Mostrar</button>
+                    </div>
+                    <button type="button" class="save-button">Guardar Cambios</button>
+                @elseif(isset($registro))
+                    <h2>{{ $registro->nombre_cliente }} {{ $registro->apellido_cliente }}</h2>
+                    <div class="form-group">
+                        <label for="nombre_cliente">Nombre</label>
+                        <input type="text" id="nombre_cliente" value="{{ $registro->nombre_cliente }}">
+                    </div>
+                    <div class="form-group">
+                        <label for="apellido_cliente">Apellido</label>
+                        <input type="text" id="apellido_cliente" value="{{ $registro->apellido_cliente }}">
+                    </div>
+                    <div class="form-group">
+                        <label for="telefono_cliente">Teléfono</label>
+                        <input type="text" id="telefono_cliente" value="{{ $registro->telefono_cliente }}">
+                    </div>
+                    <div class="form-group">
+                        <label for="correo">Correo Electrónico</label>
+                        <input type="email" id="correo" value="{{ $registro->correo }}">
+                    </div>
+                    <div class="form-group password-container">
+                        <label for="contrasena">Contraseña</label>
+                        <input type="password" id="contrasena" value="********">
+                        <button type="button" class="toggle-password" onclick="togglePasswordVisibility()">Mostrar</button>
+                    </div>
+                    <button type="button" class="save-button">Guardar Cambios</button>
+                @else
+                    <p>No hay registros disponibles.</p>
+                @endif
+            </div>
         </div>
-        <div class="form-group">
-            <label for="apellido_cliente">Apellido</label>
-            <input type="text" id="apellido_cliente" value="{{ $registro->apellido_cliente }}">
-        </div>
-        <div class="form-group">
-            <label for="telefono_cliente">Teléfono</label>
-            <input type="text" id="telefono_cliente" value="{{ $registro->telefono_cliente }}">
-        </div>
-        <div class="form-group">
-            <label for="correo">Correo Electrónico</label>
-            <input type="email" id="correo" value="{{ $registro->correo }}">
-        </div>
-        <div class="form-group password-container">
-            <label for="contrasena">Contraseña</label>
-            <input type="password" id="contrasena" value="********">
-            <button type="button" class="toggle-password" onclick="togglePasswordVisibility()">Mostrar</button>
-        </div>
-        <button type="button" class="save-button">Guardar Cambios</button>
     </div>
-</div>
-
     <script>
         function openTab(evt, tabName) {
             var i, tabcontent, tablinks;
@@ -187,3 +216,5 @@
     </script>
 </body>
 </html>
+@endsection
+

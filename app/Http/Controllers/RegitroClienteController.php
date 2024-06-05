@@ -21,15 +21,6 @@ class RegitroClienteController extends Controller
          }
      }
  
-
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
-
     /**
      * Store a newly created resource in storage.
      */
@@ -50,40 +41,7 @@ class RegitroClienteController extends Controller
         $registros = Registro_cliente::create($validatedData);
 
 // Rediriges al perfil del usuario recién creado y pasas el registro
-return redirect()->route('perfil', ['registro' => $registros])->with('success', 'Registro exitoso.');
-
-    }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(Registro_cliente $registro_cliente)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Registro_cliente $registro_cliente)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, Registro_cliente $registro_cliente)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Registro_cliente $registro_cliente)
-    {
-        //
+return redirect()->route('perfil', ['id' => $registros->id])->with('success', 'Registro exitoso.');
     }
 
     public function cambiarEstado($id)
@@ -127,6 +85,23 @@ return redirect()->route('perfil', ['registro' => $registros])->with('success', 
 
     return view('manejoadmin.usuarios', compact('registros'));
 }
+
+public function ultimoRegistro()
+{
+    try {
+        $ultimoRegistro = Registro_cliente::orderBy('created_at', 'desc')->first();
+        return view('perfil', compact('ultimoRegistro'));
+    } catch (\Exception $e) {
+        return back()->withError($e->getMessage())->withInput();
+    }
+}
+
+public function perfil($id)
+{
+    $registro = Registro_cliente::findOrFail($id);
+    return view('perfil', compact('registros'));
+}
+
 
 }
 
