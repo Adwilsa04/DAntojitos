@@ -2,7 +2,6 @@
 <head>
   <meta charset="utf-8">
   <title>Regístrate</title>
-  <link rel="stylesheet" type="text/css" href="regristro.css">
   <link rel="icon" type="image/x-icon" href="{{asset('imagenes/Logo.ico')}}">
 
 </head>
@@ -99,7 +98,6 @@
 <style>
 
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
-
 
   * {
     padding: 0;

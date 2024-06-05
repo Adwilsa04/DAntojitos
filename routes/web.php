@@ -121,16 +121,21 @@ Route::put('/pagos/{id}/toggle', [PagoController::class, 'toggle'])->name('pagos
 
 
 use App\Http\Controllers\RegitroClienteController;
+use App\Models\Registro_cliente;
 
+Route::get('/perfil/{id}', function ($id) {
+    $registros = Registro_cliente::findOrFail($id);
+    return view('perfil', compact('registros'));
+})->name('perfil');
 
-Route::get('Formularios/registro', [RegitroClienteController::class, 'create']);
 Route::post('Formularios/registro', [RegitroClienteController::class, 'store'])->name('registro.store');
 Route::patch('/registros/{id}/cambiarEstado', [RegitroClienteController::class, 'cambiarEstado'])->name('registro.cambiarEstado');
 Route::get('/registros/buscar', [RegitroClienteController::class, 'buscar'])->name('registro.buscar');
 Route::get('/registros/buscarid', [RegitroClienteController::class, 'buscarid'])->name('registro.buscarid');
 
+Route::get('/perfil/{registro}', [RegitroClienteController::class, 'perfil'])->name('perfil');
 
-
+Route::get('/ultimo-registro', [RegitroClienteController::class, 'ultimoRegistro'])->name('ultimo.registro');
 
 // Route::resource('registros', RegitroClienteController::class);
 
