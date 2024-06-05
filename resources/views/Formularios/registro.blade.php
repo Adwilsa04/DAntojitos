@@ -96,14 +96,16 @@
 </body>
 
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
+
   * {
     padding: 0;
     margin: 0;
     color: #1a1f36;
     box-sizing: border-box;
     word-wrap: break-word;
-    font-family:'Cinzel';
+    font-family: 'Cinzel';
   }
   body {
       min-height: 100%;
@@ -162,23 +164,24 @@
       margin: 0 -2%;
       transform: rotate(-12deg) skew(-12deg);
   }
+
   .box-divider--light-all-2 {
       box-shadow: inset 0 0 0 2px #e3e8ee;
   }
   .box-background--blue {
-      background-color: #eb3636;
+      background-color: #8B0000;
   }
   .box-background--white {
     background-color: #ffffff; 
   }
   .box-background--blue800 {
-      background-color: #cb353f;
+      background-color: #183550 ;
   }
   .box-background--gray100 {
-      background-color: #e3e8ee;
+      background-color: #183550;
   }
   .box-background--cyan200 {
-      background-color: #e62835;
+      background-color: #1e4a73;
   }
   .padding-top--64 {
     padding-top: 64px;
