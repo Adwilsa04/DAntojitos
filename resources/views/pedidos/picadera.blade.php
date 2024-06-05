@@ -9,8 +9,9 @@
 </head>
 <body>
     <div class="header">
-        <button id="button"> <a href="{{route('pagservi')}}" style="text-decoration:none; color:white;"> Volver</a></button> 
-        <p class="logo">Mi Tienda</p>
+        <button id="button"> 
+            <a href="{{ route('pagservi') }}" style="text-decoration:none; color:white;"> Volver</a>
+        </button> 
         <div class="cart-container" onclick="toggleCart()">
             <div class="cart">
                 <i class="fa-solid fa-cart-shopping"></i>
@@ -24,19 +25,17 @@
             <div class="head"><p>Mi Carrito</p></div>
             <div id="cartItem">Tu carrito está vacío</div>
             <div class="foot">
+                <h3>Fecha y Hora del Pedido</h3>
+                <input type="datetime-local" id="order-datetime">
                 <h3>Total</h3>
                 <h2 id="total">$ 0.00</h2>
-                <h3>Subtotal</h3>
-                <h2 id="subtotal">$ 0.00</h2>
-                <label for="deliveryDate">Fecha y Hora de Entrega:</label>
-                <input type="datetime-local" id="deliveryDate" name="deliveryDate">
-                <button id="pay-button"><a href="{{ route('pago') }}">Pagar</a></button>
+                <button id="pay-button"><a href="{{ route('pago') }}">ver detalles</a></button>
             </div>
         </div>
     </div>
 
-<script>
-    const product = [
+    <script>
+       const product = [
         { id: 0, image: '{{ asset('image/a.jpg') }}', title: 'Bolovan', price: 80 },
         { id: 1, image: '{{ asset('image/b.jpg') }}', title: 'Pastelistos', price: 45 },
         { id: 2, image: '{{ asset('image/c.jpg') }}', title: 'Quipes', price: 35 },
@@ -51,241 +50,248 @@
         { id: 11, image: '{{ asset('image/l.jpg') }}', title: 'Mini pay', price: 30 }
     ];
 
-    const categories = [...new Set(product.map((item) => item))];
-    let i = 0;
+        const categories = [...new Set(product.map((item) => item))];
+        let i = 0;
 
-    document.getElementById('root').innerHTML = categories.map((item) => {
-        const { image, title, price } = item;
-        return `
-            <div class='box'>
-                <div class='img-box' onmouseover="showButton(this)" onmouseout="hideButton(this)">
-                    <img class='images' src=${image}></img>
-                    <div class='button-container' style="display: none;">
-                        <button onclick='addtocart(${i++})'>ADD</button>
-                    </div>
-                </div>
-                <div class='bottom'>
-                    <p>${title}</p>
-                    <h2>$ ${price}.00</h2>
-                </div>
-            </div>
-        `;
-    }).join('');
-
-    let cart = JSON.parse(localStorage.getItem("cart")) || [];
-
-    function addtocart(a) {
-        let item = cart.find(item => item.id === categories[a].id);
-        if (item) {
-            item.quantity += 1;
-        } else {
-            cart.push({ ...categories[a], quantity: 1 });
-        }
-        localStorage.setItem("cart", JSON.stringify(cart));
-        displaycart();
-    }
-
-    function delElement(a) {
-        cart.splice(a, 1);
-        localStorage.setItem("cart", JSON.stringify(cart));
-        displaycart();
-    }
-
-    function updateQuantity(index, quantity) {
-        cart[index].quantity = parseInt(quantity);
-        localStorage.setItem("cart", JSON.stringify(cart));
-        displaycart();
-    }
-
-    function displaycart() {
-        let j = 0;
-        let total = 0;
-        let subtotal = 0;
-        document.getElementById("count").innerHTML = cart.length;
-        if (cart.length == 0) {
-            document.getElementById('cartItem').innerHTML = "Tu carrito está vacío";
-            document.getElementById("total").innerHTML = "$ 0.00";
-            document.getElementById("subtotal").innerHTML = "$ 0.00";
-        } else {
-            document.getElementById("cartItem").innerHTML = cart.map((items, index) => {
-                const { image, title, price, quantity } = items;
-                total += price * quantity;
-                subtotal += price;
-                document.getElementById("total").innerHTML = `$ ${total}.00`;
-                document.getElementById("subtotal").innerHTML = `$ ${subtotal}.00`;
-                return `
-                    <div class='cart-item'>
-                        <div class='row-img'>
-                            <img class='rowimg' src=${image}>
+        document.getElementById('root').innerHTML = categories.map((item) => {
+            const { image, title, price } = item;
+            return `
+                <div class='box'>
+                    <div class='img-box' onmouseover="showButton(this)" onmouseout="hideButton(this)">
+                        <img class='images' src=${image}></img>
+                        <div class='button-container' style="display: none;">
+                            <button onclick='addtocart(${i++})'>Añadir</button>
                         </div>
-                        <p style='font-size:12px;'>${title}</p>
-                        <input type='number' min='1' value='${quantity}' onchange='updateQuantity(${index}, this.value)'>
-                        <p style='font-size:12px;'>$ ${price}.00</p>
-                        <i class="fas fa-trash" onclick='delElement(${j++})'></i>
                     </div>
-                `;
-            }).join('');
+                    <div class='bottom'>
+                        <p>${title}</p>
+                        <h2>$ ${price}.00</h2>
+                    </div>
+                </div>
+            `;
+        }).join('');
+
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+        function addtocart(a) {
+            let item = cart.find(item => item.id === categories[a].id);
+            if (item) {
+                item.quantity += 1;
+            } else {
+                cart.push({ ...categories[a], quantity: 1 });
+            }
+            localStorage.setItem("cart", JSON.stringify(cart));
+            displaycart();
         }
-        // Guarda el total en el localStorage
-        localStorage.setItem("cartTotal", total);
-    }
 
-    function toggleCart() {
-        const sidebar = document.getElementById('sidebar');
-        if (sidebar.style.display === 'none' || sidebar.style.display === '') {
-            sidebar.style.display = 'block';
-        } else {
-            sidebar.style.display = 'none';
+        function delElement(a) {
+            cart.splice(a, 1);
+            localStorage.setItem("cart", JSON.stringify(cart));
+            displaycart();
         }
-    }
 
-    function showButton(element) {
-        const buttonContainer = element.querySelector('.button-container');
-        buttonContainer.style.display = 'block';
-    }
+        function updateQuantity(index, quantity) {
+            cart[index].quantity = parseInt(quantity);
+            localStorage.setItem("cart", JSON.stringify(cart));
+            displaycart();
+        }
 
-    function hideButton(element) {
-        const buttonContainer = element.querySelector('.button-container');
-        buttonContainer.style.display = 'none';
-    }
+        function displaycart() {
+            let j = 0;
+            let total = 0;
+            document.getElementById("count").innerHTML = cart.length;
+            if (cart.length == 0) {
+                document.getElementById('cartItem').innerHTML = "Tu carrito está vacío";
+                document.getElementById("total").innerHTML = "$ 0.00";
+            } else {
+                document.getElementById("cartItem").innerHTML = cart.map((items, index) => {
+                    const { image, title, price, quantity } = items;
+                    const subtotal = price * quantity;
+                    total += subtotal;
+                    document.getElementById("total").innerHTML = `$ ${total}.00`;
+                    return `
+                        <div class='cart-item'>
+                            <div class='row-img'>
+                                <img class='rowimg' src=${image}>
+                            </div>
+                            <p style='font-size:12px;'>${title}</p>
+                            <input type='number' min='1' value='${quantity}' onchange='updateQuantity(${index}, this.value)'>
+                            <p style='font-size:12px;'>$ ${price}.00</p>
+                            <p style='font-size:12px;'>Subtotal: $ ${subtotal}.00</p>
+                            <i class="fas fa-trash" onclick='delElement(${j++})'></i>
+                        </div>
+                    `;
+                }).join('');
+            }
+            localStorage.setItem("cartTotal", total);
+        }
 
-    document.addEventListener('DOMContentLoaded', () => {
-        displaycart();
-    });
-    
-</script>
+        function toggleCart() {
+            const sidebar = document.getElementById('sidebar');
+            if (sidebar.style.display === 'none' || sidebar.style.display === '') {
+                sidebar.style.display = 'block';
+            } else {
+                sidebar.style.display = 'none';
+            }
+        }
 
-<style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Cinzel', serif;
-    font-size: 18px;
-}
+        function showButton(element) {
+            const buttonContainer = element.querySelector('.button-container');
+            buttonContainer.style.display = 'block';
+        }
 
-body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-a {
-    color: white;
-    text-decoration: none; /* Quitar la subrayado */
-}
+        function hideButton(element) {
+            const buttonContainer = element.querySelector('.button-container');
+            buttonContainer.style.display = 'none';
+        }
 
-button a {
-    color: white;
-    text-decoration: none; /* Quitar la subrayado */
-}
+        document.addEventListener('DOMContentLoaded', () => {
+            displaycart();
+        });
+    </script>
 
-button#button {
-    font-size: 24px; /* Aumentar el tamaño de fuente */
-    padding: 5px 30px; /* Aumentar el padding */
-    background-color: #8B0000;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Cinzel', serif;
+            font-size: 18px;
+        }
 
-.header {
-    width: 100%;
-    background-color: transparent;
-    padding: 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-}
+        a {
+            color: #fff;
+        }
 
-.header .logo {
-    font-size: 30px;
-    font-weight: bold;
-    color: white;
-}
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
 
-.cart-container {
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    display: flex;
-    align-items: center;
-}
+        button#button {
+            background-color: #8B0000;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 30px; /* Aumentar el padding */
+            font-size: 18px;
+            cursor: pointer;
+        }
 
-.cart {
-    display: flex;
-    align-items: center;
-    background-color: white;
-    padding: 7px 10px;
-    border-radius: 3px;
-}
+        button#button a {
+            color: white;
+            text-decoration: none;
+        }
 
-.cart p {
-    height: 22px;
-    width: 22px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    background-color: #8B0000;
-    color: white;
-    margin-left: 10px;
-}
+        .header {
+            width: 100%;
+            background-color: transparent;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+        }
 
-.container {
-    display: flex;
-    width: 70%;
-    margin-bottom: 30px;
-    position: relative;
-}
+        .header .logo {
+            font-size: 30px;
+            font-weight: bold;
+            color: white;
+        }
 
-#root {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
-}
+        .cart-container {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            align-items: center;
+        }
 
-.sidebar {
-    width: 80%; /* Aumentar el tamaño del marco del carrito */
-    border-radius: 5px;
-    background-color: #eee;
-    margin-left: 20px;
-    padding: 20px; /* Aumentar el padding */
-    text-align: center;
-    display: none;
-}
+        .cart {
+            display: flex;
+            align-items: center;
+            background-color: white;
+            padding: 7px 10px;
+            border-radius: 3px;
+        }
 
-.head {
-    background-color: #8B0000;
-    border-radius: 3px;
-    height: 50px; /* Aumentar la altura */
-    padding: 10px;
-    margin-bottom: 20px;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 20px; /* Aumentar el tamaño de fuente */
-}
+        .cart p {
+            height: 22px;
+            width: 22px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background-color: #8B0000;
+            color: white;
+            margin-left: 10px;
+        }
 
-.foot {
-    display: flex;
-    justify-content: space-between;
-    margin: 20px 0px;
-    padding: 10px 0px;
-    border-top: 1px solid #333;
-    flex-direction: column;
-    align-items: center;
-}
+        .container {
+            display: flex;
+            width: 70%;
+            margin-bottom: 30px;
+            position: relative;
+        }
 
-.foot h3, .foot h2 {
-    margin: 5px 0;
-}
+        #root {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 20px;
+        }
 
-.foot button {
+        .sidebar {
+            width: 80%;
+            border-radius: 5px;
+            background-color: #eee;
+            margin-left: 20px;
+            padding: 20px;
+            text-align: center;
+            display: none;
+        }
+
+       
+        .head {
+            background-color: #8B0000;
+            border-radius: 3px;
+            height: 50px;
+            padding: 10px;
+            margin-bottom: 20px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
+
+        .foot {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0px;
+            padding: 10px 0px;
+            border-top: 1px solid #333;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .foot h3,
+        .foot h2 {
+            margin: 5px 0;
+        }
+
+        .foot input[type="datetime-local"] {
+            margin: 10px 0;
+            padding: 10px;
+            width: 80%;
+            font-size: 18px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .foot button {
     background-color: #8B0000;
     color: white; /* Cambiar el color del texto a blanco */
     border: none;
@@ -296,166 +302,173 @@ button#button {
     display: inline-block; /* Ajustar el botón como un bloque en línea */
     border-bottom: none; /* Quitar la línea debajo */
 }
+        .foot button:hover {
+            background-color: #333;
+        }
 
-.foot button:hover {
-    background-color: #333;
-    text-decoration: none; /* Quitar la subrayado en el hover */
-}
+        .cart-item input {
+            width: 40px;
+        }
 
-.cart-item input {
-    width: 40px; /* Reducir el ancho del cuadro de cantidad */
-}
+        .box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            border-radius: 5px;
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
 
-.box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    border-radius: 5px;
-    padding: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    position: relative;
-}
+        .img-box {
+            width: 100%;
+            height: 260px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
 
-.img-box {
-    width: 100%;
-    height: 260px; /* Aumentar la altura de la imagen */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-}
+        .images {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
 
-.images {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-}
+        .button-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
 
-.button-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(0, 0, 0, 0.5);
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-}
+        .box:hover .button-container {
+            opacity: 1;
+        }
 
-.box:hover .button-container {
-    opacity: 1;
-}
+        .button-container button {
+            width: 90px;
+            height: 50px;
+            border: none;
+            border-radius: 5px;
+            background-color: #8B0000;
+            padding: 5px;
+            cursor: pointer;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
 
-.button-container button {
-    width: 70px; /* Reducir el ancho del botón */
-    height: 40px; /* Reducir la altura del botón */
-    border: none;
-    border-radius: 5px;
-    background-color: #8B0000;
-    padding: 5px; /* Reducir el padding dentro del botón */
-    cursor: pointer;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: 50%; /* Centrar verticalmente */
-    left: 50%; /* Centrar horizontalmente */
-    transform: translate(-50%, -50%); /* Centrar exactamente en el medio */
-}
+        .button-container button:hover {
+            background-color: #333;
+        }
 
-.button-container button:hover {
-    background-color: #333;
-}
+        .bottom {
+            margin-top: 10px;
+            width: 100%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
 
-.bottom {
-    margin-top: 10px;
-    width: 100%;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
+        .bottom p,
+        .bottom h2 {
+            margin: 5px 0;
+        }
 
-.bottom p, .bottom h2 {
-    margin: 5px 0;
-}
+        h2 {
+            font-size: 22px;
+            color: green;
+        }
 
-h2 {
-    font-size: 22px; /* Aumentar el tamaño de la fuente */
-    color: green;
-}
+        button i {
+            margin-left: 10px;
+        }
 
-button i {
-    margin-left: 10px;
-}
+        .cart-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 0;
+            border-bottom: 1px solid #ccc;
+            margin-bottom: 15px;
+        }
 
-.cart-item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 15px 0; /* Aumentar el padding */
-    border-bottom: 1px solid #ccc;
-    margin-bottom: 15px; /* Aumentar el margen */
-}
+        .row-img {
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
 
-.row-img {
-    width: 60px; /* Aumentar el tamaño de la imagen en el carrito */
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    border-radius: 5px;
-    margin-right: 10px;
-}
+        .rowimg {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
 
-.rowimg {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-.cart-item input {
-    width: 40px; /* Ancho original */
-    margin: 0 10px; /* Margen horizontal de 10px */
-}
+        .cart-item input {
+            width: 40px;
+            margin: 0 10px;
+        }
 
-.cart-item p {
-    flex: 1;
-    text-align: left;
-    font-size: 16px; /* Aumentar el tamaño del texto */
-}
+        .cart-item p {
+            flex: 1;
+            text-align: left;
+            font-size: 16px;
+        }
 
-.cart-item .fas {
-    cursor: pointer;
-    color: black; /* Cambiar el color del icono a negro */
-    margin-left: 10px;
-}
+        .cart-item .fas {
+            cursor: pointer;
+            color: black;
+            margin-left: 10px;
+        }
 
-.cart-item .fas:hover {
-    color: darkred;
-}
+        .cart-item .fas:hover {
+            color: darkred;
+        }
 
-/* Estilos para pantallas de hasta 480px de ancho */
-@media screen and (max-width: 480px) {
-    #root {
-        grid-template-columns: repeat(1, 1fr); /* Cambiar a una sola columna */
-    }
-}
+        /* Estilos para pantallas de hasta 768px de ancho */
+        @media screen and (max-width: 768px) {
+            .container {
+                width: 90%; /* Reducir el ancho del contenedor principal */
+            }
 
-@media screen and (max-width: 768px) {
-    .sidebar {
-        width: 100%; /* Ocupar todo el ancho en pantallas pequeñas */
-        margin-left: 0; /* Eliminar el margen izquierdo */
-        padding: 10px; /* Reducir el padding */
-    }
-}
-</style>
+            #root {
+                grid-template-columns: repeat(2, 1fr); /* Cambiar a 2 columnas en lugar de 3 */
+            }
+
+            .sidebar {
+                width: 100%; /* Ocupar todo el ancho en pantallas pequeñas */
+            }
+        }
+
+        /* Estilos para pantallas de hasta 480px de ancho */
+        @media screen and (max-width: 480px) {
+            #root {
+                grid-template-columns: repeat(1, 1fr); /* Cambiar a una sola columna */
+            }
+        }
+    </style>
 </body>
 </html>

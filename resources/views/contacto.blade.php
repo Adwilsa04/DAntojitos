@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto y FAQs</title>
+    <title>Contacto</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="icon" type="image/x-icon" href="{{asset('imagenes/Logo.ico')}}">
 
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
+
         body {
-            font-family: Arial, sans-serif;
+            font-family:'Cinzel' ;
             margin: 0;
             padding: 0;
         }
@@ -127,7 +129,7 @@
 
         .contact-form button {
             padding: 10px 20px;
-            background-color: #333;
+            background-color: #8B0000;
             color: #fff;
             border: none;
             border-radius: 4px;
@@ -137,7 +139,7 @@
         }
 
         .contact-form button:hover {
-            background-color: #555;
+            background-color: #333;
         }
 
         @media (max-width: 768px) {

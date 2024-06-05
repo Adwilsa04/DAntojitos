@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pantalla de Perfil</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
         body {
             margin: 0;
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Cinzel';
             background-color: #f1f1f1;
             display: flex;
             justify-content: center;

@@ -246,6 +246,64 @@ a{
         padding: 2vw 4vw; /* Padding del botón para pantallas pequeñas */
     }
 }
+/*codigos de la alerta */
+body {
+    font-family: Arial, sans-serif;
+}
+
+.alert-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    max-width: 400px;
+    z-index: 1000;
+}
+
+.alert-content {
+    background-color: #2a4a46;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.alert-content h2 {
+    margin-top: 0;
+}
+
+.alert-content p {
+    margin: 10px 0;
+}
+
+.alert-content .btn-register,
+.alert-content button {
+    display: block;
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: none;
+    background-color: #56b68b;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: none;
+    text-align: center;
+}
+
+
+
     </style>
 <x-index></x-index>
 <br>
@@ -254,6 +312,7 @@ a{
 <br>
 
     <body>
+        
         <div class="banner">
             <video autoplay loop muted plays-inline>
                 <source src="{{asset('video/Video.mp4')}}" type="video/mp4">
@@ -324,6 +383,36 @@ a{
         </div>
         <button class="book-now" href="https://www.google.com/maps/place/19%C2%B024'08.0%22N+70%C2%B039'25.2%22W/@19.4022312,-70.659565,17z/data=!3m1!4b1!4m4!3m3!8m2!3d19.4022312!4d-70.6569901?entry=ttu">Mapa</button>
     </div>
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIP Alert</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="alert-container" id="vipAlert">
+        <div class="alert-content">
+            <span class="close-btn" onclick="closeAlert()">&times;</span>
+            <h2>REGÍSTRATE</h2>
+            <p>Por favor, regístrate para acceder a todas las funciones de la aplicación.</p>
+            <button onclick="redirectToRegister()">REGISTRARME</button>
+        </div>
+    </div>
+
+    <script>
+        function closeAlert() {
+            document.getElementById('vipAlert').style.display = 'none';
+        }
+
+        function redirectToRegister() {
+            window.location.href = "{{ route('registrate') }}";
+        }
+    </script>
+</body>
+</html>
 
     </body>
     <x-footer></x-footer>
