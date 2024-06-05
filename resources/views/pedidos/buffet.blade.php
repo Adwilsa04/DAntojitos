@@ -36,7 +36,7 @@
         </div>
     </div>
 
-    <script>
+    <script >
         const product = [
             { id: 12, image: '{{ asset('image/a1.jpg') }}', title: 'Menú 1', price: 550 },
             { id: 13, image: '{{ asset('image/a2.jpg') }}', title: 'Menú 2', price: 500 },
@@ -150,6 +150,8 @@
         document.addEventListener('DOMContentLoaded', () => {
             displaycart();
         });
+
+
     </script>
 
     <style>
