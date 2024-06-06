@@ -29,7 +29,7 @@
                 <input type="datetime-local" id="order-datetime">
                 <h3>Total</h3>
                 <h2 id="total">$ 0.00</h2>
-                <button id="pay-button"><a href="{{ route('Detalle') }}">VER DETALLES</a></button>
+                <button id="button"><a href="{{ route('Detalle') }}">VER DETALLES</a></button>
             </div>
         </div>
     </div>

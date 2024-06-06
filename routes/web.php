@@ -3,6 +3,8 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\File;
+use App\Http\Controllers\PaymentController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -33,6 +35,13 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+
+Route::get('/pago', function () {
+    return view('Electromecanica/factura_reg');
+   })->name('pago');
+   Route::post('/paypal/pay', [PaymentController::class, 'payWithPayPal'])->name('payment.payWithPayPal');
+   Route::get('/paypal/status', 'PaymentController@payPalStatus');
+
 
 Route::get('/inicio', function () {
     return view('pagianPrinci');
