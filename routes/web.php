@@ -151,8 +151,6 @@ Route::get('/usuarios', [RegitroClienteController::class, 'index'])->name('usuar
 
 use App\Http\Controllers\RegistroClienteTestController;
 
-Route::post('/registro-cliente-test', [RegistroClienteTestController::class, 'store']);
-
 
 use App\Http\Controllers\AuthController;
 

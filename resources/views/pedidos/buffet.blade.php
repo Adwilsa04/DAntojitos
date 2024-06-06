@@ -38,7 +38,6 @@
             <div class="foot">
                 <h3>Fecha y Hora del Pedido</h3>
                 <input type="datetime-local" id="order-datetime">
-                <h3>Dirección del Pedido</h3>
                 <input type="text" id="order-address" placeholder="Ingrese su dirección">
                 <h3>Total</h3>
                 <h2 id="total">$ 0.00</h2>
@@ -161,7 +160,7 @@
 
         document.addEventListener('DOMContentLoaded', () => {
             displaycart();
-            
+
             localStorage.setItem("orderAddress", document.getElementById("order-address").value);
 
 
@@ -175,6 +174,31 @@
             const formattedDate = `${year}-${month}-${day}T${hours}:${minutes}`;
             orderDatetime.value = formattedDate;
         });
+
+        document.addEventListener('DOMContentLoaded', () => {
+    const orderDatetime = document.getElementById("order-datetime");
+
+    // Obtener la fecha y hora actual
+    const today = new Date();
+    const formattedDate = today.toISOString().slice(0, 16);
+
+    // Establecer el valor predeterminado del campo de fecha y hora
+    orderDatetime.value = formattedDate;
+
+    // Escuchar cambios en el campo de fecha y hora
+    orderDatetime.addEventListener('change', () => {
+        // Guardar la fecha y hora seleccionadas en el almacenamiento local
+        localStorage.setItem("orderDatetime", orderDatetime.value);
+    });
+});
+// Dentro del evento donde el usuario ingresa la dirección
+const orderAddressInput = document.getElementById("order-address");
+
+orderAddressInput.addEventListener('change', () => {
+    const address = orderAddressInput.value;
+    localStorage.setItem("orderAddress", address);
+});
+
 
     </script>
 
