@@ -159,6 +159,9 @@ table {
         <p>Variable $registros no está definida.</p>
     @endif
     <br>
+    <center><button><a href="{{ route('pantadmin') }}">Regresar</a></button></center>
+    <br>
+
     <div class="search-forms">
         <form action="{{ route('registro.buscarid') }}" method="GET">
             <input type="text" name="id" placeholder="Buscar por ID" value="{{ request()->input('id') }}">
@@ -172,9 +175,7 @@ table {
         <br>
     </div>
     </center>
-    <br>
-    <center><button><a href="{{ route('pantadmin') }}">Regresar</a></button></center>
-    <br>
+
     <table border="0">
     <tr>
         <th>Id Del Registro</th>
