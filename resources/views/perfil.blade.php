@@ -123,38 +123,47 @@
         <div class="profile-header">
             Perfil
         </div>
+
         <div class="tab-container">
             <div class="tab active" onclick="openTab(event, 'details')">Detalles</div>
         </div>
+
         <div id="details" class="tab-content active">
             <div class="profile-details">
                 <h2 id="user-name">Juan Rosa</h2>
+
                 <div class="form-group">
                     <label for="nombre_cliente">Nombre</label>
                     <input type="text" id="nombre_cliente" value="Juan">
                 </div>
+
                 <div class="form-group">
                     <label for="apellido_cliente">Apellido</label>
                     <input type="text" id="apellido_cliente" value="Rosa">
                 </div>
+
                 <div class="form-group">
                     <label for="telefono_cliente">Teléfono</label>
                     <input type="text" id="telefono_cliente" value="829-321-0364">
                 </div>
+
                 <div class="form-group">
                     <label for="correo">Correo Electrónico</label>
                     <input type="email" id="correo" value="JuanRosa22@gmail.com">
                 </div>
+
                 <div class="form-group password-container">
                     <label for="contrasena">Contraseña</label>
                     <input type="password" id="contrasena" value="123456789">
                     <button type="button" class="toggle-password" onclick="togglePasswordVisibility()">Mostrar</button>
                 </div>
                 <button type="button" class="save-button">Guardar Cambios</button>
-            </div>
-        </div>
-    </div>
-    <script>
+
+                </div>
+                </div>
+                </div>
+            
+                <script>
         function openTab(evt, tabName) {
             var i, tabcontent, tablinks;
             tabcontent = document.getElementsByClassName("tab-content");
@@ -183,5 +192,9 @@
             }
         }
     </script>
+            
+          
+
+<x-footer></x-footer>
 </body>
 </html>
