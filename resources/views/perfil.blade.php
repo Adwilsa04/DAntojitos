@@ -116,6 +116,28 @@
         .save-button:hover {
             background-color: #dd2222;
         }
+
+        a{
+            font-family: 'Cinzel';
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .regresar{
+            padding: 10px;
+            border: none;
+            background-color: #f12f1f;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 20px; 
+        }
+
+        .regresar:hover{
+            background-color: #dd2222;
+        }
+
     </style>
 </head>
 <body>
@@ -158,7 +180,9 @@
                     <button type="button" class="toggle-password" onclick="togglePasswordVisibility()">Mostrar</button>
                 </div>
                 <button type="button" class="save-button">Guardar Cambios</button>
-
+                <br>
+                <br><br>
+    <button class="regresar"><a href="{{ route('inicio') }}">Regresar</a></button>
                 </div>
                 </div>
                 </div>
@@ -192,9 +216,5 @@
             }
         }
     </script>
-            
-          
-
-<x-footer></x-footer>
 </body>
 </html>

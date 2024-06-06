@@ -114,6 +114,7 @@ table {
     a{
         color:#ffff;
         font-size: 20px;
+        text-decoration: none;
     }
 
     .search-forms {

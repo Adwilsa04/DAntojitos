@@ -216,6 +216,7 @@ Route::post('admin/login', [AdminAuthController::class, 'login'])->name('admin.l
 Route::post('admin/logout', [AdminAuthController::class, 'logout'])->name('admin.logout');
 
 
+
 use App\Http\Controllers\MessageController;
 
 Route::post('/contacto', [MessageController::class, 'store'])->name('contacto.store');
