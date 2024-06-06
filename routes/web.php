@@ -110,6 +110,14 @@ Route::get('Formulario de Pago', function(){
     return view('Formularios/pago');
 }) ->name('pago');
 
+Route::get('Detalle', function(){
+    return view('Detalle');
+}) ->name('Detalle');
+
+Route::get('Cancelar', function(){
+    return view('Cancelar');
+}) ->name('Cancelar');
+
 Route::get('Inicio de admin', function(){
     return view('Formularios/inicioad');
 }) ->name('inicioad');

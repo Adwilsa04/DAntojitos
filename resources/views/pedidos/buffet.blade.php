@@ -31,7 +31,7 @@
                 <input type="datetime-local" id="order-datetime">
                 <h3>Total</h3>
                 <h2 id="total">$ 0.00</h2>
-                <button id="pay-button"><a href="{{ route('pago') }}">PAGAR</a></button>
+                <button id="pay-button"><a href="{{ route('Detalle') }}">VER DETALLES</a></button>
             </div>
         </div>
     </div>
@@ -151,7 +151,18 @@
             displaycart();
         });
 
+        document.getElementById("pay-button").addEventListener("click", function() {
+            // Obtener datos del carrito y fecha/hora del pedido
+            const cartData = JSON.stringify(cart);
+            const orderDatetime = document.getElementById("order-datetime").value;
 
+            // Almacenar datos en el almacenamiento local
+            localStorage.setItem("cartData", cartData);
+            localStorage.setItem("orderDatetime", orderDatetime);
+
+            // Redireccionar a la siguiente página
+            window.location.href = "detalle.blade.php";
+        });
     </script>
 
     <style>
