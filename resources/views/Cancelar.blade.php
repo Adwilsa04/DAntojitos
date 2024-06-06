@@ -5,8 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cancelar Pedido</title>
     <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
+
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Cinzel';
             margin: 0;
             padding: 0;
             display: flex;
@@ -40,6 +43,7 @@
             border-radius: 5px;
         }
         button {
+            font-family: 'Cinzel';
             background-color: #8B0000;
             color: white;
             border: none;
