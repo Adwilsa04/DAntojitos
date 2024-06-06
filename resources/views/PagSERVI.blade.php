@@ -14,7 +14,7 @@
 h1 {
     font-family: 'Cinzel';
     font-size: 24px;
-    color: #D2B48C; /* Color crema/marrón claro */
+    color: #000; /* Color crema/marrón claro */
     text-align: center; /* Centrado */
     margin-top: 20px; /* Espacio sobre las tarjetas */
 }
@@ -98,7 +98,7 @@ h1 {
 <x-index></x-index>
 <br><br><br><br><br>
 
-<h1>Editorial</h1> <!-- Título agregado -->
+<h1>Servicios</h1> <!-- Título agregado -->
 <br>
 <body>
     <!-- Contenedor para las tarjetas -->

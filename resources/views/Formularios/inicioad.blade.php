@@ -49,10 +49,10 @@
           <div class="formbg">
             <div class="formbg-inner padding-horizontal--48">
               <span class="padding-bottom--15">Ingresa los datos</span>
-              <form action="{{ route('admin.login') }}" method="POST">
+              <form action="{{ route('admin.login.submit') }}" method="POST">
     @csrf
     <div class="field padding-bottom--24">
-        <label for="email">Email</label>
+        <label for="correo">Email</label>
         <input type="email" name="correo" placeholder="Correo predeterminado de Admin" required>
     </div>
     <div class="field padding-bottom--24">
@@ -78,6 +78,7 @@
         </div>
     @endif
 </form>
+
 
             </div>
           </div>

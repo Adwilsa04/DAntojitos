@@ -3,6 +3,8 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\File;
+use App\Http\Controllers\PaymentController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -33,6 +35,13 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+
+Route::get('/pago', function () {
+    return view('Electromecanica/factura_reg');
+   })->name('pago');
+   Route::post('/paypal/pay', [PaymentController::class, 'payWithPayPal'])->name('payment.payWithPayPal');
+   Route::get('/paypal/status', 'PaymentController@payPalStatus');
+
 
 Route::get('/inicio', function () {
     return view('pagianPrinci');
@@ -140,6 +149,10 @@ Route::get('/ultimo-registro', [RegitroClienteController::class, 'ultimoRegistro
 
 Route::get('/usuarios', [RegitroClienteController::class, 'index'])->name('usuarios.index');
 
+use App\Http\Controllers\RegistroClienteTestController;
+
+Route::post('/registro-cliente-test', [RegistroClienteTestController::class, 'store']);
+
 
 use App\Http\Controllers\AuthController;
 
@@ -201,8 +214,13 @@ Route::get('/manejoadmin/citas/buscar', [CitaController::class, 'index'])->name(
 use App\Http\Controllers\AdminAuthController;
 
 Route::get('admin/login', [AdminAuthController::class, 'showLoginForm'])->name('admin.login');
-Route::post('admin/login', [AdminAuthController::class, 'login']);
+Route::post('admin/login', [AdminAuthController::class, 'login'])->name('admin.login.submit');
 Route::post('admin/logout', [AdminAuthController::class, 'logout'])->name('admin.logout');
+
+// Ruta para el panel de administración, protegida por middleware
+Route::get('manejoadmin/pantadmin', function () {
+    return view('admin.panel'); // Aquí deberías retornar la vista de tu panel de administración
+})->name('pantadmin')->middleware('auth.admin');
 
 use App\Http\Controllers\MessageController;
 

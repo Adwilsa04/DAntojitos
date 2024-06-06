@@ -126,8 +126,11 @@
                     </tr>
                 </tbody>
             </table>
-            <button onclick="handlePayment()">Pagar</button>
-            <button><a href="{{ route('Cancelar') }}" style="text-decoration:none; color:white;"> Cancelar</a></button>
+            <button><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=YOUR_BUTTON_ID" id="paypal-button" style="text-decoration:none;">
+Pagar </a></button>
+<button onclick="window.print()">IMPRIMIR</button>
+
+
         </div>
 
         <script>

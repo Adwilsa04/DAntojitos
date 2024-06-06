@@ -40,7 +40,7 @@
                 <input type="datetime-local" id="order-datetime">
                 <h3>Total</h3>
                 <h2 id="total">$ 0.00</h2>
-                <button id="btn-paypal-checkout"><a href="{{ route('pago') }}">ver detalles</a></button>
+                <button id="button" ><a href="{{ route('Detalle') }}">ver detalles</a></button>
                 <!-- paypal button will be rendered here using Javascript -->  
             </div>
         </div>
@@ -159,6 +159,17 @@
 
         document.addEventListener('DOMContentLoaded', () => {
             displaycart();
+    
+
+        const orderDatetime = document.getElementById("order-datetime");
+            const today = new Date();
+            const month = String(today.getMonth() + 1).padStart(2, '0');
+            const day = String(today.getDate()).padStart(2, '0');
+            const year = today.getFullYear();
+            const hours = String(today.getHours()).padStart(2, '0');
+            const minutes = String(today.getMinutes()).padStart(2, '0');
+            const formattedDate = `${year}-${month}-${day}T${hours}:${minutes}`;
+            orderDatetime.value = formattedDate;
         });
 
     </script>
