@@ -18,7 +18,7 @@
         }
 
         .top-bar {
-            background-color: #fff;
+            background-color: #000; /* Color de fondo negro */
             padding: 10px 0;
             border-bottom: 1px solid #ddd;
         }
@@ -38,13 +38,13 @@
 
         .contact-info a {
             margin: 0 10px;
-            color: #333;
+            color: #fff; /* Color de las letras blanco */
             text-decoration: none;
         }
 
         .contact-info span {
             margin: 0 5px;
-            color: #333;
+            color: #fff; /* Color de las letras blanco */
         }
 
         .social-icons {
@@ -63,8 +63,8 @@
         .logo {
             display: flex;
             flex-direction: column;
-            align-items: flex-start; /* Alinear elementos horizontalmente */
             text-align: left;
+            align-items: flex-start; /* Alinear elementos a la izquierda */
         }
 
         .logo span {
@@ -86,6 +86,7 @@
 
         .navbar .container {
             display: flex;
+            justify-content: space-between; /* Distribuir el espacio entre los elementos */
             align-items: center; /* Alinear elementos horizontalmente */
         }
 
@@ -174,7 +175,6 @@
                     <span>|</span>
                     <a href="tel:+18292083086">(829) 208-3086, (829) 6222-3556</a>
                 </div>
-            
             </div>
         </div>
         <div class="navbar">
@@ -191,11 +191,9 @@
                 <nav>
                     <ul>
                         <li><a href="{{route('volver')}}">INICIO</a></li>
-                        <li><a href="{{route('picadera')}}">PEDIDOS BUFFET</a></li>
-                        <li><a href="{{route('buffet')}}">PEDIDOS PICADERAS</a></li>
-                        <li><a href="{{route('decoracion')}}">PEDIDOS DECORACION</a></li>
+                        <li><a href="{{route('pagservi')}}">SERVICIOS</a></li>
                         <li><a href="{{route('contacto')}}">CONTACTO</a></li>
-                        <li><a href="{{route('nosotros')}}">MI PERFIL</a></li>
+                        <li><a href="{{route('perfil')}}">MI PERFIL</a></li>
                     </ul>
                 </nav>
             </div>
@@ -208,12 +206,5 @@
             document.querySelector('nav ul').classList.toggle('active');
         });
     </script>
-
-    
 </body>
 </html>
-
-
-
-
-
