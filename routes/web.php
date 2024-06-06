@@ -156,18 +156,15 @@ Route::middleware(['auth'])->group(function () {
     })->name('dashboard');
 
     Route::resource('registros', RegitroClienteController::class);
-
-  
-    
-    Route::get('/pedidos/picadera', function () {
-        return view('pedidos/picadera');
-    })->name('picadera');
-  
 });
 
 Route::get('/pedidos/buffet', function () {
     return view('pedidos/buffet');
 })->name('buffet');
+
+Route::get('/pedidos/picadera', function () {
+        return view('pedidos/picadera');
+    })->name('picadera');
 
 Route::get('sesion', function() {
     return view('Formularios/inicio');

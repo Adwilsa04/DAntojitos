@@ -174,13 +174,7 @@
                     <span>|</span>
                     <a href="tel:+18292083086">(829) 208-3086, (829) 6222-3556</a>
                 </div>
-                <div class="social-icons">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-google"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                </div>
+            
             </div>
         </div>
         <div class="navbar">
@@ -201,7 +195,7 @@
                         <li><a href="{{route('buffet')}}">PEDIDOS PICADERAS</a></li>
                         <li><a href="{{route('decoracion')}}">PEDIDOS DECORACION</a></li>
                         <li><a href="{{route('contacto')}}">CONTACTO</a></li>
-                        <li><a href="{{route('nosotros')}}">SHORTCODES</a></li>
+                        <li><a href="{{route('nosotros')}}">MI PERFIL</a></li>
                     </ul>
                 </nav>
             </div>
