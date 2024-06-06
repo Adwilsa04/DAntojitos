@@ -131,7 +131,7 @@
                         <td id="order-datetime" class="highlight"></td>
                     </tr>
 <tr>
-                        <td style="text-align: right;" class="highlight"><strong>Dirección de entrega:</strong></td>
+                        <td style="text-align: right;" class="highlight"><strong>Dirección de Entrega:</strong></td>
                         <td id="order-address" class="highlight"></td>
                     </tr>
                 </tbody>
