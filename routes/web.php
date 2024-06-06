@@ -99,27 +99,42 @@ Route::get('Formulario de Pago', function(){
     return view('Formularios/pago');
 }) ->name('pago');
 
+Route::get('Detalle', function(){
+    return view('Detalle');
+}) ->name('Detalle');
+
+Route::get('Cancelar', function(){
+    return view('Cancelar');
+}) ->name('Cancelar');
+
 Route::get('Inicio de admin', function(){
     return view('Formularios/inicioad');
 }) ->name('inicioad');
 
 use App\Http\Controllers\PagoController;
+Route::get('/pagos', [PagoController::class, 'index'])->name('pagos.buscar');
+Route::get('pagos/id', [PagoController::class, 'index'])->name('pagos.buscarid');
 Route::post('/pagar', [PagoController::class, 'store'])->name('pagar.store');
 Route::get('/pagos', [PagoController::class, 'index'])->name('pagos.index');
 Route::put('/pagos/{id}/toggle', [PagoController::class, 'toggle'])->name('pagos.toggle');
 
 
 use App\Http\Controllers\RegitroClienteController;
+use App\Models\Registro_cliente;
 
+Route::get('/perfil/{id}', function ($id) {
+    $registros = Registro_cliente::findOrFail($id);
+    return view('perfil', compact('registros'));
+})->name('perfil');
 
-Route::get('Formularios/registro', [RegitroClienteController::class, 'create']);
 Route::post('Formularios/registro', [RegitroClienteController::class, 'store'])->name('registro.store');
 Route::patch('/registros/{id}/cambiarEstado', [RegitroClienteController::class, 'cambiarEstado'])->name('registro.cambiarEstado');
 Route::get('/registros/buscar', [RegitroClienteController::class, 'buscar'])->name('registro.buscar');
 Route::get('/registros/buscarid', [RegitroClienteController::class, 'buscarid'])->name('registro.buscarid');
 
+Route::get('/perfil/{registro}', [RegitroClienteController::class, 'perfil'])->name('perfil');
 
-
+Route::get('/ultimo-registro', [RegitroClienteController::class, 'ultimoRegistro'])->name('ultimo.registro');
 
 // Route::resource('registros', RegitroClienteController::class);
 
@@ -182,9 +197,8 @@ Route::resource('citas', CitaController::class);
 Route::get('/citas', [App\Http\Controllers\CitaController::class, 'index'])->name('citas.index');
 Route::post('/citas', [App\Http\Controllers\CitaController::class, 'store'])->name('citas.store');
 Route::delete('/citas/{id}', [App\Http\Controllers\CitaController::class, 'destroy'])->name('citas.destroy');
-Route::get('/citas/buscar', [CitaController::class, 'buscarcita'])->name('citas.buscar');
-Route::get('/citas/buscarid', [CitaController::class, 'buscaridcita'])->name('citas.buscarid');
-
+Route::get('/manejoadmin/citas/buscarid', [CitaController::class, 'index'])->name('citas.buscarid');
+Route::get('/manejoadmin/citas/buscar', [CitaController::class, 'index'])->name('citas.buscar');
 
 
 use App\Http\Controllers\AdminAuthController;
@@ -192,12 +206,6 @@ use App\Http\Controllers\AdminAuthController;
 Route::get('admin/login', [AdminAuthController::class, 'showLoginForm'])->name('admin.login');
 Route::post('admin/login', [AdminAuthController::class, 'login']);
 Route::post('admin/logout', [AdminAuthController::class, 'logout'])->name('admin.logout');
-
-Route::middleware(['auth:admin'])->group(function () {
-    Route::get('admin/pantaadmin', function () {
-        return view('admin.pantaadmin');
-    })->name('admin.pantaadmin');
-});
 
 use App\Http\Controllers\MessageController;
 

@@ -6,9 +6,24 @@ use Illuminate\Http\Request;
 
 class PagoController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $pagos = Pago::all();
+        $query = $request->input('query');
+        $id = $request->input('id');
+
+        if ($id) {
+            $pagos = Pago::where('id', $id)->get();
+        } elseif ($query) {
+            $pagos = Pago::where('nombre_completo', 'LIKE', "%$query%")
+                ->orWhere('email', 'LIKE', "%$query%")
+                ->orWhere('tipo_pago', 'LIKE', "%$query%")
+                ->orWhere('descripcion_pago', 'LIKE', "%$query%")
+                ->orWhere('monto', 'LIKE', "%$query%")
+                ->get();
+        } else {
+            $pagos = Pago::all();
+        }
+
         return view('manejoadmin.pagos', ['pagos' => $pagos]);
     }
     public function store(Request $request)

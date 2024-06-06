@@ -40,14 +40,18 @@
                 <input type="datetime-local" id="order-datetime">
                 <h3>Total</h3>
                 <h2 id="total">$ 0.00</h2>
+
                 <button id="btn-paypal-checkout"><a href="{{ route('pago') }}">ver detalles</a></button>
                 <!-- paypal button will be rendered here using Javascript -->
+
+
+                <button id="pay-button"><a href="{{ route('Detalle') }}">VER DETALLES</a></button>
 
             </div>
         </div>
     </div>
 
-    <script>
+    <script >
         const product = [
             { id: 12, image: '{{ asset('image/a1.jpg') }}', title: 'Menú 1', price: 550 },
             { id: 13, image: '{{ asset('image/a2.jpg') }}', title: 'Menú 2', price: 500 },
@@ -162,6 +166,21 @@
             displaycart();
         });
 
+<<<<<<< HEAD
+=======
+        document.getElementById("pay-button").addEventListener("click", function() {
+            // Obtener datos del carrito y fecha/hora del pedido
+            const cartData = JSON.stringify(cart);
+            const orderDatetime = document.getElementById("order-datetime").value;
+
+            // Almacenar datos en el almacenamiento local
+            localStorage.setItem("cartData", cartData);
+            localStorage.setItem("orderDatetime", orderDatetime);
+
+            // Redireccionar a la siguiente página
+            window.location.href = "detalle.blade.php";
+        });
+>>>>>>> bab200a669752942cef88c1ac4b8ef82234c8b47
     </script>
 
     <style>
