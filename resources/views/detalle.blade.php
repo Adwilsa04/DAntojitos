@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detalles del Pedido</title>
+    <title> Factura </title>
     <style>
                 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
 
@@ -103,7 +103,7 @@
         <div class="header">
             <button onclick="window.history.back()">Volver</button>
         </div>
-        <h1>DETALLES DEL PEDIDO</h1>
+        <h1>Factura</h1>
         <table>
             <thead>
                 <tr>
@@ -111,6 +111,7 @@
                     <th>Cantidad</th>
                     <th>Precio</th>
                     <th>Subtotal</th>
+                    <th>Dirección</th>
                 </tr>
             </thead>
             <tbody id="order-details-body">
@@ -143,6 +144,8 @@ Pagar </a></button>
                 // Recuperar datos del almacenamiento local
                 const cartData = localStorage.getItem("cartData");
                 const orderDatetime = localStorage.getItem("orderDatetime");
+                const orderAddress = localStorage.getItem("orderAddress");
+
 
                 // Convertir datos del carrito a objeto
                 const cart = JSON.parse(cartData);
@@ -159,6 +162,7 @@ Pagar </a></button>
                                 <td>${item.quantity}</td>
                                 <td>$${item.price.toFixed(2)}</td>
                                 <td>$${(item.price * item.quantity).toFixed(2)}</td>
+                                <td>${orderAddress}</td> <!-- Mostrar la dirección en la nueva columna -->
                             </tr>
                         `;
                         orderDetailsBody.innerHTML += row;
@@ -170,6 +174,8 @@ Pagar </a></button>
 
                     // Mostrar fecha/hora del pedido
                     document.getElementById("order-datetime").innerText = orderDatetime.replace("T", " ").slice(0, 16);
+
+                    document.getElementById("order-address").innerText = orderAddress;
                 } else {
                     orderDetailsBody.innerHTML = '<tr><td colspan="4">No hay datos en el carrito.</td></tr>';
                 }

@@ -38,6 +38,8 @@
             <div class="foot">
                 <h3>Fecha y Hora del Pedido</h3>
                 <input type="datetime-local" id="order-datetime">
+                <h3>Dirección del Pedido</h3>
+                <input type="text" id="order-address" placeholder="Ingrese su dirección">
                 <h3>Total</h3>
                 <h2 id="total">$ 0.00</h2>
                 <button id="button" ><a href="{{ route('Detalle') }}">ver detalles</a></button>
@@ -159,7 +161,9 @@
 
         document.addEventListener('DOMContentLoaded', () => {
             displaycart();
-    
+            
+            localStorage.setItem("orderAddress", document.getElementById("order-address").value);
+
 
         const orderDatetime = document.getElementById("order-datetime");
             const today = new Date();
