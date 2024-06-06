@@ -247,12 +247,14 @@ body {
 <body>
   
     <div class="wrapper">
-        <h2>Reserva tu cita !!!</h2>
-
-                   
-
+        <h2>Reserva tu cita</h2>
         <form action="{{route('citas.store') }}" method="POST">
         @csrf
+        @if(session('success'))
+    <div style="color: green; font-weight: bold; margin-top: 20px;">
+        {{ session('success') }}
+    </div>
+@endif
         <h4>Cuenta</h4>
         <div class="input_group">
             <div class="input_box">
@@ -260,7 +262,7 @@ body {
                 <i class="fa fa-user icon"></i>
             </div>
         </div>
-        
+
         <div class="input_group">
             <div class="input_box">
                 <input type="email" name="email" placeholder="Email Address" required class="name">

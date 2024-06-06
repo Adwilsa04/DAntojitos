@@ -95,24 +95,16 @@
 </body>
 
 <style>
-<<<<<<< HEAD
           @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
 
 
-=======
-    @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
->>>>>>> 9ca18ae874ba789f9fa0f796cfc2166cf41e522d
   * {
     padding: 0;
     margin: 0;
     color: #1a1f36;
     box-sizing: border-box;
     word-wrap: break-word;
-<<<<<<< HEAD
     font-family:  'Cinzel';
-=======
-    font-family:'Cinzel';
->>>>>>> 9ca18ae874ba789f9fa0f796cfc2166cf41e522d
   }
   body {
       min-height: 100%;

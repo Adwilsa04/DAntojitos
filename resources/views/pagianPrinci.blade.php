@@ -403,16 +403,16 @@ body {
     </section>
 <br><br>
     <div class="container">
-        <h1>Nuestra Ubicacion</h1>
+        <h1>Nuestra Ubicación</h1>
         <div class="address">
-            <h2>Direccion y telefono</h2>
-            <p1>Santiago,Republica Dominica, Carr.Punal</p1>
+            <h2>Dirección y teléfono</h2>
+            <p1>Santiago, República Dominica, Carr.Puñal</p1>
             <p2>(829) 622-356, (829) 208-3086</p2>
         </div>
         <div class="hours">
             <h2>Horas</h2>
             <p3>Lunes – Viernes: 8 am - 7 pm</p3>
-            <p4>Sabados: 9 am - 7 pm</p4>
+            <p4>Sábados: 9 am - 7 pm</p4>
         </div>
         <button class="book-now"><a href="{{route('contacto')}}">Mapa</a></button>
     </div>
