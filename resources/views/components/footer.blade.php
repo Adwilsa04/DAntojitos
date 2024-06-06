@@ -125,7 +125,6 @@ footer{
                 <li><a href="{{route('cita')}}">Reserva tu cita</a></li>
             </ul>
         </div>
-        
     </div>
     <div class="footerBottom">
         <p>Copyright &copy;2024  <span class="designer">D' Antojitos Gourmet Decora</span></p>

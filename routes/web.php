@@ -217,10 +217,6 @@ Route::get('admin/login', [AdminAuthController::class, 'showLoginForm'])->name('
 Route::post('admin/login', [AdminAuthController::class, 'login'])->name('admin.login.submit');
 Route::post('admin/logout', [AdminAuthController::class, 'logout'])->name('admin.logout');
 
-// Ruta para el panel de administración, protegida por middleware
-Route::get('manejoadmin/pantadmin', function () {
-    return view('admin.panel'); // Aquí deberías retornar la vista de tu panel de administración
-})->name('pantadmin')->middleware('auth.admin');
 
 use App\Http\Controllers\MessageController;
 
