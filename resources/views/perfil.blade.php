@@ -1,6 +1,3 @@
-@extends('layouts.app')
-
-@section('content')
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -25,6 +22,7 @@
             overflow: hidden;
             width: 450px;
             color: #333333;
+            padding: 20px;
         }
         .profile-header {
             background-color: #f12f1f;
@@ -67,39 +65,26 @@
             color: #f12f1f;
             font-size: 1.8em;
         }
-        .form-group {
-            margin-bottom: 15px;
-        }
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
-        }
-        .form-group input, .form-group select {
-            width: 100%;
-            padding: 6px;
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group input[type="password"] {
+            width: calc(100% - 40px);
+            padding: 8px;
             border: 1px solid #ccc;
             border-radius: 5px;
-            background-color: #f9f9f9;
-            color: #333333;
+            margin-top: 5px;
         }
-        .form-group input:focus, .form-group select:focus {
-            outline: none;
-            border-color: #f12f1f;
-        }
-        .save-button {
-            background-color: #f12f1f;
-            color: #ffffff;
+        .form-group button {
+            padding: 8px 15px;
             border: none;
-            padding: 10px 20px;
-            border-radius: 50px;
+            background-color: #f12f1f;
+            color: white;
+            border-radius: 5px;
             cursor: pointer;
             transition: background-color 0.3s;
-            display: block;
-            margin: 20px auto 0;
         }
-        .save-button:hover {
-            background-color: #ffffff;
-            color: #000000;
+        .form-group button:hover {
+            background-color: #dd2222;
         }
         .toggle-password {
             background: none;
@@ -108,7 +93,7 @@
             cursor: pointer;
             position: absolute;
             right: 5px;
-            top: 50%;
+            top: 73%;
             transform: translateY(-50%);
             padding: 5px 10px;
             font-size: 0.8em;
@@ -116,6 +101,20 @@
         }
         .password-container {
             position: relative;
+        }
+        .save-button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            background-color: #f12f1f;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 20px;
+        }
+        .save-button:hover {
+            background-color: #dd2222;
         }
     </style>
 </head>
@@ -126,62 +125,32 @@
         </div>
         <div class="tab-container">
             <div class="tab active" onclick="openTab(event, 'details')">Detalles</div>
-            <div class="tab" onclick="openTab(event, 'edit')">Editar Perfil</div>
-            <div class="tab" onclick="openTab(event, 'settings')">Configuración</div>
         </div>
         <div id="details" class="tab-content active">
             <div class="profile-details">
-                @if(isset($ultimoRegistro))
-                    <h2>{{ $ultimoRegistro->nombre_cliente }} {{ $ultimoRegistro->apellido_cliente }}</h2>
-                    <div class="form-group">
-                        <label for="nombre_cliente">Nombre</label>
-                        <input type="text" id="nombre_cliente" value="{{ $ultimoRegistro->nombre_cliente }}">
-                    </div>
-                    <div class="form-group">
-                        <label for="apellido_cliente">Apellido</label>
-                        <input type="text" id="apellido_cliente" value="{{ $ultimoRegistro->apellido_cliente }}">
-                    </div>
-                    <div class="form-group">
-                        <label for="telefono_cliente">Teléfono</label>
-                        <input type="text" id="telefono_cliente" value="{{ $ultimoRegistro->telefono_cliente }}">
-                    </div>
-                    <div class="form-group">
-                        <label for="correo">Correo Electrónico</label>
-                        <input type="email" id="correo" value="{{ $ultimoRegistro->correo }}">
-                    </div>
-                    <div class="form-group password-container">
-                        <label for="contrasena">Contraseña</label>
-                        <input type="password" id="contrasena" value="********">
-                        <button type="button" class="toggle-password" onclick="togglePasswordVisibility()">Mostrar</button>
-                    </div>
-                    <button type="button" class="save-button">Guardar Cambios</button>
-                @elseif(isset($registro))
-                    <h2>{{ $registro->nombre_cliente }} {{ $registro->apellido_cliente }}</h2>
-                    <div class="form-group">
-                        <label for="nombre_cliente">Nombre</label>
-                        <input type="text" id="nombre_cliente" value="{{ $registro->nombre_cliente }}">
-                    </div>
-                    <div class="form-group">
-                        <label for="apellido_cliente">Apellido</label>
-                        <input type="text" id="apellido_cliente" value="{{ $registro->apellido_cliente }}">
-                    </div>
-                    <div class="form-group">
-                        <label for="telefono_cliente">Teléfono</label>
-                        <input type="text" id="telefono_cliente" value="{{ $registro->telefono_cliente }}">
-                    </div>
-                    <div class="form-group">
-                        <label for="correo">Correo Electrónico</label>
-                        <input type="email" id="correo" value="{{ $registro->correo }}">
-                    </div>
-                    <div class="form-group password-container">
-                        <label for="contrasena">Contraseña</label>
-                        <input type="password" id="contrasena" value="********">
-                        <button type="button" class="toggle-password" onclick="togglePasswordVisibility()">Mostrar</button>
-                    </div>
-                    <button type="button" class="save-button">Guardar Cambios</button>
-                @else
-                    <p>No hay registros disponibles.</p>
-                @endif
+                <h2 id="user-name">Juan Rosa</h2>
+                <div class="form-group">
+                    <label for="nombre_cliente">Nombre</label>
+                    <input type="text" id="nombre_cliente" value="Juan">
+                </div>
+                <div class="form-group">
+                    <label for="apellido_cliente">Apellido</label>
+                    <input type="text" id="apellido_cliente" value="Rosa">
+                </div>
+                <div class="form-group">
+                    <label for="telefono_cliente">Teléfono</label>
+                    <input type="text" id="telefono_cliente" value="829-321-0364">
+                </div>
+                <div class="form-group">
+                    <label for="correo">Correo Electrónico</label>
+                    <input type="email" id="correo" value="JuanRosa22@gmail.com">
+                </div>
+                <div class="form-group password-container">
+                    <label for="contrasena">Contraseña</label>
+                    <input type="password" id="contrasena" value="123456789">
+                    <button type="button" class="toggle-password" onclick="togglePasswordVisibility()">Mostrar</button>
+                </div>
+                <button type="button" class="save-button">Guardar Cambios</button>
             </div>
         </div>
     </div>
@@ -216,5 +185,3 @@
     </script>
 </body>
 </html>
-@endsection
-
