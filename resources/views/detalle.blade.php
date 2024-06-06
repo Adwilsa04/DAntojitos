@@ -111,7 +111,6 @@
                     <th>Cantidad</th>
                     <th>Precio</th>
                     <th>Subtotal</th>
-                    <th>Dirección</th>
                 </tr>
             </thead>
             <tbody id="order-details-body">
@@ -122,6 +121,7 @@
         <div class="footer">
             <table style="width: 100%;">
                 <tbody>
+
                     <tr>
                         <td style="text-align: right;" class="highlight"><strong>Total:</strong></td>
                         <td id="order-total" class="highlight"></td>
@@ -130,11 +130,15 @@
                         <td style="text-align: right;" class="highlight"><strong>Fecha y Hora del Pedido:</strong></td>
                         <td id="order-datetime" class="highlight"></td>
                     </tr>
+<tr>
+                        <td style="text-align: right;" class="highlight"><strong>Dirección de entrega:</strong></td>
+                        <td id="order-address" class="highlight"></td>
+                    </tr>
                 </tbody>
             </table>
             <button><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=YOUR_BUTTON_ID" id="paypal-button" style="text-decoration:none;">
 Pagar </a></button>
-<button onclick="window.print()">IMPRIMIR</button>
+<button onclick="window.print()">Imprimir</button>
 
 
         </div>
@@ -162,7 +166,6 @@ Pagar </a></button>
                                 <td>${item.quantity}</td>
                                 <td>$${item.price.toFixed(2)}</td>
                                 <td>$${(item.price * item.quantity).toFixed(2)}</td>
-                                <td>${orderAddress}</td> <!-- Mostrar la dirección en la nueva columna -->
                             </tr>
                         `;
                         orderDetailsBody.innerHTML += row;
@@ -190,7 +193,35 @@ Pagar </a></button>
                 alert('Pedido cancelado.');
                 // Aquí puedes añadir la lógica para cancelar el pedido
             }
+
+            document.addEventListener('DOMContentLoaded', () => {
+    const orderDatetime = document.getElementById("order-datetime");
+
+    // Obtener la fecha y hora actual
+    const today = new Date();
+    const formattedDate = today.toISOString().slice(0, 16);
+
+    // Establecer el valor predeterminado del campo de fecha y hora
+    orderDatetime.value = formattedDate;
+
+    // Escuchar cambios en el campo de fecha y hora
+    orderDatetime.addEventListener('change', () => {
+        // Guardar la fecha y hora seleccionadas en el almacenamiento local
+        localStorage.setItem("orderDatetime", orderDatetime.value);
+    });
+});
+
+// Dentro del evento donde el usuario ingresa la dirección
+const orderAddressInput = document.getElementById("order-address");
+
+orderAddressInput.addEventListener('change', () => {
+    const address = orderAddressInput.value;
+    localStorage.setItem("orderAddress", address);
+});
+
+
         </script>
+
     </div>
 </body>
 </html>
