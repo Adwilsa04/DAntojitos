@@ -127,7 +127,6 @@
                 </tbody>
             </table>
             <button onclick="handlePayment()">Pagar</button>
-            <button><a href="{{ route('Cancelar') }}" style="text-decoration:none; color:white;"> Cancelar</a></button>
         </div>
 
         <script>
