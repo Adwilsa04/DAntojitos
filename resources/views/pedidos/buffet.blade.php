@@ -40,7 +40,7 @@
                 <input type="datetime-local" id="order-datetime">
                 <h3>Total</h3>
                 <h2 id="total">$ 0.00</h2>
-                <button id="btn-paypal-checkout"><a href="{{ route('pago') }}">ver detalles</a></button>
+                <button id="pay-button" ><a href="{{ route('Detalle') }}">ver detalles</a></button>
                 <!-- paypal button will be rendered here using Javascript -->  
             </div>
         </div>
