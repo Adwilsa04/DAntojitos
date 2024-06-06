@@ -193,7 +193,7 @@
                         <li><a href="{{route('volver')}}">INICIO</a></li>
                         <li><a href="{{route('pagservi')}}">SERVICIOS</a></li>
                         <li><a href="{{route('contacto')}}">CONTACTO</a></li>
-                        <li><a href="{{route('nosotros')}}">MI PERFIL</a></li>
+                        <li><a href="{{route('perfil')}}">MI PERFIL</a></li>
                     </ul>
                 </nav>
             </div>

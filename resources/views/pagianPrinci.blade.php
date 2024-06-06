@@ -10,7 +10,7 @@
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
-
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
 
         *{
     margin: 0;
@@ -193,61 +193,92 @@ p {
 }
 
 /* nuestra ubi*/
-.container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-}
+* {
+            margin: 0;
+            padding: 0;
+            font-family: 'Cinzel', sans-serif;
+            box-sizing: border-box;
+        }
 
-h1 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-}
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+            color: #4a5157;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
 
-.address, .hours {
-    margin-bottom: 30px;
-}
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
 
-h2 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-}
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
 
-.p1, .p2, .p3, .p4 {
-    font-size: 1em;
-    margin: 10px 0;
-    font-family: 'Cinzel', sans-serif; /* Corrige el nombre de la fuente */
-    text-align: center; /* Alinea el texto al centro */
-}
+        .info-section {
+            margin-bottom: 30px;
+            width: 100%;
+            text-align: center;
+        }
 
-.book-now {
-    background-color: #8B0000;
-    color: white;
-    border: none;
-    padding: 15px 30px;
-    font-size: 1em;
-    cursor: pointer;
-    text-transform: uppercase;
-}
+        h2 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
 
-.book-now:hover {
-    background-color: #000;
-}
+        .info-section p {
+            font-size: 1em;
+            margin: 10px 0;
+            text-align: center;
+        }
 
-a{
-    font-size: arial;
-    color:white;
-}
-@media screen and (max-width: 768px) {
-    /* Estilos específicos para pantallas pequeñas */
-    .content h1 {
-        font-size: 10vw; /* Tamaño de fuente para pantallas pequeñas */
-    }
-    button {
-        font-size: 5vw; /* Tamaño de fuente del botón para pantallas pequeñas */
-        padding: 2vw 4vw; /* Padding del botón para pantallas pequeñas */
-    }
-}
+        .book-now {
+            background-color: #8B0000;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1em;
+            cursor: pointer;
+            text-transform: uppercase;
+            margin-top: 20px;
+        }
+
+        .book-now:hover {
+            background-color: #000;
+        }
+
+        a {
+            font-size: arial;
+            color: white;
+            text-decoration: none;
+        }
+
+        @media screen and (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            h2 {
+                font-size: 1.3em;
+            }
+
+            .info-section p {
+                font-size: 0.9em;
+            }
+
+            .book-now {
+                padding: 10px 20px;
+                font-size: 0.9em;
+            }
+        }
 /*codigos de la alerta */
 body {
     font-family: Arial, sans-serif;
@@ -383,7 +414,7 @@ body {
             <p3>Lunes – Viernes: 8 am - 7 pm</p3>
             <p4>Sabados: 9 am - 7 pm</p4>
         </div>
-        <button class="book-now" href="https://www.google.com/maps/place/19%C2%B024'08.0%22N+70%C2%B039'25.2%22W/@19.4022312,-70.659565,17z/data=!3m1!4b1!4m4!3m3!8m2!3d19.4022312!4d-70.6569901?entry=ttu">Mapa</button>
+        <button class="book-now"><a href="{{route('contacto')}}">Mapa</a></button>
     </div>
 
     <!DOCTYPE html>

@@ -173,9 +173,9 @@ table {
             <button type="submit">Buscar</button>
         </form>
         <br>
+        <button onclick="window.print()">Imprimir</button>
     </div>
     </center>
-
     <table border="0">
     <tr>
         <th>Id Del Registro</th>
