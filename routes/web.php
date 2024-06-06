@@ -45,9 +45,9 @@ Route::get('/pagianservi', function () {
 
 
 
-Route::get('Formularios/inicio', function() {
+/*Route::get('Formularios/inicio', function() {
     return view('Formularios/inicio');
-}) ->name('sesion');
+}) ->name('sesion');*/
 
 
 
@@ -61,21 +61,10 @@ Route::get('Contactanos', function() {
 }) ->name('contacto');
 
 
-Route::get('pedidos', function() {
+/*Route::get('pedidos', function() {
     return view('pedidos/buffet');
-}) ->name('pedidos');
-
-Route::get('/pedidos/buffet', function () {
-    return view('pedidos/buffet');
-})->name('buffet');
-
-
-
-Route::get('/pedidos/picadera', function () {
-    return view('pedidos/picadera');
-})->name('picadera');
-
-
+}) ->name('pedidos');*/
+ 
 
 Route::get('/pantadmin', function(){
     return view('pantadmin');
@@ -168,11 +157,21 @@ Route::middleware(['auth'])->group(function () {
 
     Route::resource('registros', RegitroClienteController::class);
 
+  
     
-    Route::get('sesion', function() {
-        return view('Formularios/inicio');
-    }) ->name('sesion');
+    Route::get('/pedidos/picadera', function () {
+        return view('pedidos/picadera');
+    })->name('picadera');
+  
 });
+
+Route::get('/pedidos/buffet', function () {
+    return view('pedidos/buffet');
+})->name('buffet');
+
+Route::get('sesion', function() {
+    return view('Formularios/inicio');
+}) ->name('sesion'); 
 
 Route::get('registro', function() {
     return view('Formularios/registro');

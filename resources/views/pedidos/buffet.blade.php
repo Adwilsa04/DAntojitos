@@ -6,6 +6,15 @@
     <title>Buffet</title>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/92d70a2fd8.js" crossorigin="anonymous"></script>
+
+     <!-- paypal-->
+     <!-- Load the required checkout.js script -->
+<script src="https://www.paypalobjects.com/api/checkout.js" data-version-4></script>
+ 
+ <!-- Load the required Braintree components. -->
+ <script src="https://js.braintreegateway.com/web/3.39.0/js/client.min.js"></script>
+ <script src="https://js.braintreegateway.com/web/3.39.0/js/paypal-checkout.min.js"></script>
+ 
 </head>
 <body>
 
@@ -31,7 +40,13 @@
                 <input type="datetime-local" id="order-datetime">
                 <h3>Total</h3>
                 <h2 id="total">$ 0.00</h2>
+
+                <button id="btn-paypal-checkout"><a href="{{ route('pago') }}">ver detalles</a></button>
+                <!-- paypal button will be rendered here using Javascript -->
+
+
                 <button id="pay-button"><a href="{{ route('Detalle') }}">VER DETALLES</a></button>
+
             </div>
         </div>
     </div>
@@ -151,6 +166,8 @@
             displaycart();
         });
 
+<<<<<<< HEAD
+=======
         document.getElementById("pay-button").addEventListener("click", function() {
             // Obtener datos del carrito y fecha/hora del pedido
             const cartData = JSON.stringify(cart);
@@ -163,6 +180,7 @@
             // Redireccionar a la siguiente página
             window.location.href = "detalle.blade.php";
         });
+>>>>>>> bab200a669752942cef88c1ac4b8ef82234c8b47
     </script>
 
     <style>

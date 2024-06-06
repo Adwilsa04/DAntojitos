@@ -128,7 +128,7 @@ button:hover{
 /*aqui comienza la galeria de imagenes y el body */
 body {
     font-family: Arial, sans-serif;
-    background-color: #fffbf4;
+    background-color: white;
     color: #4a5157;
     text-align: center;
     margin: 0;
@@ -213,9 +213,11 @@ h2 {
     margin-bottom: 10px;
 }
 
-p {
+.p1, .p2, .p3, .p4 {
     font-size: 1em;
-    margin: 5px 0;
+    margin: 10px 0;
+    font-family: 'Cinzel', sans-serif; /* Corrige el nombre de la fuente */
+    text-align: center; /* Alinea el texto al centro */
 }
 
 .book-now {
@@ -373,13 +375,13 @@ body {
         <h1>Nuestra Ubicacion</h1>
         <div class="address">
             <h2>Direccion y telefono</h2>
-            <p>Santiago,Republica Dominica, Carr.Punal</p>
-            <p>(829) 622-356, (829) 208-3086</p>
+            <p1>Santiago,Republica Dominica, Carr.Punal</p1>
+            <p2>(829) 622-356, (829) 208-3086</p2>
         </div>
         <div class="hours">
             <h2>Horas</h2>
-            <p>Lunes – Viernes: 8 am - 7 pm</p>
-            <p>Sabados: 9 am - 7 pm</p>
+            <p3>Lunes – Viernes: 8 am - 7 pm</p3>
+            <p4>Sabados: 9 am - 7 pm</p4>
         </div>
         <button class="book-now" href="https://www.google.com/maps/place/19%C2%B024'08.0%22N+70%C2%B039'25.2%22W/@19.4022312,-70.659565,17z/data=!3m1!4b1!4m4!3m3!8m2!3d19.4022312!4d-70.6569901?entry=ttu">Mapa</button>
     </div>
