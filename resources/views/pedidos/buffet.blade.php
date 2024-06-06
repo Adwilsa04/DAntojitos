@@ -38,16 +38,17 @@
             <div class="foot">
                 <h3>Fecha y Hora del Pedido</h3>
                 <input type="datetime-local" id="order-datetime">
-                <input type="text" id="order-address" placeholder="Ingrese su dirección">
                 <h3>Total</h3>
                 <h2 id="total">$ 0.00</h2>
-                <button id="button" ><a href="{{ route('Detalle') }}">ver detalles</a></button>
-                <!-- paypal button will be rendered here using Javascript -->  
+
+
+                <button id="pay-button"><a href="{{ route('Detalle') }}">VER DETALLES</a></button>
+
             </div>
         </div>
     </div>
 
-    <script>
+    <script >
         const product = [
             { id: 12, image: '{{ asset('image/a1.jpg') }}', title: 'Menú 1', price: 550 },
             { id: 13, image: '{{ asset('image/a2.jpg') }}', title: 'Menú 2', price: 500 },
@@ -160,45 +161,20 @@
 
         document.addEventListener('DOMContentLoaded', () => {
             displaycart();
-
-            localStorage.setItem("orderAddress", document.getElementById("order-address").value);
-
-
-        const orderDatetime = document.getElementById("order-datetime");
-            const today = new Date();
-            const month = String(today.getMonth() + 1).padStart(2, '0');
-            const day = String(today.getDate()).padStart(2, '0');
-            const year = today.getFullYear();
-            const hours = String(today.getHours()).padStart(2, '0');
-            const minutes = String(today.getMinutes()).padStart(2, '0');
-            const formattedDate = `${year}-${month}-${day}T${hours}:${minutes}`;
-            orderDatetime.value = formattedDate;
         });
 
-        document.addEventListener('DOMContentLoaded', () => {
-    const orderDatetime = document.getElementById("order-datetime");
+document.getElementById("pay-button").addEventListener("click", function() {
+            // Obtener datos del carrito y fecha/hora del pedido
+            const cartData = JSON.stringify(cart);
+            const orderDatetime = document.getElementById("order-datetime").value;
 
-    // Obtener la fecha y hora actual
-    const today = new Date();
-    const formattedDate = today.toISOString().slice(0, 16);
+            // Almacenar datos en el almacenamiento local
+            localStorage.setItem("cartData", cartData);
+            localStorage.setItem("orderDatetime", orderDatetime);
 
-    // Establecer el valor predeterminado del campo de fecha y hora
-    orderDatetime.value = formattedDate;
-
-    // Escuchar cambios en el campo de fecha y hora
-    orderDatetime.addEventListener('change', () => {
-        // Guardar la fecha y hora seleccionadas en el almacenamiento local
-        localStorage.setItem("orderDatetime", orderDatetime.value);
-    });
-});
-// Dentro del evento donde el usuario ingresa la dirección
-const orderAddressInput = document.getElementById("order-address");
-
-orderAddressInput.addEventListener('change', () => {
-    const address = orderAddressInput.value;
-    localStorage.setItem("orderAddress", address);
-});
-
+            // Redireccionar a la siguiente página
+            window.location.href = "detalle.blade.php";
+        });
 
     </script>
 
