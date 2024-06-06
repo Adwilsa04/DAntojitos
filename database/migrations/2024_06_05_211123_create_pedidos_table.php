@@ -9,18 +9,22 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
-    public function up(): void
+    public function up()
     {
         Schema::create('pedidos', function (Blueprint $table) {
             $table->id();
+            $table->string('nombre');
+            $table->integer('cantidad');
+            $table->decimal('precio', 10, 2);
+            $table->decimal('subtotal', 10, 2);
+            $table->date('fecha');
+            $table->time('hora');
+            $table->decimal('total', 10, 2);
             $table->timestamps();
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
-    public function down(): void
+    public function down()
     {
         Schema::dropIfExists('pedidos');
     }
