@@ -83,6 +83,7 @@ a{
     font-family: 'Cinzel';
     text-align: center;
     color: #fff;
+    text-decoration: none;
 }
 
 footer{

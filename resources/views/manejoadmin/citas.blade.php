@@ -121,6 +121,7 @@ table {
     a{
         color:#ffff;
         font-size: 25px;
+        text-decoration: none;
     }
 
     

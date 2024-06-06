@@ -27,7 +27,7 @@ class AdminAuthController extends Controller
         if ($admin && Hash::check($request->contrasena, $admin->contrasena)) {
             // Guardar el administrador en la sesión manualmente
             $request->session()->put('admin', $admin->id);
-            return redirect()->route('pantadmin')->with('success', 'Inicio de sesión exitoso.');
+            return redirect()->route('pantadmin1')->with('success', 'Inicio de sesión exitoso.');
         } else {
             return redirect()->back()->with('error', 'Las credenciales no son correctas.');
         }
