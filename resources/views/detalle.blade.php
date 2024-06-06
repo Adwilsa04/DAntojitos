@@ -66,6 +66,11 @@
             font-family: 'Cinzel';
             background-color: #333;
         }
+
+        button a {
+            font-family: 'Cinzel';
+            color: white;
+        }
         .footer input {
             font-family: 'Cinzel';
             padding: 8px;
